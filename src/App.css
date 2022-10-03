@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
+.css-oxsoa5-MuiAutocomplete-root
+  .MuiOutlinedInput-root.MuiInputBase-sizeSmall
+  .MuiAutocomplete-input {
+  margin-left: 18px;
+  font-size: 13px;
+}
+.date {
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.css-145w2hp-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-145w2hp-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-145w2hp-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  margin-left: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.css-1q9zbch-MuiButtonBase-root-MuiPaginationItem-root.Mui-disabled {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.css-wjh20t-MuiPagination-ul {
+  width: 345px;
+  background-color: white;
+  border-radius: 15px;
+  height: 40px;
 }
