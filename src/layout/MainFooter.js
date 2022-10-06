@@ -25,7 +25,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -36,7 +36,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -47,7 +47,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -58,7 +58,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -69,7 +69,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -80,7 +80,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -91,7 +91,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -102,7 +102,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -118,7 +118,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -129,7 +129,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -140,7 +140,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -151,7 +151,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -167,7 +167,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -178,7 +178,7 @@ function MainFooter() {
               component={routerLink}
               to=""
               sx={{
-                color: "black",
+                color: "white",
                 textDecoration: "none",
                 ":hover": { textDecoration: "underline" },
               }}
@@ -197,13 +197,12 @@ function MainFooter() {
       <Typography
         sx={{ textAlign: "center", padding: "10px 0" }}
         variant="body2"
-        color="black"
       >
         Copyright ©
         <Link
           component={routerLink}
           to="/"
-          sx={{ textDecoration: "none", color: "black" }}
+          sx={{ textDecoration: "none", color: "white" }}
         >
           Travel Booking
         </Link>{" "}

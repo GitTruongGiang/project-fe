@@ -13,9 +13,6 @@ function MainLayout() {
         style={{
           margin: "0 auto",
           position: "relative",
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
         }}
       >
         <MainHeader />
@@ -25,7 +22,11 @@ function MainLayout() {
         </Box>
         <Container
           maxWidth="xl"
-          sx={{ backgroundColor: "white", marginTop: "100px" }}
+          sx={{
+            backgroundColor: "#24292e",
+            marginTop: "100px",
+            color: "white",
+          }}
         >
           <MainFooter />
         </Container>

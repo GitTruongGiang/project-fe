@@ -107,7 +107,7 @@ function Search() {
                     >
                       <Chip
                         label="Mở Bản Đồ"
-                        icon={<FmdGoodIcon style={{ color: "#00e676" }} />}
+                        icon={<FmdGoodIcon style={{ color: "#1e88e5" }} />}
                         sx={{
                           color: "white",
                           fontSize: "16px",
@@ -217,10 +217,10 @@ function Search() {
                         renderInput={(params) => (
                           <TextField
                             {...params}
-                            sx={{
+                            style={{
                               backgroundColor: "white",
                               borderRadius: "8px",
-                              color: "#66bb6a",
+                              color: "#1e88e5",
                             }}
                           />
                         )}
@@ -281,7 +281,6 @@ function Search() {
                   sx={{
                     color: "white",
                     textTransform: "capitalize",
-                    backgroundColor: "#66bb6a",
                     ":hover": { backgroundColor: "#d50000", color: "white" },
                   }}
                   loading={isSubmitting}

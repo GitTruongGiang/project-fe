@@ -93,7 +93,9 @@ function Flight() {
   return (
     <Container maxWidth="lg" sx={{ color: "white" }}>
       <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-        <Typography sx={{ fontSize: "20px" }}>Bộ lọc: </Typography>
+        <Typography sx={{ fontSize: "20px", color: "black" }}>
+          Bộ lọc:{" "}
+        </Typography>
         <Button
           sx={{
             color: "white",
@@ -152,7 +154,7 @@ function Flight() {
       >
         {flights.map((flight) => {
           let date = new Date(flight.fromDay).getDate();
-          let month = new Date(flight.fromDay).getMonth();
+          let month = new Date(flight.fromDay).getMonth() + 1;
           let year = new Date(flight.fromDay).getFullYear();
           const lable = countrys.find(
             (country) => country.value === flight.to.toUpperCase()
