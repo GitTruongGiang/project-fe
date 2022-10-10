@@ -208,7 +208,7 @@ function MainFooter() {
         </Link>{" "}
         {new Date().getFullYear()}
       </Typography>
-      <Box sx={{ textAlign: "center", mb: 5 }}>
+      <Box sx={{ textAlign: "center" }}>
         <IconButton>
           <FacebookIcon sx={{ ":hover": { color: "#1976d2" } }} />
         </IconButton>

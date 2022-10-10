@@ -1,0 +1,38 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn span {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.btn-1::before {
+  background-color: rgb(18, 18, 18);
+  transition: 0.3s ease-out;
+}
+.btn-1 span {
+  color: rgb(0, 170, 255);
+  transition: 0.2s 0.1s;
+}
+.btn-1 span:hover {
+  color: rgb(28, 31, 30);
+  transition: 0.2s 0.1s;
+}
+.btn.hover-filled-slide-down::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.btn.hover-filled-slide-down:hover::before {
+  height: 0%;
+}

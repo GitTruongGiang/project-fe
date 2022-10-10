@@ -5,6 +5,7 @@ import {
   Container,
   Divider,
   Grid,
+  Paper,
   Stack,
   Typography,
 } from "@mui/material";
@@ -22,8 +23,6 @@ function InfomationBooking() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { chair, flight } = useSelector((state) => state.chairs);
-  console.log(chair);
-  console.log(flight);
   const handleFinish = async () => {
     navigate("/");
     toast.success("booking flight success");
@@ -58,7 +57,7 @@ function InfomationBooking() {
           }}
         />
       </Box>
-      <Card sx={{ padding: "20px", borderRadius: "25px" }}>
+      <Paper elevation={12} sx={{ padding: "20px", borderRadius: "25px" }}>
         <Box sx={{ padding: "10px", mb: 2 }}>
           <Typography sx={{ textAlign: "center", fontSize: "25px" }}>
             {flight.airlines?.name}
@@ -66,64 +65,93 @@ function InfomationBooking() {
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Stack spacing={2}>
-            <Typography sx={{ fontSize: "18px" }}>
-              Nơi đi: {country[0].label}
-            </Typography>
-            <Typography sx={{ fontSize: "18px" }}>
-              Nơi đến: {country[1].label}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Ngày xuất phát: {new Date(flight.fromDay).getDate()}
-              {"/"}
-              {new Date(flight.fromDay).getMonth()}
-              {"/"}
-              {new Date(flight.fromDay).getFullYear()}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Thời gian đi:{" "}
-              {new Date(flight.timeFrom).getHours() < 10
-                ? `0${new Date(flight.timeFrom).getHours()}`
-                : new Date(flight.timeFrom).getHours()}
-              :
-              {new Date(flight.timeFrom).getMinutes() < 10
-                ? `0${new Date(flight.timeFrom).getMinutes()}`
-                : new Date(flight.timeFrom).getMinutes()}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Thời gian đến:{" "}
-              {new Date(flight.timeTo).getHours() < 10
-                ? `0${new Date(flight.timeTo).getHours()}`
-                : new Date(flight.timeTo).getHours()}
-              :
-              {new Date(flight.timeTo).getMinutes() < 10
-                ? `0${new Date(flight.timeTo).getMinutes()}`
-                : new Date(flight.timeTo).getMinutes()}
-            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Nơi đi:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>{country[0].label}</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Nơi đến:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>{country[1].label}</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Ngày xuất phát:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>
+                {new Date(flight.fromDay).getDate()}
+                {"/"}
+                {new Date(flight.fromDay).getMonth()}
+                {"/"}
+                {new Date(flight.fromDay).getFullYear()}
+              </Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Thời gian đi:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>
+                {new Date(flight.timeFrom).getHours() < 10
+                  ? `0${new Date(flight.timeFrom).getHours()}`
+                  : new Date(flight.timeFrom).getHours()}
+                :
+                {new Date(flight.timeFrom).getMinutes() < 10
+                  ? `0${new Date(flight.timeFrom).getMinutes()}`
+                  : new Date(flight.timeFrom).getMinutes()}
+              </Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Thời gian đến:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>
+                {new Date(flight.timeTo).getHours() < 10
+                  ? `0${new Date(flight.timeTo).getHours()}`
+                  : new Date(flight.timeTo).getHours()}
+                :
+                {new Date(flight.timeTo).getMinutes() < 10
+                  ? `0${new Date(flight.timeTo).getMinutes()}`
+                  : new Date(flight.timeTo).getMinutes()}
+              </Typography>
+            </Box>
           </Stack>
           <Divider orientation="vertical" flexItem />
           <Stack spacing={2}>
-            <Typography sx={{ fontSize: "18px" }}>
-              Giá vé: ${Math.ceil(flight.price / 21)}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Hãng máy bay: {flight.plane.name}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Mã hiệu: {flight.codePlane}
-            </Typography>
-
-            <Typography sx={{ fontSize: "18px" }}>
-              Số ghế: {chair.codeNumber}
-              {chair.codeString}
-            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Giá vé:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>
+                ${Math.ceil(flight.price / 21)}
+              </Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Hãng máy bay:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>{flight.plane.name}</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Mã hiệu:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>{flight.codePlane}</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
+                Số ghế:
+              </Typography>
+              <Typography sx={{ ml: 1 }}>
+                {chair.codeNumber}
+                {chair.codeString}
+              </Typography>
+            </Box>
           </Stack>
         </Box>
-      </Card>
+      </Paper>
       <Box sx={{ textAlign: "end", mt: 2 }}>
         <Button variant="contained" onClick={handleFinish}>
           finish

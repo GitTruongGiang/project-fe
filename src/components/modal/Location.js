@@ -61,7 +61,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
     >
       <Box sx={style}>
         <Box>
-          <Typography variant="h6" component="h2" textAlign="center" mb={2}>
+          <Typography
+            variant="h6"
+            component="h2"
+            textAlign="center"
+            mb={2}
+            sx={{ fontWeight: 600 }}
+          >
             Giờ cất cánh
           </Typography>
           <Grid container spacing={2} columns={8} sx={{ textAlign: "center" }}>
@@ -69,7 +75,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 onClick={() => setTimeFrom(6)}
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
               >
                 00:00 - 06:00
@@ -78,7 +87,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeFrom(12)}
               >
@@ -88,7 +100,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeFrom(18)}
               >
@@ -98,7 +113,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeFrom(23)}
               >
@@ -122,7 +140,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeTo(6)}
               >
@@ -132,7 +153,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeTo(12)}
               >
@@ -142,7 +166,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeTo(18)}
               >
@@ -152,7 +179,10 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                sx={{ fontSize: "16px" }}
+                sx={{
+                  fontSize: "16px",
+                  ":focus-within": { backgroundColor: "#f44336" },
+                }}
                 variant="contained"
                 onClick={() => setTimeTo(23)}
               >

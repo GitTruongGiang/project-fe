@@ -33,6 +33,8 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import KingBedIcon from "@mui/icons-material/KingBed";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import Search from "../components/Search";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import "./MainHeader.css";
 
 const pageMains = [
   { value: "vé máy bay", icon: <FlightIcon color="info" /> },
@@ -153,7 +155,7 @@ function MainHeader() {
               sx={{ mr: 2 }}
               onClick={toggleDrawer(true)}
             >
-              <MenuIcon sx={{ ":hover": { color: "#66bb6a" } }} />
+              <MenuIcon sx={{ ":hover": { color: "#f44336" } }} />
             </IconButton>
             <Typography
               variant="h6"
@@ -164,42 +166,45 @@ function MainHeader() {
               <FlightTakeoffIcon sx={{ color: "#1e88e5", ml: 0.5 }} />
             </Typography>
 
-            <Button
+            <Box
+              component="button"
               variant="body2"
+              className="btn-appbar"
               sx={{
                 mr: 2,
-                ":hover": { backgroundColor: "#f44336", color: "white" },
               }}
             >
-              chuyến bay
-            </Button>
-            <Button
+              <span>chuyến bay</span>
+            </Box>
+            <Box
+              component="button"
               variant="body2"
+              className="btn-appbar"
               sx={{
                 mr: 2,
-                ":hover": { backgroundColor: "#f44336", color: "white" },
               }}
             >
-              khách sạn
-            </Button>
-            <Button
+              <span>Khách Sạn</span>
+            </Box>
+            <Box
+              component="button"
               variant="body2"
+              className="btn-appbar"
               sx={{
                 mr: 2,
-                ":hover": { backgroundColor: "#f44336", color: "white" },
               }}
             >
-              khuyến mãi
-            </Button>
-            <Button
-              variant="body2"
+              <span> Khuyến mãi</span>
+            </Box>
+            <Box
+              component="button"
+              className="btn-appbar"
               sx={{
                 mr: 2,
-                ":hover": { backgroundColor: "#f44336", color: "white" },
               }}
             >
-              đơn hàng
-            </Button>
+              <span>Đơn Hàng</span>
+            </Box>
             <Box>
               <Avatar
                 onClick={handleMenu}

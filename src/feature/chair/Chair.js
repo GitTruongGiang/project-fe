@@ -15,16 +15,16 @@ import { useParams } from "react-router-dom";
 import ChairModal from "../../components/modal/ChairModal";
 import { getSingleFlight } from "../flights/flightSlice";
 import { getChairs } from "./chairSlice";
+import "../../Button.css";
 
 function Chair() {
   const params = useParams();
   const dispatch = useDispatch();
   const flightId = params.flightId;
-
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
 
-  const { flight } = useSelector((state) => state.flight);
+  const { flight } = useSelector((state) => state.flights);
 
   useEffect(() => {
     dispatch(getSingleFlight({ flightId }));
@@ -34,14 +34,16 @@ function Chair() {
     <Container maxWidth="xl">
       <Box sx={{ textAlign: "center" }}>
         <Chip
+          label={flight?.airlines?.name}
           sx={{
-            color: "white",
+            fontWeight: 600,
             fontSize: "30px",
-            backgroundColor: "#ff9100",
-            p: "20px",
+            fontStyle: "italic",
+            backgroundColor: "#1e88e5",
+            color: "white",
+            padding: "10px",
           }}
-          label={flight?.airlines?.name || ""}
-        />
+        ></Chip>
       </Box>
       <Stack
         direction="row"
@@ -59,7 +61,14 @@ function Chair() {
         </Typography>
       </Stack>
       <Stack direction="row" spacing={2} sx={{ justifyContent: "center" }}>
-        <Card sx={{ minWidth: 450, textAlign: "center" }}>
+        <Card
+          sx={{
+            minWidth: 450,
+            textAlign: "center",
+            boxShadow:
+              "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+          }}
+        >
           <CardContent>
             <Typography sx={{ fontSize: "22px", fontWeight: 600 }}>
               Booking Cabin
@@ -72,19 +81,26 @@ function Chair() {
           />
           <Button
             variant="text"
+            className="btn btn-1 hover-filled-slide-down"
             fullWidth
             sx={{
               textTransform: "capitalize",
               color: "black",
               fontSize: "16px",
               borderRadius: 0,
-              ":hover": { backgroundColor: "#81c784", color: "white" },
             }}
           >
-            check cabin
+            <span> check cabin</span>
           </Button>
         </Card>
-        <Card sx={{ minWidth: 450, textAlign: "center" }}>
+        <Card
+          sx={{
+            minWidth: 450,
+            textAlign: "center",
+            boxShadow:
+              "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+          }}
+        >
           <CardContent>
             <Typography sx={{ fontSize: "22px", fontWeight: 600 }}>
               Booking Chair
@@ -97,17 +113,16 @@ function Chair() {
           />
           <Button
             variant="text"
+            className="btn btn-1 hover-filled-slide-down"
             fullWidth
             sx={{
               textTransform: "capitalize",
-              color: "black",
               fontSize: "16px",
               borderRadius: 0,
-              ":hover": { backgroundColor: "#81c784", color: "white" },
             }}
             onClick={handleOpen}
           >
-            check chair
+            <span>Check Chair</span>
           </Button>
         </Card>
         <ChairModal open={open} setOpen={setOpen} flight={flight} />

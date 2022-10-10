@@ -115,6 +115,7 @@ export const chairSlice = createSlice({
         state.isLoading = false;
         const { chair } = action.payload.data;
         state.chair = chair;
+        toast.success("cancel success");
       })
       .addCase(cancelChair.rejected, (state, action) => {
         state.error = action.error.message;

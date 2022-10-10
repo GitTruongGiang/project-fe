@@ -75,7 +75,15 @@ function AccountGeneral() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
-          <Card sx={{ py: 10, px: 3, textAlign: "center" }}>
+          <Card
+            sx={{
+              py: 10,
+              px: 3,
+              textAlign: "center",
+              boxShadow:
+                "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+            }}
+          >
             <Controller
               control={control}
               name="avatarUrl"
@@ -108,7 +116,13 @@ function AccountGeneral() {
         </Grid>
 
         <Grid item xs={12} md={8}>
-          <Card sx={{ p: 3 }}>
+          <Card
+            sx={{
+              p: 3,
+              boxShadow:
+                "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+            }}
+          >
             <Box
               sx={{
                 display: "grid",
@@ -251,6 +265,7 @@ function AccountGeneral() {
                 type="submit"
                 variant="contained"
                 loading={isSubmitting || isloading}
+                sx={{ ":hover": { backgroundColor: "#f44336" } }}
               >
                 Save Changes
               </LoadingButton>

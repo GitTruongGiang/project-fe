@@ -1,5 +1,5 @@
 export const countrys = [
-  { value: "SG", label: "TP HCM" },
+  { value: "SG", label: "Thành phố Hồ Chí Minh" },
   { value: "DN", label: "ĐỒNG NAI" },
   { value: "BV", label: "BÀ RỊA VŨNG TÀU" },
   { value: "DNA", label: "ĐÀ NẴNG" },

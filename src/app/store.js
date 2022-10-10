@@ -5,7 +5,7 @@ import chairsReducer from "../feature/chair/chairSlice";
 import usersReducer from "../feature/user/userSlice";
 const store = configureStore({
   reducer: {
-    flight: flightReducer,
+    flights: flightReducer,
     airlines: airlinesReducer,
     chairs: chairsReducer,
     users: usersReducer,

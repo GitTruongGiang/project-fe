@@ -26,6 +26,7 @@ function MainLayout() {
             backgroundColor: "#24292e",
             marginTop: "100px",
             color: "white",
+            paddingBottom: "24px",
           }}
         >
           <MainFooter />

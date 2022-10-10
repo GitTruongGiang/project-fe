@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { Checkbox, Stack } from "@mui/material";
+import { Checkbox, Radio, Stack } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getAirlines } from "../../feature/airlines/airlineSlice";
 
@@ -14,14 +14,15 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
+  border: "1px solid #000",
+  boxShadow: 25,
   p: 4,
+  borderRadius: "25px",
 };
 
-function NameAirlines({ nameAir, setNameAir, setName }) {
+function NameAirlines({ nameAir, setNameAir, setName, nameID }) {
   const handechange = async (e) => {
-    if (e.target.checked === true) {
+    if (e.target.checked) {
       setName(e.target.value);
     } else {
       setName("");
@@ -45,19 +46,21 @@ function NameAirlines({ nameAir, setNameAir, setName }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Stack spacing={1}>
-            {airlines.map((airline) => {
-              return (
-                <Box key={airline._id} sx={{ display: "flex" }}>
-                  <Checkbox
-                    value={true ? airline._id : ""}
-                    onClick={handechange}
-                  />
-                  <Typography>{airline.name}</Typography>
-                </Box>
-              );
-            })}
-          </Stack>
+          {airlines.map((airline) => {
+            return (
+              <Stack spacing={2} key={airline._id} direction="row">
+                <Radio
+                  checked={nameID === airline._id}
+                  value={airline._id}
+                  onClick={handechange}
+                />
+                <img src={airline.imageUrl} alt="" width="30px" height="30px" />
+                <Typography sx={{ fontWeight: 600, fontSize: "18px" }}>
+                  {airline.name}
+                </Typography>
+              </Stack>
+            );
+          })}
         </Box>
       </Modal>
     </div>

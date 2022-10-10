@@ -10,23 +10,24 @@ import { LoadingButton } from "@mui/lab";
 import { Controller, useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import { useDispatch, useSelector } from "react-redux";
+import { updateUserProfile } from "./userSlice";
 
 const SOCIAL_LINKS = [
   {
     value: "facebookLink",
-    icon: <FacebookIcon sx={{ fontSize: 30 }} />,
+    icon: <FacebookIcon sx={{ fontSize: 30, color: "#1976d2" }} />,
   },
   {
     value: "instagramLink",
-    icon: <InstagramIcon sx={{ fontSize: 30 }} />,
+    icon: <InstagramIcon sx={{ fontSize: 30, color: "#e91e63" }} />,
   },
   {
     value: "linkedinLink",
-    icon: <LinkedInIcon sx={{ fontSize: 30 }} />,
+    icon: <LinkedInIcon sx={{ fontSize: 30, color: "#2170af" }} />,
   },
   {
     value: "twitterLink",
-    icon: <TwitterIcon sx={{ fontSize: 30 }} />,
+    icon: <TwitterIcon sx={{ fontSize: 30, color: "#64b5f6" }} />,
   },
 ];
 
@@ -46,11 +47,19 @@ function AccountSocialLinks() {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { isSubmitting },
   } = methods;
   const dispatch = useDispatch();
-
-  const onSubmit = async (data) => {};
+  const { isloading } = useSelector((state) => state.users);
+  const onSubmit = async (data) => {
+    try {
+      dispatch(updateUserProfile({ userId: user._id, ...data }));
+      reset();
+    } catch (error) {
+      reset();
+    }
+  };
 
   return (
     <Card sx={{ p: 3 }}>
@@ -85,7 +94,8 @@ function AccountSocialLinks() {
           <LoadingButton
             type="submit"
             variant="contained"
-            loading={isSubmitting}
+            loading={isSubmitting || isloading}
+            sx={{ ":hover": { backgroundColor: "#f44336" } }}
           >
             Save Changes
           </LoadingButton>

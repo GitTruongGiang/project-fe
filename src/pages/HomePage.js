@@ -6,6 +6,7 @@ import {
   CardMedia,
   Container,
   IconButton,
+  Paper,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -22,7 +23,19 @@ function HomePage() {
   return (
     <Container maxWidth="lg">
       <Stack direction="row" spacing={2}>
-        <Card sx={{ height: "120px", width: "265px" }}>
+        <Paper
+          sx={{
+            height: "120px",
+            width: "265px",
+            ":hover": {
+              transition: "all 0.3s ease",
+              transform: "scale(1.1)",
+              transitionDuration: "0.4s",
+              zIndex: 1,
+            },
+          }}
+          elevation={3}
+        >
           <IconButton>
             <LocalOfferIcon sx={{ alignItems: "center" }} />
           </IconButton>
@@ -32,8 +45,20 @@ function HomePage() {
             </samp>
             <br /> Find the best deals available from 900+ travel sites.
           </Typography>
-        </Card>
-        <Card sx={{ height: "120px", width: "265px" }}>
+        </Paper>
+        <Paper
+          sx={{
+            height: "120px",
+            width: "265px",
+            ":hover": {
+              transition: "all 0.3s ease",
+              transform: "scale(1.1)",
+              transitionDuration: "0.4s",
+              zIndex: 1,
+            },
+          }}
+          elevation={3}
+        >
           <IconButton>
             <CheckCircleOutlineIcon />
           </IconButton>
@@ -44,8 +69,20 @@ function HomePage() {
             <br />
             The prices you see aren't affected by your searches.
           </Typography>
-        </Card>
-        <Card sx={{ height: "120px", width: "265px" }}>
+        </Paper>
+        <Paper
+          sx={{
+            height: "120px",
+            width: "265px",
+            ":hover": {
+              transition: "all 0.3s ease",
+              transform: "scale(1.1)",
+              transitionDuration: "0.4s",
+              zIndex: 1,
+            },
+          }}
+          elevation={3}
+        >
           <IconButton>
             <PublishedWithChangesIcon />
           </IconButton>
@@ -56,8 +93,20 @@ function HomePage() {
             <br />
             Easily find flights with no change fees.
           </Typography>
-        </Card>
-        <Card sx={{ height: "120px", width: "265px" }}>
+        </Paper>
+        <Paper
+          sx={{
+            height: "120px",
+            width: "265px",
+            ":hover": {
+              transition: "all 0.3s ease",
+              transform: "scale(1.1)",
+              transitionDuration: "0.4s",
+              zIndex: 1,
+            },
+          }}
+          elevation={3}
+        >
           <IconButton>
             <RecommendIcon />
           </IconButton>
@@ -68,7 +117,7 @@ function HomePage() {
             <br />
             We’re completely free to use – no hidden charges or fees.
           </Typography>
-        </Card>
+        </Paper>
       </Stack>
       <Stack mt={10}>
         <Card sx={{ backgroundColor: "#24292e", color: "white" }}>
@@ -103,6 +152,9 @@ function HomePage() {
                 textTransform: "capitalize",
                 width: 130,
                 height: 30,
+                ":hover": {
+                  backgroundColor: "#f44336",
+                },
               }}
             >
               Discover
