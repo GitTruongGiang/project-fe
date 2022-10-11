@@ -51,7 +51,11 @@ function ChairModal({ open, setOpen, flight }) {
   const { user } = auth;
 
   const handeChangeChair = async (chair) => {
-    const a = chairs.find((e) => e.user);
+    const a = chairs.find((e) => {
+      if (e.user === user._id) {
+        return e;
+      }
+    });
     if (a) {
       toast.error(
         `bạn hiện đang có ghế chờ ${a.codeNumber}${a.codeString} bấm send để tiếp tục hoặc bấm cancel để hủy ghế`

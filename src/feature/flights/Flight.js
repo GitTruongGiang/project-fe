@@ -309,20 +309,20 @@ function Flight() {
               />
             </Stack>
           </Container>
-          <Location
-            location={location}
-            setLocation={setLocation}
-            setTimeFrom={setTimeFrom}
-            setTimeTo={setTimeTo}
-          />
-          <NameAirlines
-            nameID={nameID}
-            setName={setNameID}
-            nameAir={nameAir}
-            setNameAir={setNameAir}
-          />
         </>
       )}
+      <Location
+        location={location}
+        setLocation={setLocation}
+        setTimeFrom={setTimeFrom}
+        setTimeTo={setTimeTo}
+      />
+      <NameAirlines
+        nameID={nameID}
+        setName={setNameID}
+        nameAir={nameAir}
+        setNameAir={setNameAir}
+      />
     </>
   );
 }
