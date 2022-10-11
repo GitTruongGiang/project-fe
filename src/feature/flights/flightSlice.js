@@ -16,7 +16,7 @@ export const getFlights = createAsyncThunk(
     { rejectWithValue }
   ) => {
     page = page || 1;
-    limit = limit || 9;
+    limit = limit || 10;
     nameAirlines = nameAirlines ? nameAirlines : "";
     try {
       let url = `/flights/flight?page=${page}&limit=${limit}&from=${from}&to=${to}&nameAirlines=${nameAirlines}`;
