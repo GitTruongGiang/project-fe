@@ -52,10 +52,13 @@ export const getSingleChair = createAsyncThunk(
 
 export const cancelChair = createAsyncThunk(
   "chair/cancelChair",
-  async ({ chairId, status }, { rejectWithValue }) => {
+  async ({ chairId, status, userId }, { rejectWithValue }) => {
     try {
       let url = `chairs/cancel/${chairId}`;
-      const response = await apisevice.post(url, { status: status });
+      const response = await apisevice.post(url, {
+        status: status,
+        userId: userId,
+      });
       return response.data;
     } catch (error) {
       rejectWithValue(error);

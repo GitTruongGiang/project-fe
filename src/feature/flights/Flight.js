@@ -99,228 +99,230 @@ function Flight() {
       {isLoading ? (
         <LoadingCss />
       ) : (
-        <Container maxWidth="lg" sx={{ color: "white" }}>
-          <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-            <Typography sx={{ fontSize: "20px", color: "black" }}>
-              Bộ lọc:{" "}
+        <>
+          <Container maxWidth="lg" sx={{ color: "white" }}>
+            <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
+              <Typography sx={{ fontSize: "20px", color: "black" }}>
+                Bộ lọc:{" "}
+              </Typography>
+              <Box component="div">
+                <Box component="div" className="dedcription-btn">
+                  <span className="name-descripeion">Điểm Dừng</span>
+                  <Box component="div" className="btn-icon">
+                    <ExpandMoreIcon className="far fa-lightbulb" />
+                  </Box>
+                </Box>
+              </Box>
+              <Box component="div" onClick={handleLocation}>
+                <Box component="div" className="dedcription-btn">
+                  <span className="name-descripeion">Thời gian bay</span>
+                  <Box component="div" className="btn-icon">
+                    <ExpandMoreIcon className="far fa-lightbulb" />
+                  </Box>
+                </Box>
+              </Box>
+              <Box component="div" onClick={handleNameAirlines}>
+                <Box component="div" className="dedcription-btn">
+                  <span className="name-descripeion">Hãng hàng không </span>
+                  <Box component="div" className="btn-icon">
+                    <ExpandMoreIcon className="far fa-lightbulb" />
+                  </Box>
+                </Box>
+              </Box>
+            </Stack>
+            <Typography sx={{ fontSize: "25px", mb: 2, color: "black" }}>
+              Explore destinations
             </Typography>
-            <Box component="div">
-              <p className="dedcription-btn">
-                <span className="name-descripeion">Điểm Dừng</span>
-                <div className="btn-icon">
-                  <ExpandMoreIcon className="far fa-lightbulb" />
-                </div>
-              </p>
-            </Box>
-            <Box component="div" onClick={handleLocation}>
-              <p className="dedcription-btn">
-                <span className="name-descripeion">Thời gian bay</span>
-                <div className="btn-icon">
-                  <ExpandMoreIcon className="far fa-lightbulb" />
-                </div>
-              </p>
-            </Box>
-            <Box component="div" onClick={handleNameAirlines}>
-              <p className="dedcription-btn">
-                <span className="name-descripeion">Hãng hàng không </span>
-                <div className="btn-icon">
-                  <ExpandMoreIcon className="far fa-lightbulb" />
-                </div>
-              </p>
-            </Box>
-          </Stack>
-          <Typography sx={{ fontSize: "25px", mb: 2, color: "black" }}>
-            Explore destinations
-          </Typography>
 
-          <Grid container spacing={2} columns={12}>
-            {flights.map((flight) => {
-              let date = new Date(flight.fromDay).getDate();
-              let month = new Date(flight.fromDay).getMonth() + 1;
-              let year = new Date(flight.fromDay).getFullYear();
-              const lableFrom = countrys.find(
-                (country) => country.value === flight.from.toUpperCase()
-              );
-              const lableTo = countrys.find(
-                (country) => country.value === flight.to.toUpperCase()
-              );
-              return (
-                <Grid item xs={12} key={flight._id}>
-                  <Card
-                    sx={{
-                      padding: "10px",
-                      boxShadow:
-                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                    }}
-                  >
-                    <Stack
-                      direction="row"
-                      spacing={1}
+            <Grid container spacing={2} columns={12}>
+              {flights.map((flight) => {
+                let date = new Date(flight.fromDay).getDate();
+                let month = new Date(flight.fromDay).getMonth() + 1;
+                let year = new Date(flight.fromDay).getFullYear();
+                const lableFrom = countrys.find(
+                  (country) => country.value === flight.from.toUpperCase()
+                );
+                const lableTo = countrys.find(
+                  (country) => country.value === flight.to.toUpperCase()
+                );
+                return (
+                  <Grid item xs={12} key={flight._id}>
+                    <Card
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-
-                        justifyContent: "space-around",
+                        padding: "10px",
+                        boxShadow:
+                          "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
                       }}
                     >
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <CardMedia
-                          component="img"
-                          image={flight.airlines.imageUrl}
-                          height="35px"
-                          sx={{ width: "35px" }}
-                        />
-                        <Typography sx={{ ml: 1 }}>
-                          {flight.airlines.name}
-                        </Typography>
-                      </Box>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Typography
-                          sx={{
-                            fontWeight: 600,
-                            fontSize: "25px",
-                            fontStyle: "italic",
-                            pointerEvents: "fill",
-                          }}
-                        >
-                          {new Date(flight.timeFrom).getHours() < 10
-                            ? `0${new Date(flight.timeFrom).getHours()}`
-                            : new Date(flight.timeFrom).getHours()}
-                          :
-                          {new Date(flight.timeFrom).getMinutes() === 0
-                            ? "00"
-                            : new Date(flight.timeFrom).getMinutes() < 10
-                            ? `0${new Date(flight.timeFrom).getMinutes()}`
-                            : new Date(flight.timeFrom).getMinutes()}
-                        </Typography>
-                        <Box
-                          sx={{
-                            display: "flex",
-                          }}
-                        >
-                          <Typography sx={{ fontWeight: 600 }}>
-                            {flight.from.toUpperCase()}
-                          </Typography>
+                      <Stack
+                        direction="row"
+                        spacing={1}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+
+                          justifyContent: "space-around",
+                        }}
+                      >
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                          <CardMedia
+                            component="img"
+                            image={flight.airlines.imageUrl}
+                            height="35px"
+                            sx={{ width: "35px" }}
+                          />
                           <Typography sx={{ ml: 1 }}>
+                            {flight.airlines.name}
+                          </Typography>
+                        </Box>
+                        <Box sx={{ textAlign: "center" }}>
+                          <Typography
+                            sx={{
+                              fontWeight: 600,
+                              fontSize: "25px",
+                              fontStyle: "italic",
+                              pointerEvents: "fill",
+                            }}
+                          >
+                            {new Date(flight.timeFrom).getHours() < 10
+                              ? `0${new Date(flight.timeFrom).getHours()}`
+                              : new Date(flight.timeFrom).getHours()}
+                            :
+                            {new Date(flight.timeFrom).getMinutes() === 0
+                              ? "00"
+                              : new Date(flight.timeFrom).getMinutes() < 10
+                              ? `0${new Date(flight.timeFrom).getMinutes()}`
+                              : new Date(flight.timeFrom).getMinutes()}
+                          </Typography>
+                          <Box
+                            sx={{
+                              display: "flex",
+                            }}
+                          >
+                            <Typography sx={{ fontWeight: 600 }}>
+                              {flight.from.toUpperCase()}
+                            </Typography>
+                            <Typography sx={{ ml: 1 }}>
+                              {lableFrom.label}
+                            </Typography>
+                          </Box>
+                          <Typography sx={{ fontSize: "13px" }}>
                             {lableFrom.label}
                           </Typography>
                         </Box>
-                        <Typography sx={{ fontSize: "13px" }}>
-                          {lableFrom.label}
-                        </Typography>
-                      </Box>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Typography sx={{ fontStyle: "italic" }}>
-                          {Math.abs(
-                            new Date(flight.timeFrom).getHours() -
-                              new Date(flight.timeTo).getHours()
-                          )}
-                          h{" "}
-                          {Math.abs(
-                            new Date(flight.timeFrom).getMinutes() -
-                              new Date(flight.timeTo).getMinutes()
-                          )}
-                          min
-                        </Typography>
-                        <Box
-                          sx={{
-                            backgroundColor: "black",
-                            height: "1px",
-                            width: "150px",
-                          }}
-                        ></Box>
-                        <Typography sx={{ fontSize: "15px" }}>
-                          direct
-                        </Typography>
-                      </Box>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Typography
-                          sx={{
-                            fontWeight: 600,
-                            fontSize: "25px",
-                            fontStyle: "italic",
-                          }}
-                        >
-                          {new Date(flight.timeTo).getHours() < 10
-                            ? `0${new Date(flight.timeTo).getHours()}`
-                            : new Date(flight.timeTo).getHours()}
-                          :
-                          {new Date(flight.timeTo).getMinutes() === 0
-                            ? "00"
-                            : new Date(flight.timeTo).getMinutes() < 10
-                            ? `0${new Date(flight.timeTo).getMinutes()}`
-                            : new Date(flight.timeTo).getMinutes()}
-                        </Typography>
-                        <Box
-                          sx={{
-                            display: "flex",
-                          }}
-                        >
-                          <Typography sx={{ fontWeight: 600 }}>
-                            {flight.to.toUpperCase()}
+                        <Box sx={{ textAlign: "center" }}>
+                          <Typography sx={{ fontStyle: "italic" }}>
+                            {Math.abs(
+                              new Date(flight.timeFrom).getHours() -
+                                new Date(flight.timeTo).getHours()
+                            )}
+                            h{" "}
+                            {Math.abs(
+                              new Date(flight.timeFrom).getMinutes() -
+                                new Date(flight.timeTo).getMinutes()
+                            )}
+                            min
                           </Typography>
-                          <Typography sx={{ ml: 1 }}>
+                          <Box
+                            sx={{
+                              backgroundColor: "black",
+                              height: "1px",
+                              width: "150px",
+                            }}
+                          ></Box>
+                          <Typography sx={{ fontSize: "15px" }}>
+                            direct
+                          </Typography>
+                        </Box>
+                        <Box sx={{ textAlign: "center" }}>
+                          <Typography
+                            sx={{
+                              fontWeight: 600,
+                              fontSize: "25px",
+                              fontStyle: "italic",
+                            }}
+                          >
+                            {new Date(flight.timeTo).getHours() < 10
+                              ? `0${new Date(flight.timeTo).getHours()}`
+                              : new Date(flight.timeTo).getHours()}
+                            :
+                            {new Date(flight.timeTo).getMinutes() === 0
+                              ? "00"
+                              : new Date(flight.timeTo).getMinutes() < 10
+                              ? `0${new Date(flight.timeTo).getMinutes()}`
+                              : new Date(flight.timeTo).getMinutes()}
+                          </Typography>
+                          <Box
+                            sx={{
+                              display: "flex",
+                            }}
+                          >
+                            <Typography sx={{ fontWeight: 600 }}>
+                              {flight.to.toUpperCase()}
+                            </Typography>
+                            <Typography sx={{ ml: 1 }}>
+                              {lableTo.label}
+                            </Typography>
+                          </Box>
+                          <Typography sx={{ fontSize: "13px" }}>
                             {lableTo.label}
                           </Typography>
                         </Box>
-                        <Typography sx={{ fontSize: "13px" }}>
-                          {lableTo.label}
-                        </Typography>
-                      </Box>
-                      <Divider orientation="vertical" flexItem />
-                      <Box
-                        sx={{
-                          padding: "10px",
-                          textAlign: "center",
-                        }}
-                      >
-                        <Box>
-                          <Typography
-                            sx={{ fontWeight: 600, fontSize: "15px" }}
-                          >
-                            price: ${Math.ceil(flight.price / 24)}
-                          </Typography>
-                          <Typography>
-                            {date} / {month} / {year}
-                          </Typography>
-                        </Box>
+                        <Divider orientation="vertical" flexItem />
                         <Box
-                          component="button"
-                          className="booking"
-                          onClick={() => handleChairs(flight)}
+                          sx={{
+                            padding: "10px",
+                            textAlign: "center",
+                          }}
                         >
-                          <span>Booking</span>
+                          <Box>
+                            <Typography
+                              sx={{ fontWeight: 600, fontSize: "15px" }}
+                            >
+                              price: ${Math.ceil(flight.price / 24)}
+                            </Typography>
+                            <Typography>
+                              {date} / {month} / {year}
+                            </Typography>
+                          </Box>
+                          <Box
+                            component="button"
+                            className="booking"
+                            onClick={() => handleChairs(flight)}
+                          >
+                            <span>Booking</span>
+                          </Box>
                         </Box>
-                      </Box>
-                    </Stack>
-                  </Card>
-                </Grid>
-              );
-            })}
-          </Grid>
+                      </Stack>
+                    </Card>
+                  </Grid>
+                );
+              })}
+            </Grid>
 
-          <Stack spacing={2} sx={{ alignItems: "center", mt: 3 }}>
-            <Pagination
-              count={10}
-              page={page}
-              onChange={handleChange}
-              color="secondary"
-            />
-          </Stack>
-        </Container>
+            <Stack spacing={2} sx={{ alignItems: "center", mt: 3 }}>
+              <Pagination
+                count={10}
+                page={page}
+                onChange={handleChange}
+                color="secondary"
+              />
+            </Stack>
+          </Container>
+          <Location
+            location={location}
+            setLocation={setLocation}
+            setTimeFrom={setTimeFrom}
+            setTimeTo={setTimeTo}
+          />
+          <NameAirlines
+            nameID={nameID}
+            setName={setNameID}
+            nameAir={nameAir}
+            setNameAir={setNameAir}
+          />
+        </>
       )}
-      <Location
-        location={location}
-        setLocation={setLocation}
-        setTimeFrom={setTimeFrom}
-        setTimeTo={setTimeTo}
-      />
-      <NameAirlines
-        nameID={nameID}
-        setName={setNameID}
-        nameAir={nameAir}
-        setNameAir={setNameAir}
-      />
     </>
   );
 }

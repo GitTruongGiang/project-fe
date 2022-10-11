@@ -45,18 +45,6 @@ function ChairModal({ open, setOpen, flight }) {
     formState: { errors, isSubmitting },
   } = methods;
 
-  const onSubmit = async () => {
-    try {
-      if (status === "pending") {
-        dispatch(
-          updateChair({ status: status, userId: user._id, chairId: chairId })
-        );
-        navigate(`/credit/${chairId}`);
-      }
-    } catch (error) {
-      setError(error);
-    }
-  };
   const dispatch = useDispatch();
   const handleClose = () => setOpen(false);
   const auth = useAuth();
@@ -78,6 +66,20 @@ function ChairModal({ open, setOpen, flight }) {
   const handleCancel = async () => {
     const a = chairs.find((e) => e.user);
     dispatch(cancelChair({ chairId: a._id, status: "none" }));
+  };
+
+  const onSubmit = async () => {
+    try {
+      if (status === "pending") {
+        // console.log({ status: status, userId: user._id, chairId: chairId });
+        dispatch(
+          updateChair({ status: status, userId: user._id, chairId: chairId })
+        );
+        navigate(`/credit/${chairId}`);
+      }
+    } catch (error) {
+      setError(error);
+    }
   };
 
   return (
