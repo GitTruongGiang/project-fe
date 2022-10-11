@@ -190,7 +190,7 @@ function Search() {
                       <PersonIcon
                         sx={{
                           position: "absolute",
-                          color: "#d50000",
+                          color: "#1e88e5",
                           top: "55px",
                           left: "20px",
                           zIndex: 10,
@@ -260,7 +260,7 @@ function Search() {
                       <ChairIcon
                         style={{
                           position: "absolute",
-                          color: "#ff6f00",
+                          color: "#1e88e5",
                           zIndex: 10,
                           left: "20px",
                           bottom: "26px",
