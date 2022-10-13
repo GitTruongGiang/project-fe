@@ -17,7 +17,7 @@ function Profile() {
     {
       value: "social_links",
       icon: <ShareIcon sx={{ fontSize: 30 }} />,
-      component: <AccountSocialLinks profile={{}} />,
+      component: <AccountSocialLinks />,
     },
   ];
   return (

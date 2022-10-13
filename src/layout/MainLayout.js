@@ -8,31 +8,29 @@ import background from "../image/airplane-2619434_960_720.jpg";
 
 function MainLayout() {
   return (
-    <>
-      <div
-        style={{
-          margin: "0 auto",
-          position: "relative",
+    <div
+      style={{
+        margin: "0 auto",
+        position: "relative",
+      }}
+    >
+      <MainHeader />
+      <AlertMsg />
+      <Box sx={{ paddingTop: "50px" }}>
+        <Outlet />
+      </Box>
+      <Container
+        maxWidth="xl"
+        sx={{
+          backgroundColor: "#24292e",
+          marginTop: "100px",
+          color: "white",
+          paddingBottom: "24px",
         }}
       >
-        <MainHeader />
-        <AlertMsg />
-        <Box sx={{ paddingTop: "50px" }}>
-          <Outlet />
-        </Box>
-        <Container
-          maxWidth="xl"
-          sx={{
-            backgroundColor: "#24292e",
-            marginTop: "100px",
-            color: "white",
-            paddingBottom: "24px",
-          }}
-        >
-          <MainFooter />
-        </Container>
-      </div>
-    </>
+        <MainFooter />
+      </Container>
+    </div>
   );
 }
 

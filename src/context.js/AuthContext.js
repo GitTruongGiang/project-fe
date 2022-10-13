@@ -30,6 +30,8 @@ const reducer = (state, action) => {
       };
     case LOGIN_SUCCESS:
       return { ...state, isAuthenticated: true, user: action.payload.user };
+    case LOGOUT_SUCCESS:
+      return { ...state, isAuthenticated: false, user: null };
     case REGISTER_SUCCESS:
       return {
         ...state,

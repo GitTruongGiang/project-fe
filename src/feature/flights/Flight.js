@@ -24,7 +24,7 @@ import "./Flight.css";
 
 function Flight() {
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(9);
+  const [limit, setLimit] = useState(10);
   const [timeFrom, setTimeFrom] = useState("");
   const [timeTo, setTimeTo] = useState("");
   const [nameID, setNameID] = useState("");
