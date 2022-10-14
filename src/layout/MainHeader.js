@@ -77,7 +77,7 @@ function MainHeader() {
 
   const pageHeaders = [
     {
-      value: "trang trủ",
+      value: "trang chủ",
       icon: (
         <IconButton onClick={() => handeHome()}>
           <HomeIcon color="info" />
@@ -99,14 +99,23 @@ function MainHeader() {
   const list = () => (
     <Box sx={{ width: 250, zIndex: 100 }}>
       <List>
-        {pageHeaders.map((index) => (
-          <ListItem key={index.value} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{index.icon}</ListItemIcon>
-              <ListItemText primary={index.value} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {pageHeaders.map((index) => {
+          return (
+            <ListItem key={index.value} disablePadding>
+              {index.value === "trang chủ" ? (
+                <ListItemButton onClick={() => handeHome()}>
+                  <ListItemIcon>{index.icon}</ListItemIcon>
+                  <ListItemText primary={index.value} />
+                </ListItemButton>
+              ) : (
+                <ListItemButton>
+                  <ListItemIcon>{index.icon}</ListItemIcon>
+                  <ListItemText primary={index.value} />
+                </ListItemButton>
+              )}
+            </ListItem>
+          );
+        })}
       </List>
       <Divider />
       <List>
