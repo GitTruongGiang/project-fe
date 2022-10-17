@@ -35,7 +35,7 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
       <Container maxWidth="sm" sx={style}>
         <Box sx={{ textAlign: "center" }}>
           <Chip
-            label="Infomation Flight"
+            label="thông tin chuyến bay"
             sx={{
               color: "white",
               fontSize: "30px",

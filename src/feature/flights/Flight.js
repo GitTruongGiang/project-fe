@@ -131,7 +131,7 @@ function Flight() {
               </Box>
             </Stack>
             <Typography sx={{ fontSize: "25px", mb: 2, color: "black" }}>
-              Explore destinations
+              KHÁM PHÁ CÁC ĐIỂM ĐẾN
             </Typography>
 
             <Grid container spacing={2} columns={12}>
@@ -279,7 +279,7 @@ function Flight() {
                             <Typography
                               sx={{ fontWeight: 600, fontSize: "15px" }}
                             >
-                              price: ${Math.ceil(flight.price / 24)}
+                              GIÁ VÉ: ${Math.ceil(flight.price / 24)}
                             </Typography>
                             <Typography>
                               {date} / {month} / {year}
@@ -290,7 +290,7 @@ function Flight() {
                             className="booking"
                             onClick={() => handleChairs(flight)}
                           >
-                            <span>Booking</span>
+                            <span>ĐẶT VÉ</span>
                           </Box>
                         </Box>
                       </Stack>
@@ -302,7 +302,7 @@ function Flight() {
 
             <Stack spacing={2} sx={{ alignItems: "center", mt: 3 }}>
               <Pagination
-                count={10}
+                count={totalPage}
                 page={page}
                 onChange={handleChange}
                 color="secondary"

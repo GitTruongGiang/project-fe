@@ -31,7 +31,7 @@ function Profile() {
       }}
     >
       <Typography variant="h5" gutterBottom>
-        Profile
+        THÔNG TIN CÁ NHÂN
       </Typography>
       <Tabs
         value={currentTab}

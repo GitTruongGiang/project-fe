@@ -28,6 +28,7 @@ function Booking() {
   const { chairs, flights, message, isLoading } = useSelector(
     (state) => state.users
   );
+
   useEffect(() => {
     dispatch(getListBooking({}));
   }, [dispatch]);
@@ -139,7 +140,7 @@ function Booking() {
                       variant="contained"
                       onClick={() => handleOpen(flight)}
                     >
-                      Details
+                      CHI TIẾT
                       <ChevronRightIcon />
                     </Button>
                   </Card>

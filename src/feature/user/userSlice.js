@@ -4,7 +4,7 @@ import apisevice from "../../app/apisevice";
 import { cloudinaryUpload } from "../../utills/cloudinaryUpload";
 
 const initialState = {
-  isloading: false,
+  isLoading: false,
   updateUser: [],
   message: "",
   chairs: [],
@@ -73,10 +73,10 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(updateUserProfile.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
       })
       .addCase(updateUserProfile.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         const { user } = action.payload.data;
         state.updateUser = user;
         toast.success("Update Profile successfully ");
@@ -86,10 +86,10 @@ export const userSlice = createSlice({
       });
     builder
       .addCase(getListBooking.pending, (state, action) => {
-        state.isloading = true;
+        state.isLoading = true;
       })
       .addCase(getListBooking.fulfilled, (state, action) => {
-        state.isloading = false;
+        state.isLoading = false;
         const { chairs, flights } = action.payload.data;
         state.message = action.payload.message;
         state.chairs = chairs;

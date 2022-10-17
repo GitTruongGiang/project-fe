@@ -37,9 +37,9 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import "./MainHeader.css";
 
 const pageMains = [
-  { value: "vé máy bay", icon: <FlightIcon color="info" /> },
-  { value: "khách sạn", icon: <HotelIcon sx={{ color: "Highlight" }} /> },
-  { value: "đưa đón sân bay", icon: <KingBedIcon sx={{ color: "brown" }} /> },
+  { value: "VÉ MÁY BAY", icon: <FlightIcon color="info" /> },
+  { value: "KHÁCH SẠN", icon: <HotelIcon sx={{ color: "Highlight" }} /> },
+  { value: "ĐƯA ĐÓN SÂN BAY", icon: <KingBedIcon sx={{ color: "brown" }} /> },
 ];
 
 function MainHeader() {
@@ -72,28 +72,34 @@ function MainHeader() {
   };
   const handleBookingList = async () => {
     navigate(`/listBooking`);
-    handleClose();
   };
 
   const pageHeaders = [
     {
-      value: "trang chủ",
+      value: "TRANG CHỦ",
       icon: (
         <IconButton onClick={() => handeHome()}>
           <HomeIcon color="info" />
         </IconButton>
       ),
     },
-    { value: "đặt chổ của tôi", icon: <ListAltIcon color="info" /> },
-    { value: "hộp thư của tôi", icon: <MarkEmailUnreadIcon color="info" /> },
-    { value: "đẫ lưu", icon: <TurnedInIcon color="secondary" /> },
     {
-      value: "liên hệ với chúng tôi",
+      value: "ĐẶT CHỔ CỦA TÔI",
+      icon: (
+        <IconButton onClick={handleBookingList}>
+          <ListAltIcon color="info" />
+        </IconButton>
+      ),
+    },
+    { value: "hỘP THƯ CỦA TÔI", icon: <MarkEmailUnreadIcon color="info" /> },
+    { value: "ĐÃ LƯU", icon: <TurnedInIcon color="secondary" /> },
+    {
+      value: "LIÊN HỆ VỚI CHÚNG TÔI",
       icon: <PhoneEnabledIcon color="error" />,
     },
-    { value: "ngoại tệ", icon: <CurrencyExchangeIcon color="success" /> },
-    { value: "trợ giúp", icon: <HelpOutlineIcon /> },
-    { value: "tải ứng dụng", icon: <DownloadIcon color="warning" /> },
+    { value: "NGOẠI TỆ", icon: <CurrencyExchangeIcon color="success" /> },
+    { value: "TRỢ GIÚP", icon: <HelpOutlineIcon /> },
+    { value: "TẢI ỨNG DỤNG", icon: <DownloadIcon color="warning" /> },
   ];
 
   const list = () => (
@@ -102,8 +108,13 @@ function MainHeader() {
         {pageHeaders.map((index) => {
           return (
             <ListItem key={index.value} disablePadding>
-              {index.value === "trang chủ" ? (
+              {index.value === "TRANG CHỦ" ? (
                 <ListItemButton onClick={() => handeHome()}>
+                  <ListItemIcon>{index.icon}</ListItemIcon>
+                  <ListItemText primary={index.value} />
+                </ListItemButton>
+              ) : index.value === "ĐẶT CHỔ CỦA TÔI" ? (
+                <ListItemButton onClick={handleBookingList}>
                   <ListItemIcon>{index.icon}</ListItemIcon>
                   <ListItemText primary={index.value} />
                 </ListItemButton>
@@ -254,10 +265,7 @@ function MainHeader() {
                 </Box>
                 <Divider sx={{ borderStyle: "dashed" }} />
                 <MenuItem onClick={handleProfile} sx={{ mx: 1 }}>
-                  Profile
-                </MenuItem>
-                <MenuItem onClick={handleBookingList} sx={{ mx: 1 }}>
-                  booking
+                  THÔNG TIN CÁ NHÂN
                 </MenuItem>
                 <Divider sx={{ borderStyle: "dashed" }} />
                 <MenuItem onClick={handleClick} sx={{ m: 1 }}>

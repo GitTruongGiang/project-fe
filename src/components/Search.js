@@ -103,10 +103,7 @@ function Search() {
                     </Grid>
 
                     <Grid item xs={8}>
-                      <Link
-                        href="https://www.google.com/maps/@10.8181205,106.627298,13.48z?hl=vi"
-                        sx={{ textDecoration: "none" }}
-                      >
+                      <Link href="#" sx={{ textDecoration: "none" }}>
                         <Chip
                           label="Mở Bản Đồ"
                           icon={<FmdGoodIcon style={{ color: "#1e88e5" }} />}
