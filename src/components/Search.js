@@ -31,6 +31,7 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import ChairIcon from "@mui/icons-material/Chair";
 import SearchIcon from "@mui/icons-material/Search";
 import { countrys, rankChair } from "../list";
+import "./Search.css";
 
 function Search() {
   const [from, setFrom] = useState(countrys[0]);
