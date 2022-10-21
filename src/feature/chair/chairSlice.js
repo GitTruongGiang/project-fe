@@ -28,6 +28,7 @@ export const updateChair = createAsyncThunk(
   "chair/updateChair",
   async ({ status, userId, chairId }, { rejectWithValue }) => {
     try {
+      console.log(status, userId, chairId);
       let url = `/chairs/${chairId}`;
       const response = await apisevice.put(url, { status, userId });
       return response.data;
@@ -56,9 +57,23 @@ export const cancelChair = createAsyncThunk(
     try {
       let url = `chairs/cancel/${chairId}`;
       const response = await apisevice.post(url, {
-        status: status,
+        status,
         userId: userId,
       });
+      return response.data;
+    } catch (error) {
+      rejectWithValue(error);
+    }
+  }
+);
+
+export const cancelFlights = createAsyncThunk(
+  "chair/cancelFlights",
+  async ({ status, chairId }, { rejectWithValue }) => {
+    try {
+      console.log(status, chairId);
+      let url = `chairs/cancel/flight/${chairId}`;
+      const response = await apisevice.post(url, { status });
       return response.data;
     } catch (error) {
       rejectWithValue(error);
@@ -121,6 +136,22 @@ export const chairSlice = createSlice({
         toast.success("cancel success");
       })
       .addCase(cancelChair.rejected, (state, action) => {
+        state.error = action.error.message;
+      });
+    builder
+      .addCase(cancelFlights.pending, (status, action) => {
+        status.isLoading = true;
+      })
+      .addCase(cancelFlights.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const { chair } = action.payload.data;
+        if (chair) {
+          toast.success("cancel flight success");
+        } else {
+          toast.error(`${action.payload.message}`);
+        }
+      })
+      .addCase(cancelFlights.rejected, (state, action) => {
         state.error = action.error.message;
       });
   },

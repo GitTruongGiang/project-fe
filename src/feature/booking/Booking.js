@@ -15,6 +15,7 @@ import { getListBooking } from "../user/userSlice";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import LoadingCss from "../../components/LoadingCss";
 import ModalBooking from "./ModalBooking";
+import { cancelFlights, deletedChair } from "../chair/chairSlice";
 
 function Booking() {
   const [dataFlight, setDataFlight] = useState("");
@@ -32,6 +33,11 @@ function Booking() {
   useEffect(() => {
     dispatch(getListBooking({}));
   }, [dispatch]);
+
+  const cancelFLight = async (flight) => {
+    const chair = chairs.find((chair) => chair.flight._id === flight._id);
+    dispatch(cancelFlights({ status: "none", chairId: chair._id }));
+  };
 
   return (
     <Container maxWidth="lg">
@@ -135,14 +141,33 @@ function Booking() {
                         }
                       })}
                     </Stack>
-                    <Button
-                      sx={{ mr: 2, height: "30px" }}
-                      variant="contained"
-                      onClick={() => handleOpen(flight)}
-                    >
-                      CHI TIẾT
-                      <ChevronRightIcon />
-                    </Button>
+                    <Box>
+                      <Button
+                        sx={{ mr: 1, height: "30px", padding: "6px 10px" }}
+                        variant="contained"
+                        onClick={() => handleOpen(flight)}
+                      >
+                        CHI TIẾT
+                        <ChevronRightIcon />
+                      </Button>
+                      <Button
+                        sx={{
+                          mr: 1,
+                          height: "30px",
+                          padding: "6px 10px",
+                          backgroundColor: "#ff5252",
+                          opacity: 0.7,
+                          ":hover": {
+                            backgroundColor: "#ff5252",
+                            opacity: 1,
+                          },
+                        }}
+                        variant="contained"
+                        onClick={() => cancelFLight(flight)}
+                      >
+                        HỦY
+                      </Button>
+                    </Box>
                   </Card>
                 ))}
               </Stack>

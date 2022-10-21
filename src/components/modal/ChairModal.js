@@ -75,7 +75,6 @@ function ChairModal({ open, setOpen, flight }) {
   const onSubmit = async () => {
     try {
       if (status === "pending") {
-        // console.log({ status: status, userId: user._id, chairId: chairId });
         dispatch(
           updateChair({ status: status, userId: user._id, chairId: chairId })
         );

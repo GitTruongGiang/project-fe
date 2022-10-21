@@ -36,11 +36,7 @@ import Search from "../components/Search";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import "./MainHeader.css";
 
-const pageMains = [
-  { value: "VÉ MÁY BAY", icon: <FlightIcon color="info" /> },
-  { value: "KHÁCH SẠN", icon: <HotelIcon sx={{ color: "Highlight" }} /> },
-  { value: "ĐƯA ĐÓN SÂN BAY", icon: <KingBedIcon sx={{ color: "brown" }} /> },
-];
+const pageMains = [];
 
 function MainHeader() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -91,15 +87,6 @@ function MainHeader() {
         </IconButton>
       ),
     },
-    { value: "hỘP THƯ CỦA TÔI", icon: <MarkEmailUnreadIcon color="info" /> },
-    { value: "ĐÃ LƯU", icon: <TurnedInIcon color="secondary" /> },
-    {
-      value: "LIÊN HỆ VỚI CHÚNG TÔI",
-      icon: <PhoneEnabledIcon color="error" />,
-    },
-    { value: "NGOẠI TỆ", icon: <CurrencyExchangeIcon color="success" /> },
-    { value: "TRỢ GIÚP", icon: <HelpOutlineIcon /> },
-    { value: "TẢI ỨNG DỤNG", icon: <DownloadIcon color="warning" /> },
   ];
 
   const list = () => (
