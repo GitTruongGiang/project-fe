@@ -7,3 +7,265 @@
 .css-1k74z00.css-1k74z00.css-1k74z00 {
   margin-left: 20px;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .css-oxsoa5-MuiAutocomplete-root {
+    height: 16px;
+  }
+  #from {
+    height: 0px;
+    font-size: 5px;
+    padding: 3.5px 4px 2.5px 6px;
+    min-width: 100px;
+  }
+  #to {
+    height: 0px;
+    font-size: 5px;
+    padding: 3.5px 4px 2.5px 6px;
+    min-width: 100px;
+  }
+  .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-sizeSmall.MuiInputBase-adornedEnd.MuiAutocomplete-inputRoot.css-1wcdjql-MuiInputBase-root-MuiOutlinedInput-root {
+    padding-bottom: 5px;
+  }
+  .css-foxx5i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator {
+    padding: 4px 2px 2px;
+  }
+  .MuiBox-root .css-zxidmm {
+    margin-left: 0px;
+  }
+  .css-1ynrp2g-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator
+    .css-ptiqhd-MuiSvgIcon-root {
+    font-size: 7px;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 10px;
+  }
+  .MuiAutocomplete-listbox {
+    font-size: 6px;
+  }
+  .MuiAutocomplete-option {
+  }
+  .MuiAutocomplete-paper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .MuiBox-root .css-m6wntm {
+    margin: 0;
+  }
+  #people {
+    height: 0.8em;
+    padding: 4px 14px;
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+  }
+  #people-label {
+    font-size: 10px;
+  }
+  #people-helper-text {
+    font-size: 10px;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-z177mx-MuiSvgIcon-root-MuiSelect-icon {
+    font-size: 10px;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.MuiSelect-iconOpen.css-1h1jq32-MuiSvgIcon-root-MuiSelect-icon {
+    font-size: 10px;
+  }
+  .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list
+    li {
+    font-size: 6px;
+    min-height: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  #datepiker {
+    font-size: 0.4rem;
+    padding: 4px 8px;
+    line-height: 0;
+  }
+  .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1pz723x-MuiPaper-root-MuiDialog-paper {
+    min-width: 220px;
+  }
+  .MuiTypography-root.MuiTypography-overline.css-i0ws07-MuiTypography-root {
+    font-size: 0.3rem;
+  }
+  .MuiPickersToolbar-root.MuiDatePickerToolbar-root.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    padding: 4px 12px;
+  }
+  .MuiTypography-root.MuiTypography-h4.MuiTypography-alignCenter.MuiDatePickerToolbar-title.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
+    font-size: 0.65rem;
+  }
+  .MuiPickersCalendarHeader-root.css-nk89i7-MuiPickersCalendarHeader-root {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  .css-31ca4x-MuiPickersFadeTransitionGroup-root {
+    font-size: 0.5rem;
+  }
+  .css-qklzlb-MuiDayPicker-header span {
+    font-size: 0.4rem;
+    height: 15px;
+    width: 20px;
+  }
+  .css-jtvb7r-MuiButtonBase-root-MuiPickersDay-root.Mui-disabled {
+    font-size: 0.4rem;
+  }
+  .css-ghi3gg-MuiDayPicker-weekContainer div {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    font-size: 0.4rem;
+  }
+  .css-ghi3gg-MuiDayPicker-weekContainer button {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    font-size: 0.4rem;
+  }
+  .MuiDialogActions-root.MuiDialogActions-spacing.css-hlj6pa-MuiDialogActions-root {
+    padding: 4px;
+  }
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1v4h6g7-MuiButtonBase-root-MuiButton-root {
+    font-size: 0.4rem;
+    padding: 2px 4px;
+    margin-left: 0;
+  }
+  .PrivatePickersSlideTransition-root.MuiDayPicker-slideTransition.css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition {
+    min-height: 90px;
+  }
+  .css-169iwlq-MuiCalendarPicker-root {
+    width: 200px;
+  }
+  .MuiCalendarOrClockPicker-root .css-epd502 {
+    max-height: 200px;
+    width: 220px;
+  }
+  .MuiCalendarPicker-root.css-169iwlq-MuiCalendarPicker-root {
+    width: 220px;
+  }
+  #rankchairs {
+    font-size: 0.4rem;
+    padding: 4px 14px;
+    line-height: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  #from {
+    height: 6px;
+    font-size: 8px;
+    padding: 5px 4px 2.5px 6px;
+    min-width: 100px;
+  }
+  #to {
+    height: 6px;
+    font-size: 8px;
+    padding: 5px 4px 2.5px 6px;
+    min-width: 100px;
+  }
+  .MuiBox-root .css-zxidmm {
+    margin-left: 0px;
+  }
+  .css-1ynrp2g-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator
+    .css-ptiqhd-MuiSvgIcon-root {
+    font-size: 7px;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 15px;
+  }
+  .css-16k83sk-MuiInputBase-root-MuiOutlinedInput-root
+    .css-1h1jq32-MuiSvgIcon-root-MuiSelect-icon {
+    font-size: 15px;
+  }
+  .MuiBox-root .css-m6wntm {
+    margin: 0;
+  }
+  #people {
+    height: 6px;
+    padding: 6px 14px;
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+  }
+  #people-label {
+    font-size: 10px;
+  }
+  #people-helper-text {
+    font-size: 10px;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-z177mx-MuiSvgIcon-root-MuiSelect-icon {
+    font-size: 15px;
+  }
+  .MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.Mui-selected.MuiMenuItem-root.MuiMenuItem-gutters.Mui-selected.css-fnq3rt-MuiButtonBase-root-MuiMenuItem-root {
+    font-size: 7px;
+  }
+  #datepiker {
+    font-size: 0.6rem;
+    padding: 6px 10px;
+    line-height: 0;
+  }
+  .MuiTypography-root.MuiTypography-overline.css-i0ws07-MuiTypography-root {
+    font-size: 0.45rem;
+  }
+  .MuiPickersToolbar-root.MuiDatePickerToolbar-root.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    padding: 4px 24px;
+  }
+  .MuiTypography-root.MuiTypography-h4.MuiTypography-alignCenter.MuiDatePickerToolbar-title.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
+    font-size: 1rem;
+  }
+  .MuiPickersCalendarHeader-root.css-nk89i7-MuiPickersCalendarHeader-root {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  .css-31ca4x-MuiPickersFadeTransitionGroup-root {
+    font-size: 0.6rem;
+  }
+  .css-qklzlb-MuiDayPicker-header span {
+    font-size: 0.55rem;
+    height: 20px;
+  }
+  .css-jtvb7r-MuiButtonBase-root-MuiPickersDay-root.Mui-disabled {
+    font-size: 0.55rem;
+  }
+  .css-ghi3gg-MuiDayPicker-weekContainer div {
+    height: 25px;
+    width: 25px;
+    margin: 0 7.5px;
+  }
+  .css-ghi3gg-MuiDayPicker-weekContainer button {
+    height: 25px;
+    width: 25px;
+    margin: 0 7.5px;
+  }
+  .MuiDialogActions-root.MuiDialogActions-spacing.css-hlj6pa-MuiDialogActions-root {
+    padding: 4px;
+  }
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1v4h6g7-MuiButtonBase-root-MuiButton-root {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+  .PrivatePickersSlideTransition-root.MuiDayPicker-slideTransition.css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition {
+    min-height: 150px;
+  }
+  .MuiCalendarOrClockPicker-root .css-epd502 {
+    max-height: 300px;
+  }
+  #rankchairs {
+    font-size: 0.6rem;
+    padding: 4px 14px;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1535px) {
+  #from {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  #to {
+    max-width: 100%;
+    font-size: 13px;
+  }
+}

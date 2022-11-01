@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { useEffect } from "react";
 import { toast } from "react-toastify";
 import apisevice from "../../app/apisevice";
 
@@ -7,6 +8,7 @@ const initialState = {
   chairs: [],
   chair: {},
   flight: {},
+  flights: [],
   chairCount: 0,
   rowChairCount: 0,
 };
@@ -69,11 +71,23 @@ export const cancelChair = createAsyncThunk(
 
 export const cancelFlights = createAsyncThunk(
   "chair/cancelFlights",
-  async ({ status, chairId }, { rejectWithValue }) => {
+  async ({ status, chairId, flightId }, { rejectWithValue }) => {
     try {
-      console.log(status, chairId);
       let url = `chairs/cancel/flight/${chairId}`;
       const response = await apisevice.post(url, { status });
+      return response.data;
+    } catch (error) {
+      rejectWithValue(error);
+    }
+  }
+);
+
+export const getListBooking = createAsyncThunk(
+  "list/getListBooking",
+  async ({}, { rejectWithValue }) => {
+    try {
+      let url = `chairs/listBooking`;
+      const response = await apisevice.get(url);
       return response.data;
     } catch (error) {
       rejectWithValue(error);
@@ -131,8 +145,8 @@ export const chairSlice = createSlice({
       })
       .addCase(cancelChair.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { chair } = action.payload.data;
-        state.chair = chair;
+        const { chairs } = action.payload.data;
+        state.chairs = chairs;
         toast.success("cancel success");
       })
       .addCase(cancelChair.rejected, (state, action) => {
@@ -144,14 +158,29 @@ export const chairSlice = createSlice({
       })
       .addCase(cancelFlights.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { chair } = action.payload.data;
+        const { chair, flights } = action.payload.data;
         if (chair) {
+          state.flights = flights;
           toast.success("cancel flight success");
         } else {
           toast.error(`${action.payload.message}`);
         }
       })
       .addCase(cancelFlights.rejected, (state, action) => {
+        state.error = action.error.message;
+      });
+    builder
+      .addCase(getListBooking.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(getListBooking.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const { chairs, flights } = action.payload.data;
+        state.message = action.payload.message;
+        state.chairs = chairs;
+        state.flights = flights;
+      })
+      .addCase(getListBooking.rejected, (state, action) => {
         state.error = action.error.message;
       });
   },

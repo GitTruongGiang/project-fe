@@ -1,0 +1,40 @@
+#email {
+  height: 1.4375em;
+}
+
+@media only screen and (max-width: 740px) {
+  #email {
+    height: 0.8em;
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+  #email-label {
+    font-size: 10px;
+  }
+  #email-helper-text {
+    font-size: 10px;
+  }
+  .css-wb57ya-MuiFormControl-root-MuiTextField-root
+    .css-17kpow5-MuiFormLabel-root-MuiInputLabel-root {
+    top: -9px;
+  }
+  #password {
+    height: 0.8em;
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+  #password-label {
+    font-size: 10px;
+  }
+  #password-helper-text {
+    font-size: 10px;
+  }
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline .css-14lo706 span {
+    padding: 0;
+  }
+  .css-1wcdjql-MuiInputBase-root-MuiOutlinedInput-root:hover
+    .MuiOutlinedInput-notchedOutline
+    .css-14lo706 {
+    max-width: 16%;
+  }
+}

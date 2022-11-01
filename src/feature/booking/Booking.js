@@ -11,11 +11,14 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { countrys } from "../../list";
-import { getListBooking } from "../user/userSlice";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import LoadingCss from "../../components/LoadingCss";
 import ModalBooking from "./ModalBooking";
-import { cancelFlights, deletedChair } from "../chair/chairSlice";
+import {
+  cancelFlights,
+  deletedChair,
+  getListBooking,
+} from "../chair/chairSlice";
 
 function Booking() {
   const [dataFlight, setDataFlight] = useState("");
@@ -26,9 +29,7 @@ function Booking() {
   };
 
   const dispatch = useDispatch();
-  const { chairs, flights, message, isLoading } = useSelector(
-    (state) => state.users
-  );
+  const { chairs, flights, isLoading } = useSelector((state) => state.chairs);
 
   useEffect(() => {
     dispatch(getListBooking({}));
@@ -38,7 +39,7 @@ function Booking() {
     const chair = chairs.find((chair) => chair.flight._id === flight._id);
     dispatch(cancelFlights({ status: "none", chairId: chair._id }));
   };
-
+  console.log(flights);
   return (
     <Container maxWidth="lg">
       <Card
@@ -49,9 +50,11 @@ function Booking() {
         }}
       >
         <CardContent>
-          <Typography sx={{ fontSize: "20px" }}>lịch sử đặt chổ</Typography>
+          <Typography sx={{ fontSize: "20px", textTransform: "uppercase" }}>
+            lịch sử đặt chổ
+          </Typography>
         </CardContent>
-        {flights && chairs ? (
+        {flights.length ? (
           <>
             {isLoading ? (
               <LoadingCss />
@@ -182,7 +185,7 @@ function Booking() {
             }}
           >
             <CardContent>
-              <Typography>{message}</Typography>
+              <Typography>không có chuyến bay nào</Typography>
             </CardContent>
           </Card>
         )}

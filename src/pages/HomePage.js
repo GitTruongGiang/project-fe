@@ -16,29 +16,24 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import RecommendIcon from "@mui/icons-material/Recommend";
 import image from "../image/bed-4416515_960_720.jpg";
-import "../App.css";
 import { Stack } from "@mui/system";
 
 function HomePage() {
   return (
     <Container maxWidth="lg">
-      <Stack direction="row" spacing={2}>
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{ textAlign: "center", justifyContent: "center" }}
+      >
         <Paper
           sx={{
             height: "120px",
             width: "265px",
-            ":hover": {
-              transition: "all 0.3s ease",
-              transform: "scale(1.1)",
-              transitionDuration: "0.4s",
-              zIndex: 1,
-            },
           }}
           elevation={3}
         >
-          <IconButton>
-            <LocalOfferIcon sx={{ alignItems: "center" }} />
-          </IconButton>
+          <LocalOfferIcon sx={{ marginTop: "10px", marginLeft: "10px" }} />
           <Typography sx={{ padding: "5px 16px 12px 16px", fontSize: "13px" }}>
             <samp style={{ fontSize: "15px", fontWeight: 600 }}>
               Best travel deals
@@ -50,18 +45,12 @@ function HomePage() {
           sx={{
             height: "120px",
             width: "265px",
-            ":hover": {
-              transition: "all 0.3s ease",
-              transform: "scale(1.1)",
-              transitionDuration: "0.4s",
-              zIndex: 1,
-            },
           }}
           elevation={3}
         >
-          <IconButton>
-            <CheckCircleOutlineIcon />
-          </IconButton>
+          <CheckCircleOutlineIcon
+            sx={{ marginTop: "10px", marginLeft: "10px" }}
+          />
           <Typography sx={{ padding: "5px 16px 12px 16px", fontSize: "13px" }}>
             <samp style={{ fontSize: "15px", fontWeight: 600 }}>
               Search without worry
@@ -74,18 +63,12 @@ function HomePage() {
           sx={{
             height: "120px",
             width: "265px",
-            ":hover": {
-              transition: "all 0.3s ease",
-              transform: "scale(1.1)",
-              transitionDuration: "0.4s",
-              zIndex: 1,
-            },
           }}
           elevation={3}
         >
-          <IconButton>
-            <PublishedWithChangesIcon />
-          </IconButton>
+          <PublishedWithChangesIcon
+            sx={{ marginTop: "10px", marginLeft: "10px" }}
+          />
           <Typography sx={{ padding: "5px 16px 12px 16px", fontSize: "13px" }}>
             <samp style={{ fontSize: "15px", fontWeight: 600 }}>
               Book with flexibility
@@ -98,18 +81,10 @@ function HomePage() {
           sx={{
             height: "120px",
             width: "265px",
-            ":hover": {
-              transition: "all 0.3s ease",
-              transform: "scale(1.1)",
-              transitionDuration: "0.4s",
-              zIndex: 1,
-            },
           }}
           elevation={3}
         >
-          <IconButton>
-            <RecommendIcon />
-          </IconButton>
+          <RecommendIcon sx={{ marginTop: "10px", marginLeft: "10px" }} />
           <Typography sx={{ padding: "5px 16px 12px 16px", fontSize: "13px" }}>
             <samp style={{ fontSize: "15px", fontWeight: 600 }}>
               Trusted and free

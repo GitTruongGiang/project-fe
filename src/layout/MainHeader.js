@@ -22,18 +22,8 @@ import useAuth from "../hooks/useAuth";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import HomeIcon from "@mui/icons-material/Home";
-import MarkEmailUnreadIcon from "@mui/icons-material/MarkEmailUnread";
-import TurnedInIcon from "@mui/icons-material/TurnedIn";
-import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
-import DownloadIcon from "@mui/icons-material/Download";
-import FlightIcon from "@mui/icons-material/Flight";
-import HotelIcon from "@mui/icons-material/Hotel";
-import KingBedIcon from "@mui/icons-material/KingBed";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import Search from "../components/Search";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import "./MainHeader.css";
 
 const pageMains = [];
@@ -74,41 +64,179 @@ function MainHeader() {
     {
       value: "TRANG CHỦ",
       icon: (
-        <IconButton onClick={() => handeHome()}>
-          <HomeIcon color="info" />
+        <IconButton
+          onClick={() => handeHome()}
+          sx={{
+            padding: {
+              xs: "0.5px",
+              sm: "5px",
+              md: "6px",
+              lg: "7px",
+              xl: "8px",
+            },
+          }}
+        >
+          <HomeIcon
+            color="info"
+            sx={{
+              fontSize: {
+                xs: "0.5rem",
+                sm: "1.1rem",
+                md: "1.3rem",
+                lg: "1.4rem",
+                xl: "1.5rem",
+              },
+            }}
+          />
         </IconButton>
       ),
     },
     {
       value: "ĐẶT CHỔ CỦA TÔI",
       icon: (
-        <IconButton onClick={handleBookingList}>
-          <ListAltIcon color="info" />
+        <IconButton
+          onClick={handleBookingList}
+          sx={{
+            padding: {
+              xs: "0.5px",
+              sm: "5px",
+              md: "6px",
+              lg: "7px",
+              xl: "8px",
+            },
+          }}
+        >
+          <ListAltIcon
+            color="info"
+            sx={{
+              fontSize: {
+                xs: "0.5rem",
+                sm: "1.1rem",
+                md: "1.3rem",
+                lg: "1.4rem",
+                xl: "1.5rem",
+              },
+            }}
+          />
         </IconButton>
       ),
     },
   ];
 
   const list = () => (
-    <Box sx={{ width: 250, zIndex: 100 }}>
+    <Box
+      sx={{
+        width: { xs: 80, sm: 180, md: 210, lg: 250, xl: 300 },
+        zIndex: 100,
+      }}
+    >
       <List>
         {pageHeaders.map((index) => {
           return (
             <ListItem key={index.value} disablePadding>
               {index.value === "TRANG CHỦ" ? (
-                <ListItemButton onClick={() => handeHome()}>
-                  <ListItemIcon>{index.icon}</ListItemIcon>
-                  <ListItemText primary={index.value} />
+                <ListItemButton
+                  onClick={() => handeHome()}
+                  sx={{
+                    padding: {
+                      xs: "2px",
+                      sm: "5px",
+                      md: "6px",
+                      lg: "7px",
+                      xl: "8px",
+                    },
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                    }}
+                  >
+                    {index.icon}
+                  </ListItemIcon>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "0.4rem",
+                        sm: "0.7rem",
+                        md: "0.8rem",
+                        lg: "0.9rem",
+                        xl: "1rem",
+                      },
+                    }}
+                  >
+                    {index.value}
+                  </Typography>
                 </ListItemButton>
               ) : index.value === "ĐẶT CHỔ CỦA TÔI" ? (
-                <ListItemButton onClick={handleBookingList}>
-                  <ListItemIcon>{index.icon}</ListItemIcon>
-                  <ListItemText primary={index.value} />
+                <ListItemButton
+                  onClick={handleBookingList}
+                  sx={{
+                    padding: {
+                      xs: "2px",
+                      sm: "5px",
+                      md: "6px",
+                      lg: "7px",
+                      xl: "8px",
+                    },
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                    }}
+                  >
+                    {index.icon}
+                  </ListItemIcon>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "0.4rem",
+                        sm: "0.7rem",
+                        md: "0.8rem",
+                        lg: "0.9rem",
+                        xl: "1rem",
+                      },
+                    }}
+                  >
+                    {index.value}
+                  </Typography>
                 </ListItemButton>
               ) : (
-                <ListItemButton>
-                  <ListItemIcon>{index.icon}</ListItemIcon>
-                  <ListItemText primary={index.value} />
+                <ListItemButton
+                  sx={{
+                    padding: {
+                      xs: "2px",
+                      sm: "5px",
+                      md: "6px",
+                      lg: "7px",
+                      xl: "8px",
+                    },
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                    }}
+                  >
+                    {index.icon}
+                  </ListItemIcon>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "0.4rem",
+                        sm: "0.8rem",
+                        md: "0.8rem",
+                        lg: "0.9rem",
+                        xl: "1rem",
+                      },
+                    }}
+                  >
+                    {index.value}
+                  </Typography>
                 </ListItemButton>
               )}
             </ListItem>
@@ -143,7 +271,13 @@ function MainHeader() {
           top: 0,
           position: "sticky",
           zIndex: 99,
-          paddingTop: "100px",
+          paddingTop: {
+            xs: "50px",
+            sm: "70px",
+            md: "80px",
+            lg: "90px",
+            xl: "100px",
+          },
         }}
       >
         <Drawer anchor="left" open={toggle} onClose={toggleDrawer(false)}>
@@ -151,26 +285,83 @@ function MainHeader() {
         </Drawer>
         <AppBar
           variant="elevation"
-          style={{ backgroundColor: "rgb(35,36,36)", color: "white" }}
+          sx={{
+            backgroundColor: "rgb(35,36,36)",
+            color: "white",
+            height: { xs: 25, sm: 40, md: 55, lg: 64, xl: 68 },
+          }}
         >
-          <Toolbar sx={{ mr: 3, ml: 3 }}>
+          <Toolbar
+            sx={{
+              mr: { xs: 0.2, sm: 0.5, md: 0.8, lg: 0.9, xl: 1 },
+              ml: { xs: 0.2, sm: 0.5, md: 0.8, lg: 0.9, xl: 1 },
+              paddingLeft: {
+                xs: "2px",
+                sm: "6px",
+                md: "16px",
+                lg: "20px",
+                xl: "24px",
+              },
+              paddingRight: {
+                xs: "2px",
+                sm: "6px",
+                md: "16px",
+                lg: "20px",
+                xl: "24px",
+              },
+              minHeight: { xs: 25, sm: 40, md: 55, lg: 64, xl: 68 },
+            }}
+          >
             <IconButton
-              size="large"
+              size="small"
               edge="start"
               color="secondary"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              sx={{ mr: { xs: 0, sm: 1, md: 1.6, lg: 1.8, xl: 2 } }}
               onClick={toggleDrawer(true)}
             >
-              <MenuIcon sx={{ ":hover": { color: "#f44336" } }} />
+              <MenuIcon
+                sx={{
+                  ":hover": { color: "#f44336" },
+                  fontSize: {
+                    xs: "0.5rem",
+                    sm: "0.8rem",
+                    md: "1.2rem",
+                    lg: "1.4rem",
+                    xl: "1.5rem",
+                  },
+                }}
+              />
             </IconButton>
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, color: "white" }}
+              sx={{
+                flexGrow: 1,
+                color: "white",
+                fontSize: {
+                  xs: "0.4rem",
+                  sm: "0.8rem",
+                  md: "1.05rem",
+                  lg: "1.15rem",
+                  xl: "1.25rem",
+                },
+              }}
             >
               Travel Booking
-              <FlightTakeoffIcon sx={{ color: "#1e88e5", ml: 0.5 }} />
+              <FlightTakeoffIcon
+                sx={{
+                  color: "#1e88e5",
+                  ml: { xs: 0.1, sm: 0.2, md: 0.3, lg: 0.4, xl: 0.5 },
+                  fontSize: {
+                    xs: "0.4rem",
+                    sm: "0.8rem",
+                    md: "1.3rem",
+                    lg: "1.4rem",
+                    xl: "1.5rem",
+                  },
+                }}
+              />
             </Typography>
 
             <Box
@@ -178,39 +369,11 @@ function MainHeader() {
               variant="body2"
               className="btn-appbar"
               sx={{
-                mr: 2,
+                mr: { xs: 0.2, sm: 1, md: 1.6, lg: 1.8, xl: 2 },
               }}
+              onClick={handleBookingList}
             >
-              <span>chuyến bay</span>
-            </Box>
-            <Box
-              component="button"
-              variant="body2"
-              className="btn-appbar"
-              sx={{
-                mr: 2,
-              }}
-            >
-              <span>Khách Sạn</span>
-            </Box>
-            <Box
-              component="button"
-              variant="body2"
-              className="btn-appbar"
-              sx={{
-                mr: 2,
-              }}
-            >
-              <span> Khuyến mãi</span>
-            </Box>
-            <Box
-              component="button"
-              className="btn-appbar"
-              sx={{
-                mr: 2,
-              }}
-            >
-              <span>Đơn Hàng</span>
+              <span>đặt chổ của tôi</span>
             </Box>
             <Box>
               <Avatar
@@ -218,8 +381,8 @@ function MainHeader() {
                 src={user?.avatarUrl}
                 alt={user?.name}
                 sx={{
-                  width: 32,
-                  height: 32,
+                  width: { xs: 12, sm: 22, md: 28, lg: 30, xl: 32 },
+                  height: { xs: 12, sm: 22, md: 28, lg: 30, xl: 32 },
                   cursor: "pointer",
                   ":hover": { backgroundColor: "#1e88e5" },
                 }}
@@ -237,27 +400,124 @@ function MainHeader() {
                 }}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
+                sx={{
+                  top: { xs: -8, sm: -4, md: -2, lg: 0, xl: 0 },
+                  left: { xs: 10, sm: 4, md: 2, lg: 0, xl: 0 },
+                }}
               >
-                <Box sx={{ my: 1.5, px: 2.5 }}>
-                  <Typography variant="subtitle2" noWrap>
+                <Box
+                  sx={{
+                    my: { xs: 1.1, sm: 1.2, md: 1.3, lg: 1.4, xl: 1.5 },
+                    px: { xs: 1.5, sm: 1.7, md: 1.9, lg: 2.2, xl: 2.5 },
+                  }}
+                >
+                  <Typography
+                    noWrap
+                    sx={{
+                      fontSize: {
+                        xs: "0.5rem",
+                        sm: "0.75rem",
+                        md: "0.8rem",
+                        lg: "0.85rem",
+                        xl: "0.9rem",
+                      },
+                    }}
+                  >
                     {user?.name}
                   </Typography>
                   <Typography
-                    variant="body2"
-                    sx={{ color: "text.secondary" }}
+                    sx={{
+                      color: "text.secondary",
+                      fontSize: {
+                        xs: "0.5rem",
+                        sm: "0.75rem",
+                        md: "0.8rem",
+                        lg: "0.85rem",
+                        xl: "0.9rem",
+                      },
+                    }}
                     noWrap
                   >
                     {user?.email}
                   </Typography>
                 </Box>
-                <Divider sx={{ borderStyle: "dashed" }} />
-                <MenuItem onClick={handleProfile} sx={{ mx: 1 }}>
+                <Divider
+                  sx={{
+                    borderStyle: "dashed",
+                    mr: {
+                      xs: "3px",
+                      sm: "5px",
+                      md: "6px",
+                      lg: "7px",
+                      xl: "8px",
+                    },
+                  }}
+                />
+                <Typography
+                  onClick={handleProfile}
+                  sx={{
+                    mx: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                    padding: {
+                      xs: "2px 16px",
+                      sm: "6px 16px",
+                      md: "6px 16px",
+                      lg: "6px 16px",
+                      xl: "6px 16px",
+                    },
+                    fontSize: {
+                      xs: "0.5rem",
+                      sm: "0.7rem",
+                      md: "0.8rem",
+                      lg: "0.9rem",
+                      xl: "1rem",
+                    },
+                    cursor: "pointer",
+                    ":hover": {
+                      opacity: 0.5,
+                    },
+                  }}
+                >
                   THÔNG TIN CÁ NHÂN
-                </MenuItem>
-                <Divider sx={{ borderStyle: "dashed" }} />
-                <MenuItem onClick={handleClick} sx={{ m: 1 }}>
+                </Typography>
+                <Divider
+                  sx={{
+                    borderStyle: "dashed",
+
+                    mt: {
+                      xs: "4px",
+                      sm: "5px",
+                      md: "6px",
+                      lg: "7px",
+                      xl: "8px",
+                    },
+                  }}
+                />
+                <Typography
+                  onClick={handleClick}
+                  sx={{
+                    mx: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                    padding: {
+                      xs: "2px 16px",
+                      sm: "6px 16px",
+                      md: "6px 16px",
+                      lg: "6px  16px",
+                      xl: "6px 16px",
+                    },
+                    fontSize: {
+                      xs: "0.5rem",
+                      sm: "0.7rem",
+                      md: "0.8rem",
+                      lg: "0.9rem",
+                      xl: "1rem",
+                    },
+                    cursor: "pointer",
+                    ":hover": {
+                      opacity: 0.5,
+                    },
+                  }}
+                >
                   Logout
-                </MenuItem>
+                </Typography>
               </Menu>
             </Box>
           </Toolbar>

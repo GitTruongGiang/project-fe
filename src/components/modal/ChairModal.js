@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -69,7 +69,9 @@ function ChairModal({ open, setOpen, flight }) {
   };
   const handleCancel = async () => {
     const a = chairs.find((e) => e.user);
-    dispatch(cancelChair({ chairId: a._id, status: "none" }));
+    dispatch(
+      cancelChair({ chairId: a._id, status: "none", flightId: flight._id })
+    );
   };
 
   const onSubmit = async () => {

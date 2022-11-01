@@ -16,6 +16,7 @@ const style = {
   top: "38%",
   left: "50%",
   transform: "translate(-50%, -50%)",
+  with: "500px",
 };
 
 function ModalBooking({ open, setOpen, dataFlight, chairs }) {
@@ -47,7 +48,10 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
             }}
           />
         </Box>
-        <Paper elevation={12} sx={{ padding: "20px", borderRadius: "25px" }}>
+        <Paper
+          elevation={12}
+          sx={{ padding: "20px", borderRadius: "25px", width: "600px" }}
+        >
           <Box sx={{ padding: "10px", mb: 2 }}>
             <Typography sx={{ textAlign: "center", fontSize: "25px" }}>
               {dataFlight?.airlines?.name}
@@ -90,7 +94,7 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
                 <Typography sx={{ ml: 1 }}>
                   {new Date(dataFlight?.fromDay).getDate()}
                   {"/"}
-                  {new Date(dataFlight?.fromDay).getMonth()}
+                  {new Date(dataFlight?.fromDay).getMonth() + 1}
                   {"/"}
                   {new Date(dataFlight?.fromDay).getFullYear()}
                 </Typography>

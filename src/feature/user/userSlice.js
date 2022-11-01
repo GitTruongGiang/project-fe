@@ -6,9 +6,6 @@ import { cloudinaryUpload } from "../../utills/cloudinaryUpload";
 const initialState = {
   isLoading: false,
   updateUser: [],
-  message: "",
-  chairs: [],
-  flights: [],
 };
 
 export const updateUserProfile = createAsyncThunk(
@@ -53,19 +50,6 @@ export const updateUserProfile = createAsyncThunk(
     }
   }
 );
-export const getListBooking = createAsyncThunk(
-  "list/getListBooking",
-  async ({}, { rejectWithValue }) => {
-    try {
-      let url = `chairs/listBooking`;
-      const response = await apisevice.get(url);
-      return response.data;
-    } catch (error) {
-      rejectWithValue(error);
-    }
-  }
-);
-
 export const userSlice = createSlice({
   name: "user",
   initialState,
@@ -82,20 +66,6 @@ export const userSlice = createSlice({
         toast.success("Update Profile successfully ");
       })
       .addCase(updateUserProfile.rejected, (state, action) => {
-        state.error = action.error.message;
-      });
-    builder
-      .addCase(getListBooking.pending, (state, action) => {
-        state.isLoading = true;
-      })
-      .addCase(getListBooking.fulfilled, (state, action) => {
-        state.isLoading = false;
-        const { chairs, flights } = action.payload.data;
-        state.message = action.payload.message;
-        state.chairs = chairs;
-        state.flights = flights;
-      })
-      .addCase(getListBooking.rejected, (state, action) => {
         state.error = action.error.message;
       });
   },

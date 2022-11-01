@@ -20,6 +20,7 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
+import "./RegisterPageCss.css";
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -73,7 +74,17 @@ function RegisterPage() {
   };
 
   return (
-    <Container maxWidth="xs">
+    <Container
+      sx={{
+        width: {
+          xs: "300px",
+          sm: "374px",
+          md: "400px",
+          lg: "424px",
+          xl: "444px",
+        },
+      }}
+    >
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack spacing={3}>
           <Box
@@ -83,17 +94,90 @@ function RegisterPage() {
               alignItems: "center",
             }}
           >
-            <FlightTakeoffIcon sx={{ color: "#1e88e5", fontSize: "50px" }} />
-            <Typography sx={{ fontSize: "20px", fontWeight: 600 }}>
+            <FlightTakeoffIcon
+              sx={{
+                color: "#1e88e5",
+                fontSize: {
+                  xs: "30px",
+                  sm: "35px",
+                  md: "40px",
+                  lg: "45px",
+                  xl: "50px",
+                },
+              }}
+            />
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "16px",
+                  sm: "17px",
+                  md: "18px",
+                  lg: "19px",
+                  xl: "20px",
+                },
+                fontWeight: 600,
+              }}
+            >
               TravelBooking
             </Typography>
           </Box>
           {!!errors.responseError && (
-            <Alert severity="error">{errors.responseError.message}</Alert>
+            <Alert
+              severity="error"
+              sx={{
+                fontSize: {
+                  xs: "0.7rem",
+                  sm: "0.75rem",
+                  md: "0.8rem",
+                  lg: "0.85rem",
+                  xl: "0.9rem",
+                },
+                padding: {
+                  xs: "0px 16px",
+                  sm: "6px 16px",
+                  md: "6px 16px",
+                  lg: "6px 16px",
+                  xl: "6px 16px",
+                },
+              }}
+            >
+              {errors.responseError.message}
+            </Alert>
           )}
-          <Alert severity="info">
+          <Alert
+            severity="info"
+            sx={{
+              fontSize: {
+                xs: "0.7rem",
+                sm: "0.75rem",
+                md: "0.8rem",
+                lg: "0.85rem",
+                xl: "0.9rem",
+              },
+              padding: {
+                xs: "0px 16px",
+                sm: "6px 16px",
+                md: "6px 16px",
+                lg: "6px 16px",
+                xl: "6px 16px",
+              },
+            }}
+          >
             Already have an account?{" "}
-            <Link variant="subtitle2" component={RouterLink} to="/login">
+            <Link
+              variant="subtitle2"
+              component={RouterLink}
+              to="/login"
+              sx={{
+                fontSize: {
+                  xs: "0.7rem",
+                  sm: "0.75rem",
+                  md: "0.8rem",
+                  lg: "0.85rem",
+                  xl: "0.9rem",
+                },
+              }}
+            >
               Sign in
             </Link>
           </Alert>
@@ -105,6 +189,7 @@ function RegisterPage() {
                 <TextField
                   autoComplete="off"
                   fullWidth
+                  id="name"
                   label="Full Name"
                   {...field}
                   error={!!error}
@@ -121,6 +206,7 @@ function RegisterPage() {
                 <TextField
                   autoComplete="off"
                   fullWidth
+                  id="email"
                   label="Email Address"
                   {...field}
                   error={!!error}
@@ -137,6 +223,7 @@ function RegisterPage() {
                 <TextField
                   autoComplete="off"
                   fullWidth
+                  id="city"
                   label="City"
                   {...field}
                   error={!!error}
@@ -153,6 +240,7 @@ function RegisterPage() {
                 <TextField
                   autoComplete="off"
                   fullWidth
+                  id="phone"
                   label="Phone Numeber"
                   {...field}
                   error={!!error}
@@ -169,6 +257,7 @@ function RegisterPage() {
                 <TextField
                   label="Password"
                   fullWidth
+                  id="password"
                   type={showPassword ? "text" : "password"}
                   {...field}
                   error={!!error}
@@ -181,9 +270,29 @@ function RegisterPage() {
                           edge="end"
                         >
                           {showPassword ? (
-                            <VisibilityIcon />
+                            <VisibilityIcon
+                              sx={{
+                                fontSize: {
+                                  xs: "1rem",
+                                  sm: "1.2rem",
+                                  md: "1.3rem",
+                                  lg: "1.4rem",
+                                  xl: "1.5rem",
+                                },
+                              }}
+                            />
                           ) : (
-                            <VisibilityOffIcon />
+                            <VisibilityOffIcon
+                              sx={{
+                                fontSize: {
+                                  xs: "1rem",
+                                  sm: "1.2rem",
+                                  md: "1.3rem",
+                                  lg: "1.4rem",
+                                  xl: "1.5rem",
+                                },
+                              }}
+                            />
                           )}
                         </IconButton>
                       </InputAdornment>
@@ -201,6 +310,7 @@ function RegisterPage() {
                 <TextField
                   fullWidth
                   label="Password Confirmation"
+                  id="password"
                   type={showPasswordConfirmation ? "text" : "password"}
                   {...field}
                   error={!!error}
@@ -217,9 +327,29 @@ function RegisterPage() {
                           edge="end"
                         >
                           {showPasswordConfirmation ? (
-                            <VisibilityIcon />
+                            <VisibilityIcon
+                              sx={{
+                                fontSize: {
+                                  xs: "1rem",
+                                  sm: "1.2rem",
+                                  md: "1.3rem",
+                                  lg: "1.4rem",
+                                  xl: "1.5rem",
+                                },
+                              }}
+                            />
                           ) : (
-                            <VisibilityOffIcon />
+                            <VisibilityOffIcon
+                              sx={{
+                                fontSize: {
+                                  xs: "1rem",
+                                  sm: "1.2rem",
+                                  md: "1.3rem",
+                                  lg: "1.4rem",
+                                  xl: "1.5rem",
+                                },
+                              }}
+                            />
                           )}
                         </IconButton>
                       </InputAdornment>
@@ -236,6 +366,22 @@ function RegisterPage() {
             type="submit"
             variant="contained"
             loading={isSubmitting}
+            sx={{
+              fontSize: {
+                xs: "0.7rem",
+                sm: "0.75rem",
+                md: "0.8rem",
+                lg: "0.85rem",
+                xl: "0.9rem",
+              },
+              padding: {
+                xs: "4px 22px",
+                sm: "5px 22px",
+                md: "6px 22px",
+                lg: "7px 22px",
+                xl: "8px 22px",
+              },
+            }}
           >
             Register
           </LoadingButton>

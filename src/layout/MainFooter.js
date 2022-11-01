@@ -1,7 +1,6 @@
 import { Grid, IconButton, Link, Stack, Typography } from "@mui/material";
 import { Link as routerLink } from "react-router-dom";
 import React from "react";
-import CountrySelect from "../components/CountrySelect";
 import { Box } from "@mui/system";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -9,7 +8,14 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 function MainFooter() {
   return (
-    <div>
+    <Box
+      sx={{
+        backgroundColor: "#24292e",
+        marginTop: "100px",
+        color: "white",
+        paddingBottom: "24px",
+      }}
+    >
       <Grid container columns={16} sx={{ padding: "20px" }}>
         <Grid item xs={4}>
           <Typography sx={{ mb: 1, fontWeight: 600 }}>Company</Typography>
@@ -184,7 +190,6 @@ function MainFooter() {
           <Typography sx={{ mb: 1, fontWeight: 600 }}>
             Site / Currency
           </Typography>
-          <CountrySelect />
         </Grid>
       </Grid>
       <Typography
@@ -212,7 +217,7 @@ function MainFooter() {
           <TwitterIcon sx={{ ":hover": { color: "#64b5f6" } }} />
         </IconButton>
       </Box>
-    </div>
+    </Box>
   );
 }
 

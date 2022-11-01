@@ -38,12 +38,11 @@ function InfomationBooking() {
       return country.label;
     }
   });
-
   return (
     <Container maxWidth="sm">
       <Box sx={{ textAlign: "center" }}>
         <Chip
-          label="Infomation Flight"
+          label="thông tin chuyến bay"
           sx={{
             color: "white",
             fontSize: "30px",
@@ -55,7 +54,10 @@ function InfomationBooking() {
           }}
         />
       </Box>
-      <Paper elevation={12} sx={{ padding: "20px", borderRadius: "25px" }}>
+      <Paper
+        elevation={12}
+        sx={{ padding: "20px", borderRadius: "25px", width: "600px" }}
+      >
         <Box sx={{ padding: "10px", mb: 2 }}>
           <Typography sx={{ textAlign: "center", fontSize: "25px" }}>
             {flight.airlines?.name}
@@ -82,7 +84,7 @@ function InfomationBooking() {
               <Typography sx={{ ml: 1 }}>
                 {new Date(flight.fromDay).getDate()}
                 {"/"}
-                {new Date(flight.fromDay).getMonth()}
+                {new Date(flight.fromDay).getMonth() + 1}
                 {"/"}
                 {new Date(flight.fromDay).getFullYear()}
               </Typography>
@@ -130,7 +132,7 @@ function InfomationBooking() {
               <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>
                 Hãng máy bay:
               </Typography>
-              <Typography sx={{ ml: 1 }}>{flight.plane.name}</Typography>
+              <Typography sx={{ ml: 1 }}>{flight.plane?.name}</Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <Typography sx={{ fontSize: "18px", fontWeight: 600 }}>

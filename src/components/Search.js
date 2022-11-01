@@ -47,7 +47,7 @@ function Search() {
   const peoples = [
     {
       value: 1,
-      label: `${adults} Người Lớn,${children} trẻ em, ${baby} em bé`,
+      label: `${adults} Người Lớn`,
     },
   ];
 
@@ -67,255 +67,452 @@ function Search() {
     navigate(`/flights?from=${from.value}&to=${to.value}&fromDay=${newDate}`);
   };
   return (
-    <Container maxWidth="md">
+    <Container sx={{ width: { xs: 250, sm: 400, md: 500, lg: 700, xl: 900 } }}>
       <Paper elevation={8}>
         <Stack spacing={2}>
-          <Box>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <Card
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Card
+              sx={{
+                padding: { xs: "2px 6px", sm: "6px", lg: "9px", xl: "10px" },
+                borderRadius: { xs: "4px", sm: "6px", lg: "7px", xl: "8px" },
+                backgroundColor: "#24292e",
+                color: "white",
+              }}
+            >
+              <Box
                 sx={{
-                  minWidth: 200,
-                  height: "300px",
-                  padding: "10px",
-                  backgroundColor: "#24292e",
-                  color: "white",
+                  margin: {
+                    xs: "0",
+                    sm: "2px 2px 0 2px",
+                    lg: "4.5px 4.5px 0 4.5px",
+                    xl: "5px 5px 0px 5px",
+                  },
                 }}
               >
-                <Box sx={{ margin: "5px 5px 0px 5px" }} component="div">
-                  <Grid container spacing={2} columns={16}>
-                    <Grid
-                      item
-                      xs={8}
-                      sx={{ display: "flex", alignItems: "center" }}
+                <Grid
+                  container
+                  spacing={{ xs: 0.2, sm: 0.5, lg: 1.7, xl: 2 }}
+                  columns={16}
+                >
+                  <Grid
+                    item
+                    xs={8}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <RadioGroup defaultValue="Một Chiều / Khứ Hồi" row>
+                      <FormControlLabel
+                        value="Một Chiều / Khứ Hồi"
+                        control={
+                          <Radio
+                            sx={{
+                              "& .MuiSvgIcon-root": {
+                                fontSize: {
+                                  xs: "0.5rem",
+                                  sm: "0.8rem",
+                                  lg: "1.3rem",
+                                  xl: "1.5rem",
+                                },
+                              },
+                            }}
+                          />
+                        }
+                        label="Một Chiều / Khứ Hồi"
+                        sx={{
+                          "& .css-ahj2mt-MuiTypography-root": {
+                            fontSize: {
+                              xs: "0.3rem",
+                              sm: "0.5rem",
+                              lg: "0.85rem",
+                              xl: "1rem",
+                            },
+                          },
+                        }}
+                      />
+                    </RadioGroup>
+                  </Grid>
+
+                  <Grid item xs={8}>
+                    <Link href="#" sx={{ textDecoration: "none" }}>
+                      <Chip
+                        label="Mở Bản Đồ"
+                        icon={
+                          <FmdGoodIcon
+                            style={{ color: "#1e88e5" }}
+                            sx={{
+                              fontSize: {
+                                xs: "0.5rem",
+                                sm: "0.8rem",
+                                lg: "1.3rem",
+                                xl: "1.5rem",
+                              },
+                            }}
+                          />
+                        }
+                        sx={{
+                          color: "white",
+                          fontSize: {
+                            xs: "0.3rem",
+                            sm: "8px",
+                            lg: "13px",
+                            xl: "16px",
+                          },
+                          width: "100%",
+                          height: {
+                            xs: "10px",
+                            sm: "15px",
+                            lg: "30px",
+                            xl: "32px",
+                          },
+                          cursor: "pointer",
+                        }}
+                      />
+                    </Link>
+                  </Grid>
+
+                  <Grid item xs={8}>
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      sx={{
+                        display: "flex",
+                        flexWrap: {
+                          xs: "wrap",
+                          sm: "wrap",
+                          lg: "inherit",
+                          xl: "inherit",
+                        },
+                      }}
                     >
-                      <RadioGroup defaultValue="Một Chiều / Khứ Hồi" row>
-                        <FormControlLabel
-                          value="Một Chiều / Khứ Hồi"
-                          control={<Radio />}
-                          label="Một Chiều / Khứ Hồi"
-                        />
-
-                        <FormControlLabel
-                          value="Nhiều Thành Phố"
-                          control={<Radio />}
-                          label="Nhiều Thành Phố"
-                        />
-                      </RadioGroup>
-                    </Grid>
-
-                    <Grid item xs={8}>
-                      <Link href="#" sx={{ textDecoration: "none" }}>
-                        <Chip
-                          label="Mở Bản Đồ"
-                          icon={<FmdGoodIcon style={{ color: "#1e88e5" }} />}
+                      <Box
+                        sx={{ width: "100%", position: "relative" }}
+                        component="div"
+                      >
+                        <Typography
+                          variant="body1"
                           sx={{
-                            color: "white",
-                            fontSize: "16px",
-                            width: "400px",
-                            cursor: "pointer",
+                            mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                            fontWeight: 600,
+                            fontSize: {
+                              xs: "0.35rem",
+                              sm: "0.6rem",
+                              lg: "0.85rem",
+                              xl: "1rem",
+                            },
+                          }}
+                        >
+                          From
+                        </Typography>
+                        <AirplanemodeActiveIcon
+                          sx={{
+                            position: "absolute",
+                            color: "#1e88e5",
+                            zIndex: 10,
+                            left: { xs: 3, xl: 0 },
+                            bottom: {
+                              xs: "-2px",
+                              sm: "4px",
+                              lg: "10px",
+                              xl: "12px",
+                            },
+                            height: "20px",
+                            fontSize: {
+                              xs: "0.4rem",
+                              sm: "0.7rem",
+                              lg: "1.2rem",
+                              xl: "1.5rem",
+                            },
                           }}
                         />
-                      </Link>
-                    </Grid>
-                    <Grid item xs={4} sx={{ position: "relative" }}>
-                      <Typography
-                        variant="body1"
-                        sx={{ mb: 1, fontWeight: 600 }}
-                      >
-                        From
-                      </Typography>
-                      <AirplanemodeActiveIcon
-                        style={{
-                          position: "absolute",
-                          color: "#1e88e5",
-                          zIndex: 10,
-                          left: "20px",
-                          bottom: "15px",
-                          height: "20px",
-                        }}
-                      />
-                      <Autocomplete
-                        size="small"
-                        options={countrys}
-                        getOptionLabel={(options) => options.label}
-                        value={from}
-                        onChange={(event, newValue) => setFrom(newValue)}
-                        sx={{
-                          backgroundColor: "white",
-                          borderRadius: "8px",
-                        }}
-                        renderInput={(params) => <TextField {...params} />}
-                      />
-                    </Grid>
-                    <Grid item xs={4} sx={{ position: "relative" }}>
-                      <Typography
-                        variant="body1"
-                        sx={{ mb: 1, fontWeight: 600 }}
-                      >
-                        To
-                      </Typography>
-                      <AirplanemodeActiveIcon
-                        style={{
-                          position: "absolute",
-                          color: "#1e88e5",
-                          zIndex: 10,
-                          left: "20px",
-                          bottom: "15px",
-                          height: "20px",
-                        }}
-                      />
-                      <Autocomplete
-                        size="small"
-                        options={countrys}
-                        getOptionLabel={(options) => options.label}
-                        value={to}
-                        onChange={(event, newValue) => setTo(newValue)}
-                        sx={{
-                          backgroundColor: "white",
-                          borderRadius: "8px",
-                        }}
-                        renderInput={(params) => <TextField {...params} />}
-                      />
-                    </Grid>
-
-                    <Grid item xs={8} sx={{ position: "relative" }}>
-                      <Typography
-                        variant="body1"
-                        sx={{ mb: 1, fontWeight: 600 }}
-                      >
-                        số hành khách
-                      </Typography>
-                      <PersonIcon
-                        sx={{
-                          position: "absolute",
-                          color: "#1e88e5",
-                          top: "55px",
-                          left: "20px",
-                          zIndex: 10,
-                        }}
-                      />
-                      <TextField
-                        select
-                        fullWidth
-                        size="small"
-                        value={adults}
-                        sx={{
-                          backgroundColor: "white",
-                          borderRadius: "8px",
-                          fontStyle: "italic",
-                        }}
-                      >
-                        {peoples.map((people) => (
-                          <MenuItem key={people.value} value={people.value}>
-                            {people.label}
-                          </MenuItem>
-                        ))}
-                      </TextField>
-                    </Grid>
-
-                    <Grid item xs={4}>
-                      <Typography
-                        variant="body1"
-                        sx={{ mb: 1, fontWeight: 600 }}
-                      >
-                        Calendar
-                      </Typography>
-                      <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DatePicker
-                          value={calendar}
-                          onChange={(newValue) => {
-                            setCalendar(newValue);
+                        <Autocomplete
+                          size="small"
+                          id="from"
+                          options={countrys}
+                          isOptionEqualToValue={(option, value) =>
+                            option.label === value.label
+                          }
+                          getOptionLabel={(options) => options.label}
+                          renderOption={(props, option) => {
+                            return (
+                              <>
+                                <Typography
+                                  key={option.value}
+                                  {...props}
+                                  sx={{
+                                    cursor: "pointer",
+                                    fontSize: {
+                                      xs: "0.4rem",
+                                      lg: "0.85rem",
+                                      xl: "1rem",
+                                    },
+                                    padding: 0,
+                                  }}
+                                >
+                                  {option.label}
+                                </Typography>
+                              </>
+                            );
                           }}
-                          renderInput={(params) => (
+                          value={from}
+                          onChange={(event, newValue) => setFrom(newValue)}
+                          sx={{
+                            backgroundColor: "white",
+                            borderRadius: "8px",
+                          }}
+                          renderInput={(params) => <TextField {...params} />}
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          margin: { xs: "0" },
+                          position: "relative",
+                        }}
+                        component="div"
+                      >
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                            fontWeight: 600,
+                            fontSize: {
+                              xs: "0.35rem",
+                              sm: "0.6rem",
+                              lg: "0.85rem",
+                              xl: "1rem",
+                            },
+                          }}
+                        >
+                          To
+                        </Typography>
+                        <AirplanemodeActiveIcon
+                          sx={{
+                            position: "absolute",
+                            color: "#1e88e5",
+                            zIndex: 10,
+                            left: { xs: 3, xl: 0 },
+                            bottom: {
+                              xs: "-2px",
+                              sm: "4px",
+                              lg: "10px",
+                              xl: "12px",
+                            },
+                            height: "20px",
+                            fontSize: {
+                              xs: "0.4rem",
+                              sm: "0.8rem",
+                              lg: "1.4rem",
+                              xl: "1.5rem",
+                            },
+                          }}
+                        />
+                        <Autocomplete
+                          size="small"
+                          id="to"
+                          options={countrys}
+                          getOptionLabel={(options) => options.label}
+                          renderOption={(props, option) => {
+                            return (
+                              <>
+                                <Box
+                                  component="li"
+                                  key={option.value}
+                                  {...props}
+                                >
+                                  <Typography
+                                    sx={{
+                                      cursor: "pointer",
+                                      fontSize: {
+                                        xs: "0.4rem",
+                                        lg: "0.85rem",
+                                        xl: "1rem",
+                                      },
+                                      minHeight: 0,
+                                    }}
+                                  >
+                                    {option.label}
+                                  </Typography>
+                                </Box>
+                              </>
+                            );
+                          }}
+                          value={to}
+                          onChange={(event, newValue) => setTo(newValue)}
+                          sx={{
+                            backgroundColor: "white",
+                            borderRadius: "8px",
+                          }}
+                          renderInput={(params) => <TextField {...params} />}
+                        />
+                      </Box>
+                    </Stack>
+                  </Grid>
+
+                  <Grid item xs={8} sx={{ position: "relative" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                        fontWeight: 600,
+                        fontSize: {
+                          xs: "0.35rem",
+                          sm: "0.6rem",
+                          lg: "0.9rem",
+                          xl: "1rem",
+                        },
+                      }}
+                    >
+                      số hành khách
+                    </Typography>
+                    <PersonIcon
+                      sx={{
+                        position: "absolute",
+                        color: "#1e88e5",
+                        top: { xs: "16px", sm: "28px", xl: "55px" },
+                        left: { xs: "6px", sm: "6px", xl: "20px" },
+                        zIndex: 10,
+                        fontSize: { xs: "0.4rem", sm: "0.7rem", xl: "1.5rem" },
+                      }}
+                    />
+                    <TextField
+                      select
+                      fullWidth
+                      size="small"
+                      id="people"
+                      value={adults}
+                      sx={{
+                        backgroundColor: "white",
+                        borderRadius: "8px",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {peoples.map((people) => (
+                        <MenuItem key={people.value} value={people.value}>
+                          {people.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </Grid>
+
+                  <Grid item xs={4}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        mb: { xs: 0.2, sm: 0.5, xl: 1 },
+                        fontWeight: 600,
+                        fontSize: { xs: "0.35rem", sm: "0.6rem", xl: "1rem" },
+                      }}
+                    >
+                      Calendar
+                    </Typography>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                      <DatePicker
+                        disablePast
+                        value={calendar}
+                        onChange={(newValue) => {
+                          setCalendar(newValue);
+                        }}
+                        renderInput={(params) => {
+                          return (
                             <TextField
                               {...params}
-                              style={{
+                              id="datepiker"
+                              sx={{
                                 backgroundColor: "white",
                                 borderRadius: "8px",
                                 color: "#1e88e5",
                               }}
                             />
-                          )}
-                        />
-                      </LocalizationProvider>
-                    </Grid>
-                    <Grid item xs={4}>
-                      <FormGroup>
-                        <FormControlLabel
-                          control={<Checkbox />}
-                          label="Khứ Hồi"
-                        />
-                      </FormGroup>
-                    </Grid>
-
-                    <Grid item xs={8} sx={{ position: "relative" }}>
-                      <Typography
-                        variant="body1"
-                        sx={{ mb: 1, fontWeight: 600 }}
-                      >
-                        hạng ghế
-                      </Typography>
-                      <ChairIcon
-                        style={{
-                          position: "absolute",
-                          color: "#1e88e5",
-                          zIndex: 10,
-                          left: "20px",
-                          bottom: "26px",
-                          height: "20px",
+                          );
                         }}
                       />
-                      <TextField
-                        select
-                        fullWidth
-                        size="small"
-                        onChange={(event) => setRankChairs(event.target.value)}
-                        value={rankChairs}
-                        sx={{
-                          backgroundColor: "white",
-                          borderRadius: "8px",
-                          fontStyle: "italic",
-                        }}
-                      >
-                        {rankChair.map((chair) => (
-                          <MenuItem key={chair.value} value={chair.value}>
-                            {chair.label}
-                          </MenuItem>
-                        ))}
-                      </TextField>
-                    </Grid>
+                    </LocalizationProvider>
                   </Grid>
-                </Box>
+                  <Grid item xs={4}></Grid>
 
-                <Box
+                  <Grid item xs={8} sx={{ position: "relative" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        mb: { xs: 0.2, sm: 0.5, xl: 1 },
+                        fontWeight: 600,
+                        fontSize: { xs: "0.35rem", sm: "0.6rem", xl: "1rem" },
+                      }}
+                    >
+                      hạng ghế
+                    </Typography>
+                    <ChairIcon
+                      sx={{
+                        position: "absolute",
+                        color: "#1e88e5",
+                        zIndex: 10,
+                        left: { xs: "8px", sm: "8px", xl: "20px" },
+                        bottom: { xs: "6px", sm: "4px", xl: "26px" },
+                        height: "20px",
+                        fontSize: { xs: "0.4rem", sm: "0.6rem", xl: "1.5rem" },
+                      }}
+                    />
+                    <TextField
+                      select
+                      fullWidth
+                      size="small"
+                      onChange={(event) => setRankChairs(event.target.value)}
+                      value={rankChairs}
+                      id="rankchairs"
+                      sx={{
+                        backgroundColor: "white",
+                        borderRadius: "8px",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {rankChair.map((chair) => (
+                        <MenuItem key={chair.value} value={chair.value}>
+                          {chair.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </Grid>
+                </Grid>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "right",
+                  mr: { xs: 0, sm: 0.3, xl: 0.5 },
+                  mt: { xs: 0, sm: 1, xl: 0 },
+                }}
+              >
+                <LoadingButton
+                  type="submit"
+                  variant="contained"
                   sx={{
-                    display: "flex",
-                    justifyContent: "right",
-                    mr: 2,
-                    mt: 0,
-                  }}
-                >
-                  <LoadingButton
-                    type="submit"
-                    variant="contained"
-                    sx={{
+                    color: "white",
+                    textTransform: "capitalize",
+                    ":hover": {
+                      transition: "all 1s ease",
+                      backgroundColor: "#d50000",
                       color: "white",
-                      textTransform: "capitalize",
-                      ":hover": {
-                        transition: "all 1s ease",
-                        backgroundColor: "#d50000",
-                        color: "white",
-                      },
+                    },
+                    fontSize: { xs: "0.4rem", sm: "0.5rem", xl: "0.875rem" },
+                    padding: { xs: "4px 12px", sm: "6px 16px", xl: "6px 16px" },
+                    lineHeight: { xs: 0, sm: 0.6, xl: 1.75 },
+                  }}
+                  loading={isSubmitting}
+                >
+                  <SearchIcon
+                    sx={{
+                      mr: { xs: 0, sm: 0.5, xl: 0.5 },
+                      fontSize: { xs: "0.6rem", sm: "0.8rem", xl: "1.5rem" },
                     }}
-                    loading={isSubmitting}
-                  >
-                    <SearchIcon sx={{ mr: 0.5 }} />
-                    tìm kiếm chuyến bay
-                  </LoadingButton>
-                </Box>
-              </Card>
-            </form>
-          </Box>
+                  />
+                  tìm kiếm chuyến bay
+                </LoadingButton>
+              </Box>
+            </Card>
+          </form>
         </Stack>
       </Paper>
     </Container>
