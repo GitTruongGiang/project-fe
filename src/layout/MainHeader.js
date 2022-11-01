@@ -68,7 +68,7 @@ function MainHeader() {
           onClick={() => handeHome()}
           sx={{
             padding: {
-              xs: "0.5px",
+              xs: "4px",
               sm: "5px",
               md: "6px",
               lg: "7px",
@@ -80,8 +80,8 @@ function MainHeader() {
             color="info"
             sx={{
               fontSize: {
-                xs: "0.5rem",
-                sm: "1.1rem",
+                xs: "1.1rem",
+                sm: "1.2rem",
                 md: "1.3rem",
                 lg: "1.4rem",
                 xl: "1.5rem",
@@ -98,7 +98,7 @@ function MainHeader() {
           onClick={handleBookingList}
           sx={{
             padding: {
-              xs: "0.5px",
+              xs: "4px",
               sm: "5px",
               md: "6px",
               lg: "7px",
@@ -110,8 +110,8 @@ function MainHeader() {
             color="info"
             sx={{
               fontSize: {
-                xs: "0.5rem",
-                sm: "1.1rem",
+                xs: "1.1rem",
+                sm: "1.2rem",
                 md: "1.3rem",
                 lg: "1.4rem",
                 xl: "1.5rem",
@@ -126,7 +126,7 @@ function MainHeader() {
   const list = () => (
     <Box
       sx={{
-        width: { xs: 80, sm: 180, md: 210, lg: 250, xl: 300 },
+        width: { xs: 150, sm: 180, md: 210, lg: 250, xl: 300 },
         zIndex: 100,
       }}
     >
@@ -139,7 +139,7 @@ function MainHeader() {
                   onClick={() => handeHome()}
                   sx={{
                     padding: {
-                      xs: "2px",
+                      xs: "4px",
                       sm: "5px",
                       md: "6px",
                       lg: "7px",
@@ -150,7 +150,7 @@ function MainHeader() {
                   <ListItemIcon
                     sx={{
                       minWidth: 0,
-                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                      mr: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                     }}
                   >
                     {index.icon}
@@ -158,9 +158,9 @@ function MainHeader() {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "0.4rem",
-                        sm: "0.7rem",
-                        md: "0.8rem",
+                        xs: "0.75rem",
+                        sm: "0.8rem",
+                        md: "0.85rem",
                         lg: "0.9rem",
                         xl: "1rem",
                       },
@@ -174,7 +174,7 @@ function MainHeader() {
                   onClick={handleBookingList}
                   sx={{
                     padding: {
-                      xs: "2px",
+                      xs: "4px",
                       sm: "5px",
                       md: "6px",
                       lg: "7px",
@@ -185,7 +185,7 @@ function MainHeader() {
                   <ListItemIcon
                     sx={{
                       minWidth: 0,
-                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                      mr: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                     }}
                   >
                     {index.icon}
@@ -193,9 +193,9 @@ function MainHeader() {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "0.4rem",
-                        sm: "0.7rem",
-                        md: "0.8rem",
+                        xs: "0.75rem",
+                        sm: "0.8rem",
+                        md: "0.85rem",
                         lg: "0.9rem",
                         xl: "1rem",
                       },
@@ -208,7 +208,7 @@ function MainHeader() {
                 <ListItemButton
                   sx={{
                     padding: {
-                      xs: "2px",
+                      xs: "4px",
                       sm: "5px",
                       md: "6px",
                       lg: "7px",
@@ -219,7 +219,7 @@ function MainHeader() {
                   <ListItemIcon
                     sx={{
                       minWidth: 0,
-                      mr: { xs: 0.2, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+                      mr: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                     }}
                   >
                     {index.icon}
@@ -227,9 +227,9 @@ function MainHeader() {
                   <Typography
                     sx={{
                       fontSize: {
-                        xs: "0.4rem",
+                        xs: "0.75rem",
                         sm: "0.8rem",
-                        md: "0.8rem",
+                        md: "0.85rem",
                         lg: "0.9rem",
                         xl: "1rem",
                       },
@@ -415,7 +415,7 @@ function MainHeader() {
                     noWrap
                     sx={{
                       fontSize: {
-                        xs: "0.5rem",
+                        xs: "0.7rem",
                         sm: "0.75rem",
                         md: "0.8rem",
                         lg: "0.85rem",
@@ -429,7 +429,7 @@ function MainHeader() {
                     sx={{
                       color: "text.secondary",
                       fontSize: {
-                        xs: "0.5rem",
+                        xs: "0.7rem",
                         sm: "0.75rem",
                         md: "0.8rem",
                         lg: "0.85rem",
@@ -445,7 +445,7 @@ function MainHeader() {
                   sx={{
                     borderStyle: "dashed",
                     mr: {
-                      xs: "3px",
+                      xs: "4px",
                       sm: "5px",
                       md: "6px",
                       lg: "7px",
@@ -465,7 +465,7 @@ function MainHeader() {
                       xl: "6px 16px",
                     },
                     fontSize: {
-                      xs: "0.5rem",
+                      xs: "0.6rem",
                       sm: "0.7rem",
                       md: "0.8rem",
                       lg: "0.9rem",
@@ -498,13 +498,13 @@ function MainHeader() {
                     mx: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                     padding: {
                       xs: "2px 16px",
-                      sm: "6px 16px",
-                      md: "6px 16px",
-                      lg: "6px  16px",
+                      sm: "3px 16px",
+                      md: "4px 16px",
+                      lg: "5px  16px",
                       xl: "6px 16px",
                     },
                     fontSize: {
-                      xs: "0.5rem",
+                      xs: "0.6rem",
                       sm: "0.7rem",
                       md: "0.8rem",
                       lg: "0.9rem",
