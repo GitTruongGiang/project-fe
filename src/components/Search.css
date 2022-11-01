@@ -35,24 +35,24 @@
   }
 
   .css-oxsoa5-MuiAutocomplete-root {
-    height: 16px;
+    height: 20px;
   }
   .css-ic39pb {
-    height: 16px;
+    height: 20px;
   }
   #from {
     height: 1.25em;
-    font-size: 6px;
+    font-size: 8px;
     padding: 0px 6px;
     min-width: 100%;
     margin-left: 8px;
   }
-  .css-vubbuv {
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv {
     font-size: 1.1rem;
   }
   #to {
     height: 1.25em;
-    font-size: 6px;
+    font-size: 8px;
     padding: 0px 6px;
     min-width: 100%;
     margin-left: 8px;

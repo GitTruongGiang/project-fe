@@ -67,7 +67,7 @@ function Search() {
     navigate(`/flights?from=${from.value}&to=${to.value}&fromDay=${newDate}`);
   };
   return (
-    <Container sx={{ width: { xs: 250, sm: 400, md: 500, lg: 700, xl: 900 } }}>
+    <Container sx={{ width: { xs: 300, sm: 350, md: 500, lg: 750, xl: 900 } }}>
       <Paper elevation={8}>
         <Stack spacing={2}>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -91,7 +91,7 @@ function Search() {
               >
                 <Grid
                   container
-                  spacing={{ xs: 0.2, sm: 0.5, lg: 1.7, xl: 2 }}
+                  spacing={{ xs: 1.2, sm: 1.4, md: 1.6, lg: 1.8, xl: 2 }}
                   columns={16}
                 >
                   <Grid
@@ -200,10 +200,10 @@ function Search() {
                             },
                             height: "20px",
                             fontSize: {
-                              xs: "1rem",
-                              sm: "1.2rem",
-                              md: "1.3rem",
-                              lg: "1.4rem",
+                              xs: "0.7rem",
+                              sm: "0.9rem",
+                              md: "1.1rem",
+                              lg: "1.3rem",
                               xl: "1.5rem",
                             },
                           }}
@@ -286,10 +286,10 @@ function Search() {
                             },
                             height: "20px",
                             fontSize: {
-                              xs: "1rem",
-                              sm: "1.2rem",
-                              md: "1.3rem",
-                              lg: "1.4rem",
+                              xs: "0.7rem",
+                              sm: "0.9rem",
+                              md: "1.1rem",
+                              lg: "1.3rem",
                               xl: "1.5rem",
                             },
                           }}
