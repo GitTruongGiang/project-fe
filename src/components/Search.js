@@ -105,20 +105,7 @@ function Search() {
                     <RadioGroup defaultValue="Một Chiều / Khứ Hồi" row>
                       <FormControlLabel
                         value="Một Chiều / Khứ Hồi"
-                        control={
-                          <Radio
-                            sx={{
-                              "& .MuiSvgIcon-root": {
-                                fontSize: {
-                                  xs: "0.8rem",
-                                  sm: "1.2rem",
-                                  lg: "1.4rem",
-                                  xl: "1.5rem",
-                                },
-                              },
-                            }}
-                          />
-                        }
+                        control={<Radio />}
                         label="Một Chiều / Khứ Hồi"
                       />
                     </RadioGroup>
@@ -133,9 +120,10 @@ function Search() {
                             style={{ color: "#1e88e5" }}
                             sx={{
                               fontSize: {
-                                xs: "0.5rem",
-                                sm: "0.8rem",
-                                lg: "1.3rem",
+                                xs: "1.1rem",
+                                sm: "1.2rem",
+                                md: "1.3rem",
+                                lg: "1.4rem",
                                 xl: "1.5rem",
                               },
                             }}
@@ -144,15 +132,17 @@ function Search() {
                         sx={{
                           color: "white",
                           fontSize: {
-                            xs: "0.3rem",
-                            sm: "8px",
-                            lg: "13px",
+                            xs: "8px",
+                            sm: "10px",
+                            md: "12px",
+                            lg: "14px",
                             xl: "16px",
                           },
                           width: "100%",
                           height: {
-                            xs: "10px",
-                            sm: "15px",
+                            xs: "24px",
+                            sm: "26px",
+                            md: "28px",
                             lg: "30px",
                             xl: "32px",
                           },
