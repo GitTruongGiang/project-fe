@@ -288,7 +288,7 @@ function MainHeader() {
           sx={{
             backgroundColor: "rgb(35,36,36)",
             color: "white",
-            height: { xs: 25, sm: 40, md: 55, lg: 64, xl: 68 },
+            height: { xs: 40, sm: 40, md: 55, lg: 64, xl: 68 },
           }}
         >
           <Toolbar
@@ -309,7 +309,7 @@ function MainHeader() {
                 lg: "20px",
                 xl: "24px",
               },
-              minHeight: { xs: 25, sm: 40, md: 55, lg: 64, xl: 68 },
+              minHeight: { xs: 40, sm: 40, md: 55, lg: 64, xl: 68 },
             }}
           >
             <IconButton
@@ -324,9 +324,9 @@ function MainHeader() {
                 sx={{
                   ":hover": { color: "#f44336" },
                   fontSize: {
-                    xs: "0.5rem",
-                    sm: "0.8rem",
-                    md: "1.2rem",
+                    xs: "1rem",
+                    sm: "1.2rem",
+                    md: "1.3rem",
                     lg: "1.4rem",
                     xl: "1.5rem",
                   },
@@ -340,10 +340,10 @@ function MainHeader() {
                 flexGrow: 1,
                 color: "white",
                 fontSize: {
-                  xs: "0.4rem",
-                  sm: "0.8rem",
-                  md: "1.05rem",
-                  lg: "1.15rem",
+                  xs: "0.7rem",
+                  sm: "1rem",
+                  md: "1.1rem",
+                  lg: "1.2rem",
                   xl: "1.25rem",
                 },
               }}
@@ -354,7 +354,7 @@ function MainHeader() {
                   color: "#1e88e5",
                   ml: { xs: 0.1, sm: 0.2, md: 0.3, lg: 0.4, xl: 0.5 },
                   fontSize: {
-                    xs: "0.4rem",
+                    xs: "0.7rem",
                     sm: "0.8rem",
                     md: "1.3rem",
                     lg: "1.4rem",
@@ -369,7 +369,7 @@ function MainHeader() {
               variant="body2"
               className="btn-appbar"
               sx={{
-                mr: { xs: 0.2, sm: 1, md: 1.6, lg: 1.8, xl: 2 },
+                mr: { xs: 1, sm: 1.2, md: 1.6, lg: 1.8, xl: 2 },
               }}
               onClick={handleBookingList}
             >
@@ -381,8 +381,8 @@ function MainHeader() {
                 src={user?.avatarUrl}
                 alt={user?.name}
                 sx={{
-                  width: { xs: 12, sm: 22, md: 28, lg: 30, xl: 32 },
-                  height: { xs: 12, sm: 22, md: 28, lg: 30, xl: 32 },
+                  width: { xs: 20, sm: 22, md: 28, lg: 30, xl: 32 },
+                  height: { xs: 20, sm: 22, md: 28, lg: 30, xl: 32 },
                   cursor: "pointer",
                   ":hover": { backgroundColor: "#1e88e5" },
                 }}
