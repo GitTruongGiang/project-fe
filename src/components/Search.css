@@ -88,6 +88,7 @@
     padding: 4.5px 14px;
     font-size: 8px;
     line-height: 0.6rem;
+    margin-left: 5px;
   }
   #people-label {
     font-size: 10px;
@@ -101,23 +102,12 @@
   .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.MuiSelect-iconOpen.css-1h1jq32-MuiSvgIcon-root-MuiSelect-icon {
     font-size: 10px;
   }
-  .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-  .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list
-    li {
-    font-size: 6px;
-    min-height: 0px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-  }
   #datepiker {
     font-size: 0.4rem;
     padding: 4px 8px;
     line-height: 0;
   }
-  .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1pz723x-MuiPaper-root-MuiDialog-paper {
+  /* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1pz723x-MuiPaper-root-MuiDialog-paper {
     min-width: 220px;
   }
   .MuiTypography-root.MuiTypography-overline.css-i0ws07-MuiTypography-root {
@@ -176,7 +166,7 @@
   }
   .MuiCalendarPicker-root.css-169iwlq-MuiCalendarPicker-root {
     width: 220px;
-  }
+  } */
   #rankchairs {
     font-size: 0.4rem;
     padding: 4px 14px;
