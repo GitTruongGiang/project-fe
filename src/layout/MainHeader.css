@@ -71,15 +71,15 @@
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .btn-appbar {
-    min-width: 70px;
+    min-width: 90px;
     width: -moz-fit-content;
     width: fit-content;
     background-color: white;
-    padding: 0 6px;
-    height: 20px;
+    padding: 0 10px;
+    height: 23px;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
-    font-size: 8px;
+    font-size: 10px;
     color: #000000;
     letter-spacing: 0.7px;
     line-height: 1.4;

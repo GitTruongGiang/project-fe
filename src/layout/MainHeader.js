@@ -381,8 +381,8 @@ function MainHeader() {
                 src={user?.avatarUrl}
                 alt={user?.name}
                 sx={{
-                  width: { xs: 25, sm: 22, md: 28, lg: 30, xl: 32 },
-                  height: { xs: 25, sm: 22, md: 28, lg: 30, xl: 32 },
+                  width: { xs: 25, sm: 26, md: 28, lg: 30, xl: 32 },
+                  height: { xs: 25, sm: 26, md: 28, lg: 30, xl: 32 },
                   cursor: "pointer",
                   ":hover": { backgroundColor: "#1e88e5" },
                 }}
