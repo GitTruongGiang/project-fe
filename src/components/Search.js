@@ -342,11 +342,12 @@ function Search() {
                     <Typography
                       variant="body1"
                       sx={{
-                        mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                        mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                         fontWeight: 600,
                         fontSize: {
-                          xs: "0.35rem",
-                          sm: "0.6rem",
+                          xs: "0.6rem",
+                          sm: "0.7rem",
+                          md: "0.8rem",
                           lg: "0.9rem",
                           xl: "1rem",
                         },
@@ -358,10 +359,16 @@ function Search() {
                       sx={{
                         position: "absolute",
                         color: "#1e88e5",
-                        top: { xs: "16px", sm: "28px", xl: "55px" },
-                        left: { xs: "6px", sm: "6px", xl: "20px" },
+                        top: { xs: "32px", sm: "28px", xl: "55px" },
+                        left: { xs: "12px", sm: "6px", xl: "20px" },
                         zIndex: 10,
-                        fontSize: { xs: "0.4rem", sm: "0.7rem", xl: "1.5rem" },
+                        fontSize: {
+                          xs: "0.7rem",
+                          sm: "0.9rem",
+                          md: "1.1rem",
+                          lg: "1.3rem",
+                          xl: "1.5rem",
+                        },
                       }}
                     />
                     <TextField
