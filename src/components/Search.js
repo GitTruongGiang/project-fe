@@ -73,8 +73,20 @@ function Search() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <Card
               sx={{
-                padding: { xs: "2px 6px", sm: "6px", lg: "9px", xl: "10px" },
-                borderRadius: { xs: "4px", sm: "6px", lg: "7px", xl: "8px" },
+                padding: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "6px",
+                  lg: "9px",
+                  xl: "10px",
+                },
+                borderRadius: {
+                  xs: "4px",
+                  sm: "5px",
+                  md: "6px",
+                  lg: "7px",
+                  xl: "8px",
+                },
                 backgroundColor: "#24292e",
                 color: "white",
               }}
