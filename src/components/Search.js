@@ -395,9 +395,15 @@ function Search() {
                     <Typography
                       variant="body1"
                       sx={{
-                        mb: { xs: 0.2, sm: 0.5, xl: 1 },
+                        mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                         fontWeight: 600,
-                        fontSize: { xs: "0.35rem", sm: "0.6rem", xl: "1rem" },
+                        fontSize: {
+                          xs: "0.6rem",
+                          sm: "0.7rem",
+                          md: "0.8rem",
+                          lg: "0.9rem",
+                          xl: "1rem",
+                        },
                       }}
                     >
                       Calendar
@@ -431,9 +437,15 @@ function Search() {
                     <Typography
                       variant="body1"
                       sx={{
-                        mb: { xs: 0.2, sm: 0.5, xl: 1 },
+                        mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                         fontWeight: 600,
-                        fontSize: { xs: "0.35rem", sm: "0.6rem", xl: "1rem" },
+                        fontSize: {
+                          xs: "0.6rem",
+                          sm: "0.7rem",
+                          md: "0.8rem",
+                          lg: "0.9rem",
+                          xl: "1rem",
+                        },
                       }}
                     >
                       hạng ghế
@@ -443,10 +455,16 @@ function Search() {
                         position: "absolute",
                         color: "#1e88e5",
                         zIndex: 10,
-                        left: { xs: "8px", sm: "8px", xl: "20px" },
+                        left: { xs: "15px", sm: "8px", xl: "20px" },
                         bottom: { xs: "6px", sm: "4px", xl: "26px" },
                         height: "20px",
-                        fontSize: { xs: "0.4rem", sm: "0.6rem", xl: "1.5rem" },
+                        fontSize: {
+                          xs: "0.7rem",
+                          sm: "0.9rem",
+                          md: "1.1rem",
+                          lg: "1.3rem",
+                          xl: "1.5rem",
+                        },
                       }}
                     />
                     <TextField
@@ -477,7 +495,7 @@ function Search() {
                   display: "flex",
                   justifyContent: "right",
                   mr: { xs: 0, sm: 0.3, xl: 0.5 },
-                  mt: { xs: 0, sm: 1, xl: 0 },
+                  mt: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                 }}
               >
                 <LoadingButton
@@ -491,7 +509,13 @@ function Search() {
                       backgroundColor: "#d50000",
                       color: "white",
                     },
-                    fontSize: { xs: "0.4rem", sm: "0.5rem", xl: "0.875rem" },
+                    fontSize: {
+                      xs: "8px",
+                      sm: "10px",
+                      md: "12px",
+                      lg: "14px",
+                      xl: "16px",
+                    },
                     padding: { xs: "4px 12px", sm: "6px 16px", xl: "6px 16px" },
                     lineHeight: { xs: 0, sm: 0.6, xl: 1.75 },
                   }}
@@ -500,7 +524,13 @@ function Search() {
                   <SearchIcon
                     sx={{
                       mr: { xs: 0, sm: 0.5, xl: 0.5 },
-                      fontSize: { xs: "0.6rem", sm: "0.8rem", xl: "1.5rem" },
+                      fontSize: {
+                        xs: "0.7rem",
+                        sm: "0.9rem",
+                        md: "1.1rem",
+                        lg: "1.3rem",
+                        xl: "1.5rem",
+                      },
                     }}
                   />
                   tìm kiếm chuyến bay
