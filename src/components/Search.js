@@ -371,8 +371,8 @@ function Search() {
                       sx={{
                         position: "absolute",
                         color: "#1e88e5",
-                        top: { xs: "32px", sm: "28px", xl: "55px" },
-                        left: { xs: "12px", sm: "6px", xl: "20px" },
+                        top: { xs: "32px", sm: "37px", xl: "55px" },
+                        left: { xs: "12px", sm: "15px", xl: "20px" },
                         zIndex: 10,
                         fontSize: {
                           xs: "0.7rem",
@@ -467,8 +467,8 @@ function Search() {
                         position: "absolute",
                         color: "#1e88e5",
                         zIndex: 10,
-                        left: { xs: "15px", sm: "8px", xl: "20px" },
-                        bottom: { xs: "6px", sm: "4px", xl: "26px" },
+                        left: { xs: "15px", sm: "16px", xl: "20px" },
+                        bottom: { xs: "6px", sm: "5px", xl: "26px" },
                         height: "20px",
                         fontSize: {
                           xs: "0.7rem",
@@ -528,7 +528,7 @@ function Search() {
                       lg: "14px",
                       xl: "16px",
                     },
-                    padding: { xs: "4px 12px", sm: "6px 16px", xl: "6px 16px" },
+                    padding: { xs: "4px 12px", sm: "6px 6px", xl: "6px 16px" },
                     lineHeight: { xs: 0, sm: 0.6, xl: 1.75 },
                   }}
                   loading={isSubmitting}
