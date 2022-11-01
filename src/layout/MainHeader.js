@@ -288,7 +288,7 @@ function MainHeader() {
           sx={{
             backgroundColor: "rgb(35,36,36)",
             color: "white",
-            height: { xs: 40, sm: 40, md: 55, lg: 64, xl: 68 },
+            height: { xs: 45, sm: 40, md: 55, lg: 64, xl: 68 },
           }}
         >
           <Toolbar
@@ -324,10 +324,10 @@ function MainHeader() {
                 sx={{
                   ":hover": { color: "#f44336" },
                   fontSize: {
-                    xs: "1rem",
-                    sm: "1.2rem",
-                    md: "1.3rem",
-                    lg: "1.4rem",
+                    xs: "1.2rem",
+                    sm: "1.35rem",
+                    md: "1.4rem",
+                    lg: "1.45rem",
                     xl: "1.5rem",
                   },
                 }}
@@ -340,9 +340,9 @@ function MainHeader() {
                 flexGrow: 1,
                 color: "white",
                 fontSize: {
-                  xs: "0.7rem",
-                  sm: "1rem",
-                  md: "1.1rem",
+                  xs: "0.9rem",
+                  sm: "1.1rem",
+                  md: "1.15rem",
                   lg: "1.2rem",
                   xl: "1.25rem",
                 },
@@ -354,8 +354,8 @@ function MainHeader() {
                   color: "#1e88e5",
                   ml: { xs: 0.1, sm: 0.2, md: 0.3, lg: 0.4, xl: 0.5 },
                   fontSize: {
-                    xs: "0.7rem",
-                    sm: "0.8rem",
+                    xs: "1rem",
+                    sm: "1.2rem",
                     md: "1.3rem",
                     lg: "1.4rem",
                     xl: "1.5rem",
@@ -381,8 +381,8 @@ function MainHeader() {
                 src={user?.avatarUrl}
                 alt={user?.name}
                 sx={{
-                  width: { xs: 20, sm: 22, md: 28, lg: 30, xl: 32 },
-                  height: { xs: 20, sm: 22, md: 28, lg: 30, xl: 32 },
+                  width: { xs: 25, sm: 22, md: 28, lg: 30, xl: 32 },
+                  height: { xs: 25, sm: 22, md: 28, lg: 30, xl: 32 },
                   cursor: "pointer",
                   ":hover": { backgroundColor: "#1e88e5" },
                 }}

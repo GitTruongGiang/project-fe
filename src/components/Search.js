@@ -110,9 +110,9 @@ function Search() {
                             sx={{
                               "& .MuiSvgIcon-root": {
                                 fontSize: {
-                                  xs: "0.5rem",
-                                  sm: "0.8rem",
-                                  lg: "1.3rem",
+                                  xs: "0.8rem",
+                                  sm: "1.2rem",
+                                  lg: "1.4rem",
                                   xl: "1.5rem",
                                 },
                               },
@@ -120,16 +120,6 @@ function Search() {
                           />
                         }
                         label="Một Chiều / Khứ Hồi"
-                        sx={{
-                          "& .css-ahj2mt-MuiTypography-root": {
-                            fontSize: {
-                              xs: "0.3rem",
-                              sm: "0.5rem",
-                              lg: "0.85rem",
-                              xl: "1rem",
-                            },
-                          },
-                        }}
                       />
                     </RadioGroup>
                   </Grid>

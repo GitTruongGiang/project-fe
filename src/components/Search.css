@@ -12,6 +12,9 @@
   .css-oxsoa5-MuiAutocomplete-root {
     height: 16px;
   }
+  .css-1vbggne-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    font-size: 0.5rem;
+  }
   #from {
     height: 0px;
     font-size: 5px;
@@ -42,8 +45,6 @@
   }
   .MuiAutocomplete-listbox {
     font-size: 6px;
-  }
-  .MuiAutocomplete-option {
   }
   .MuiAutocomplete-paper {
     padding-top: 0px;
