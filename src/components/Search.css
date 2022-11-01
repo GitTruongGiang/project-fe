@@ -33,17 +33,29 @@
   .MuiChip-root.MuiChip-filled.MuiChip-sizeMedium.MuiChip-colorDefault.MuiChip-filledDefault.css-g3j8dt-MuiChip-root {
     font-size: 0.65rem;
   }
+
+  .css-oxsoa5-MuiAutocomplete-root {
+    height: 16px;
+  }
+  .css-ic39pb {
+    height: 16px;
+  }
   #from {
     height: 1.25em;
     font-size: 6px;
     padding: 0px 6px;
-    min-width: 100px;
+    min-width: 100%;
+    margin-left: 8px;
+  }
+  .css-vubbuv {
+    font-size: 1.1rem;
   }
   #to {
     height: 1.25em;
     font-size: 6px;
     padding: 0px 6px;
-    min-width: 100px;
+    min-width: 100%;
+    margin-left: 8px;
   }
   .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-sizeSmall.MuiInputBase-adornedEnd.MuiAutocomplete-inputRoot.css-1wcdjql-MuiInputBase-root-MuiOutlinedInput-root {
     padding-bottom: 5px;

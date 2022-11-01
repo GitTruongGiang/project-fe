@@ -193,7 +193,7 @@ function Search() {
                             zIndex: 10,
                             left: { xs: 3, xl: 0 },
                             bottom: {
-                              xs: "-2px",
+                              xs: "0px",
                               sm: "4px",
                               lg: "10px",
                               xl: "12px",
@@ -259,12 +259,13 @@ function Search() {
                         <Typography
                           variant="body1"
                           sx={{
-                            mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                            mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                             fontWeight: 600,
                             fontSize: {
-                              xs: "0.35rem",
-                              sm: "0.6rem",
-                              lg: "0.85rem",
+                              xs: "0.6rem",
+                              sm: "0.7rem",
+                              md: "0.8rem",
+                              lg: "0.9rem",
                               xl: "1rem",
                             },
                           }}
@@ -278,15 +279,16 @@ function Search() {
                             zIndex: 10,
                             left: { xs: 3, xl: 0 },
                             bottom: {
-                              xs: "-2px",
+                              xs: "0px",
                               sm: "4px",
                               lg: "10px",
                               xl: "12px",
                             },
                             height: "20px",
                             fontSize: {
-                              xs: "0.4rem",
-                              sm: "0.8rem",
+                              xs: "1rem",
+                              sm: "1.2rem",
+                              md: "1.3rem",
                               lg: "1.4rem",
                               xl: "1.5rem",
                             },
@@ -309,8 +311,10 @@ function Search() {
                                     sx={{
                                       cursor: "pointer",
                                       fontSize: {
-                                        xs: "0.4rem",
-                                        lg: "0.85rem",
+                                        xs: "0.6rem",
+                                        sm: "0.7rem",
+                                        md: "0.8rem",
+                                        lg: "0.9rem",
                                         xl: "1rem",
                                       },
                                       minHeight: 0,
