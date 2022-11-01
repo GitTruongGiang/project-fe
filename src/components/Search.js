@@ -107,7 +107,6 @@ function Search() {
                         value="Một Chiều / Khứ Hồi"
                         control={<Radio />}
                         label="Một Chiều / Khứ Hồi"
-                        sx={{}}
                       />
                     </RadioGroup>
                   </Grid>
@@ -174,12 +173,13 @@ function Search() {
                         <Typography
                           variant="body1"
                           sx={{
-                            mb: { xs: 0.2, sm: 0.5, lg: 0.9, xl: 1 },
+                            mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
                             fontWeight: 600,
                             fontSize: {
-                              xs: "0.35rem",
-                              sm: "0.6rem",
-                              lg: "0.85rem",
+                              xs: "0.6rem",
+                              sm: "0.7rem",
+                              md: "0.8rem",
+                              lg: "0.9rem",
                               xl: "1rem",
                             },
                           }}
@@ -200,9 +200,10 @@ function Search() {
                             },
                             height: "20px",
                             fontSize: {
-                              xs: "0.4rem",
-                              sm: "0.7rem",
-                              lg: "1.2rem",
+                              xs: "1rem",
+                              sm: "1.2rem",
+                              md: "1.3rem",
+                              lg: "1.4rem",
                               xl: "1.5rem",
                             },
                           }}
@@ -224,8 +225,10 @@ function Search() {
                                   sx={{
                                     cursor: "pointer",
                                     fontSize: {
-                                      xs: "0.4rem",
-                                      lg: "0.85rem",
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
                                       xl: "1rem",
                                     },
                                     padding: 0,

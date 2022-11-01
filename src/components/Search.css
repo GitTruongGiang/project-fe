@@ -12,6 +12,12 @@
   .css-oxsoa5-MuiAutocomplete-root {
     height: 16px;
   }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-q8lw68 {
+    font-size: 1.1rem;
+  }
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1u5ei5s {
+    font-size: 1.1rem;
+  }
   .css-1hbvpl3-MuiSvgIcon-root {
     font-size: 1.1rem;
   }
@@ -28,15 +34,15 @@
     font-size: 0.65rem;
   }
   #from {
-    height: 0px;
-    font-size: 5px;
-    padding: 3.5px 4px 2.5px 6px;
+    height: 1.25em;
+    font-size: 6px;
+    padding: 0px 6px;
     min-width: 100px;
   }
   #to {
-    height: 0px;
-    font-size: 5px;
-    padding: 3.5px 4px 2.5px 6px;
+    height: 1.25em;
+    font-size: 6px;
+    padding: 0px 6px;
     min-width: 100px;
   }
   .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-fullWidth.MuiInputBase-formControl.MuiInputBase-sizeSmall.MuiInputBase-adornedEnd.MuiAutocomplete-inputRoot.css-1wcdjql-MuiInputBase-root-MuiOutlinedInput-root {
