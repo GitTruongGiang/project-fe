@@ -8,8 +8,6 @@ import RejectionFiles from "./RejectionFiles";
 import { fData } from "../utills/numberFormat";
 
 const RootStyle = styled("div")(({ theme }) => ({
-  width: 144,
-  height: 144,
   margin: "auto",
   borderRadius: "50%",
   padding: theme.spacing(1),
@@ -71,6 +69,8 @@ function UploadAvatar({ error, file, helperText, sx, ...other }) {
             borderColor: "error.light",
           }),
           ...sx,
+          width: { xs: 128, sm: 132, md: 136, lg: 140, xl: 144 },
+          height: { xs: 128, sm: 132, md: 136, lg: 140, xl: 144 },
         }}
       >
         <DropZoneStyle
@@ -86,7 +86,11 @@ function UploadAvatar({ error, file, helperText, sx, ...other }) {
               sx={{
                 zIndex: 8,
                 overflow: "hidden",
-                "& img": { objectFit: "cover", width: 1, height: 1 },
+                "& img": {
+                  objectFit: "cover",
+                  width: 1,
+                  height: 1,
+                },
               }}
             >
               <img alt="avatar" src={isString(file) ? file : file.preview} />
@@ -107,7 +111,13 @@ function UploadAvatar({ error, file, helperText, sx, ...other }) {
               }),
             }}
           >
-            <AddAPhotoIcon sx={{ width: 24, height: 24, mb: 1 }} />
+            <AddAPhotoIcon
+              sx={{
+                width: { xs: 16, sm: 18, md: 20, lg: 22, xl: 24 },
+                height: { xs: 16, sm: 18, md: 20, lg: 22, xl: 24 },
+                mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
+              }}
+            />
             <Typography variant="caption">
               {file ? "Update photo" : "Upload photo"}
             </Typography>
@@ -118,11 +128,18 @@ function UploadAvatar({ error, file, helperText, sx, ...other }) {
       <Typography
         variant="caption"
         sx={{
-          mt: 2,
+          mt: { xs: 1.2, sm: 1.4, md: 1.6, lg: 1.8, xl: 2 },
           mx: "auto",
           display: "block",
           textAlign: "center",
           color: "text.secondary",
+          fontSize: {
+            xs: "0.55rem",
+            sm: "0.6rem",
+            md: "0.65rem",
+            lg: "0.7rem",
+            xl: "0.75rem",
+          },
         }}
       >
         Allowed *.jpeg, *.jpg, *.png, *.gif

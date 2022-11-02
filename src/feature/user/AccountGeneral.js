@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fData } from "../../utills/numberFormat";
 import UploadAvatar from "../../components/UploadAvatar";
 import { updateUserProfile } from "./userSlice";
+import "./AccountGeneralCss.css";
 
 const UpdateUserSchema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -77,8 +78,8 @@ function AccountGeneral() {
         <Grid item xs={12} md={4}>
           <Card
             sx={{
-              py: 10,
-              px: 3,
+              py: { sx: 6, sm: 7, md: 8, lg: 9, xl: 10 },
+              px: { sx: 1, sm: 1.5, md: 2, lg: 2.5, xl: 3 },
               textAlign: "center",
               boxShadow:
                 "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
@@ -90,25 +91,26 @@ function AccountGeneral() {
               render={({ field, fieldState: { error } }) => {
                 const checkError = !!error && !field.value;
                 return (
-                  <div>
-                    <UploadAvatar
-                      accept="image/*"
-                      maxSize={3145728}
-                      onDrop={handleDrop}
-                      error={checkError}
-                      file={field.value}
-                      helperText={
-                        checkError && (
-                          <FormHelperText
-                            error
-                            sx={{ px: 2, textAlign: "center" }}
-                          >
-                            {error.message}
-                          </FormHelperText>
-                        )
-                      }
-                    />
-                  </div>
+                  <UploadAvatar
+                    accept="image/*"
+                    maxSize={3145728}
+                    onDrop={handleDrop}
+                    error={checkError}
+                    file={field.value}
+                    helperText={
+                      checkError && (
+                        <FormHelperText
+                          error
+                          sx={{
+                            px: { sx: 1.2, sm: 1.4, md: 1.6, lg: 1.8, xl: 2 },
+                            textAlign: "center",
+                          }}
+                        >
+                          {error.message}
+                        </FormHelperText>
+                      )
+                    }
+                  />
                 );
               }}
             />
@@ -129,9 +131,10 @@ function AccountGeneral() {
                 rowGap: 3,
                 columnGap: 2,
                 gridTemplateColumns: {
-                  xs: "repeat(1, 1fr)",
+                  xs: "repeat(2, 1fr)",
                   sm: "repeat(2, 1fr)",
                 },
+                flexWrap: {},
               }}
             >
               <Controller
@@ -157,7 +160,7 @@ function AccountGeneral() {
                     <TextField
                       disabled
                       fullWidth
-                      label="name"
+                      label="email"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -227,40 +230,41 @@ function AccountGeneral() {
               />
             </Box>
 
-            <Stack spacing={3} alignItems="flex-end" sx={{ mt: 3 }}>
-              <Controller
-                control={control}
-                name="coverUrl"
-                render={({ field, fieldState: { error } }) => {
-                  return (
-                    <TextField
-                      fullWidth
-                      label="coverUrl"
-                      {...field}
-                      error={!!error}
-                      helperText={error?.message}
-                    />
-                  );
-                }}
-              />
-              <Controller
-                control={control}
-                name="aboutme"
-                render={({ field, fieldState: { error } }) => {
-                  return (
-                    <TextField
-                      fullWidth
-                      multiline
-                      rows={4}
-                      label="About Me"
-                      {...field}
-                      error={!!error}
-                      helperText={error?.message}
-                    />
-                  );
-                }}
-              />
-
+            <Stack spacing={3} sx={{ mt: 3, alignContent: "center" }}>
+              <Stack spacing={2}>
+                <Controller
+                  control={control}
+                  name="coverUrl"
+                  render={({ field, fieldState: { error } }) => {
+                    return (
+                      <TextField
+                        fullWidth
+                        label="coverUrl"
+                        {...field}
+                        error={!!error}
+                        helperText={error?.message}
+                      />
+                    );
+                  }}
+                />
+                <Controller
+                  control={control}
+                  name="aboutme"
+                  render={({ field, fieldState: { error } }) => {
+                    return (
+                      <TextField
+                        fullWidth
+                        multiline
+                        rows={4}
+                        label="About Me"
+                        {...field}
+                        error={!!error}
+                        helperText={error?.message}
+                      />
+                    );
+                  }}
+                />
+              </Stack>
               <LoadingButton
                 type="submit"
                 variant="contained"

@@ -11,12 +11,20 @@ function Profile() {
   const ACCOUNT_TABS = [
     {
       value: "general",
-      icon: <AccountBoxIcon sx={{ fontSize: 30 }} />,
+      icon: (
+        <AccountBoxIcon
+          sx={{ fontSize: { xs: 22, sm: 24, md: 26, lg: 28, xl: 30 } }}
+        />
+      ),
       component: <AccountGeneral />,
     },
     {
       value: "social_links",
-      icon: <ShareIcon sx={{ fontSize: 30 }} />,
+      icon: (
+        <ShareIcon
+          sx={{ fontSize: { xs: 22, sm: 24, md: 26, lg: 28, xl: 30 } }}
+        />
+      ),
       component: <AccountSocialLinks />,
     },
   ];
@@ -26,11 +34,29 @@ function Profile() {
       sx={{
         backgroundColor: "white",
         height: 800,
-        padding: "20px",
-        borderRadius: "10px",
+        padding: { xs: "12px", sm: "14px", md: "16px", lg: "18px", xl: "20px" },
+        borderRadius: {
+          xs: "6px",
+          sm: "7px",
+          md: "8px",
+          lg: "9px",
+          xl: "10px",
+        },
       }}
     >
-      <Typography variant="h5" gutterBottom>
+      <Typography
+        variant="h5"
+        gutterBottom
+        sx={{
+          fontSize: {
+            xs: "1.1rem",
+            sm: "1.2rem",
+            md: "1.3rem",
+            lg: "1.4rem",
+            xl: "1.5rem",
+          },
+        }}
+      >
         THÔNG TIN CÁ NHÂN
       </Typography>
       <Tabs
@@ -47,10 +73,19 @@ function Profile() {
             label={capitalCase(tab.value)}
             icon={tab.icon}
             value={tab.value}
+            sx={{
+              fontSize: {
+                xs: "0.65rem",
+                sm: "0.7rem",
+                md: "0.75rem",
+                lg: "0.8rem",
+                xl: "0.875rem",
+              },
+            }}
           />
         ))}
       </Tabs>
-      <Box sx={{ mb: 5 }} />
+      <Box sx={{ mb: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 } }} />
 
       {ACCOUNT_TABS.map((tab) => {
         const isMatched = tab.value === currentTab;
