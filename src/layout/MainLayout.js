@@ -16,7 +16,17 @@ function MainLayout() {
     >
       <MainHeader />
       <AlertMsg />
-      <Box sx={{ paddingTop: "50px" }}>
+      <Box
+        sx={{
+          paddingTop: {
+            xs: "30px",
+            sm: "35px",
+            md: "40px",
+            lg: "45px",
+            xl: "50px",
+          },
+        }}
+      >
         <Outlet />
       </Box>
       <MainFooter />

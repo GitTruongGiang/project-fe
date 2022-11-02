@@ -468,7 +468,7 @@ function Search() {
                         color: "#1e88e5",
                         zIndex: 10,
                         left: { xs: "15px", sm: "16px", xl: "20px" },
-                        bottom: { xs: "6px", sm: "5px", xl: "26px" },
+                        bottom: { xs: "5px", sm: "5px", xl: "26px" },
                         height: "20px",
                         fontSize: {
                           xs: "0.7rem",
