@@ -101,36 +101,82 @@ function Flight() {
       ) : (
         <>
           <Container maxWidth="lg" sx={{ color: "white" }}>
-            <Stack direction="row" spacing={2} sx={{ mb: 2 }}>
-              <Typography sx={{ fontSize: "20px", color: "black" }}>
-                Bộ lọc:{" "}
+            <Box
+              sx={{
+                mb: { xs: 1.2, sm: 1.4, md: 1.6, lg: 1.8, xl: 2 },
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "12px",
+                    sm: "14px",
+                    md: "16px",
+                    lg: "18px",
+                    xl: "20px",
+                  },
+                  color: "black",
+                }}
+              >
+                Bộ lọc:
               </Typography>
-              <Box component="div">
+            </Box>
+            <Box sx={{ display: "flex", mb: 2 }}>
+              <Box component="div" sx={{ margin: "0 5px" }}>
                 <Box component="div" className="dedcription-btn">
-                  <span className="name-descripeion">Điểm Dừng</span>
+                  <Typography component="span" className="name-descripeion">
+                    Điểm Dừng
+                  </Typography>
                   <Box component="div" className="btn-icon">
                     <ExpandMoreIcon className="far fa-lightbulb" />
                   </Box>
                 </Box>
               </Box>
-              <Box component="div" onClick={handleLocation}>
+              <Box
+                component="div"
+                onClick={handleLocation}
+                sx={{ margin: "0 5px" }}
+              >
                 <Box component="div" className="dedcription-btn">
-                  <span className="name-descripeion">Thời gian bay</span>
+                  <Typography className="name-descripeion">
+                    Thời gian bay
+                  </Typography>
                   <Box component="div" className="btn-icon">
                     <ExpandMoreIcon className="far fa-lightbulb" />
                   </Box>
                 </Box>
               </Box>
-              <Box component="div" onClick={handleNameAirlines}>
+              <Box
+                component="div"
+                onClick={handleNameAirlines}
+                sx={{ margin: "0 5px" }}
+              >
                 <Box component="div" className="dedcription-btn">
-                  <span className="name-descripeion">Hãng hàng không </span>
+                  <Typography className="name-descripeion">
+                    Hãng hàng không{" "}
+                  </Typography>
                   <Box component="div" className="btn-icon">
                     <ExpandMoreIcon className="far fa-lightbulb" />
                   </Box>
                 </Box>
               </Box>
-            </Stack>
-            <Typography sx={{ fontSize: "25px", mb: 2, color: "black" }}>
+            </Box>
+
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "17px",
+                  sm: "19px",
+                  md: "21px",
+                  lg: "23px",
+                  xl: "25px",
+                },
+                mb: 2,
+                color: "black",
+              }}
+            >
               KHÁM PHÁ CÁC ĐIỂM ĐẾN
             </Typography>
 

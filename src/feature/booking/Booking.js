@@ -44,13 +44,23 @@ function Booking() {
     <Container maxWidth="lg">
       <Card
         sx={{
-          height: "300px",
           padding: "20px",
           boxShadow: "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
         }}
       >
         <CardContent>
-          <Typography sx={{ fontSize: "20px", textTransform: "uppercase" }}>
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "12px",
+                sm: "14px",
+                md: "16px",
+                lg: "18px",
+                xl: "20px",
+              },
+              textTransform: "uppercase",
+            }}
+          >
             lịch sử đặt chổ
           </Typography>
         </CardContent>
@@ -74,88 +84,276 @@ function Booking() {
                     <Stack
                       direction="row"
                       spacing={1}
-                      sx={{ alignItems: "center" }}
+                      sx={{
+                        alignItems: "center",
+                        flexWrap: { xs: "wrap", sm: "inherit", xl: "inherit" },
+                      }}
                     >
-                      <CardContent
-                        sx={{ display: "flex", alignItems: "center" }}
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          padding: {
+                            xs: "8px 16px",
+                            sm: "10px 16px",
+                            md: "12px 16px",
+                            lg: "14px 16px",
+                            xl: "16px 16px",
+                          },
+                        }}
                       >
-                        <Typography sx={{ fontWeight: 600 }}>
+                        <Typography
+                          sx={{
+                            fontWeight: 600,
+                            fontSize: {
+                              xs: "0.6rem",
+                              sm: "0.7rem",
+                              md: "0.8rem",
+                              lg: "0.9rem",
+                              xl: "1rem",
+                            },
+                          }}
+                        >
                           {flight?.airlines?.name}
                         </Typography>
                         :
-                        <Typography sx={{ ml: 1, fontSize: "14px" }}>
+                        <Typography
+                          sx={{
+                            ml: 1,
+                            fontSize: {
+                              xs: "10px",
+                              sm: "11px",
+                              md: "12px",
+                              lg: "13px",
+                              xl: "14px",
+                            },
+                          }}
+                        >
                           {flight?.plane?.name}
                         </Typography>
                         -
-                        <Typography sx={{ fontSize: "14px" }}>
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xs: "10px",
+                              sm: "11px",
+                              md: "12px",
+                              lg: "13px",
+                              xl: "14px",
+                            },
+                          }}
+                        >
                           {flight?.codePlane}
                         </Typography>
-                      </CardContent>
+                      </Box>
                       {countrys.map((country) => {
                         if (country.value === flight.from.toUpperCase()) {
                           return (
-                            <CardContent key={country.value}>
+                            <Box
+                              key={country.value}
+                              sx={{
+                                padding: {
+                                  xs: "8px 16px",
+                                  sm: "10px 16px",
+                                  md: "12px 16px",
+                                  lg: "14px 16px",
+                                  xl: "16px 16px",
+                                },
+                              }}
+                            >
                               <Box sx={{ display: "flex" }}>
-                                <Typography sx={{ fontWeight: 600 }}>
+                                <Typography
+                                  sx={{
+                                    fontWeight: 600,
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
                                   From:
                                 </Typography>
-                                <Typography sx={{ ml: 1 }}>
+                                <Typography
+                                  sx={{
+                                    ml: {
+                                      xs: 0.6,
+                                      sm: 0.7,
+                                      md: 0.8,
+                                      lg: 0.9,
+                                      xl: 1,
+                                    },
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
                                   {country.label}
                                 </Typography>
                               </Box>
-                            </CardContent>
+                            </Box>
                           );
                         }
                       })}
                       {countrys.map((country) => {
                         if (country.value === flight.to.toUpperCase()) {
                           return (
-                            <CardContent key={country.value}>
+                            <Box
+                              key={country.value}
+                              sx={{
+                                padding: {
+                                  xs: "8px 16px",
+                                  sm: "10px 16px",
+                                  md: "12px 16px",
+                                  lg: "14px 16px",
+                                  xl: "16px 16px",
+                                },
+                              }}
+                            >
                               <Box sx={{ display: "flex" }}>
-                                <Typography sx={{ fontWeight: 600 }}>
-                                  From:
+                                <Typography
+                                  sx={{
+                                    fontWeight: 600,
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
+                                  To:
                                 </Typography>
-                                <Typography sx={{ ml: 1 }}>
+                                <Typography
+                                  sx={{
+                                    ml: {
+                                      xs: 0.6,
+                                      sm: 0.7,
+                                      md: 0.8,
+                                      lg: 0.9,
+                                      xl: 1,
+                                    },
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
                                   {country.label}
                                 </Typography>
                               </Box>
-                            </CardContent>
+                            </Box>
                           );
                         }
                       })}
                       {chairs.map((chair) => {
                         if (chair.flight._id === flight._id) {
                           return (
-                            <CardContent
-                              style={{ paddingBottom: "16px" }}
+                            <Box
+                              sx={{
+                                padding: {
+                                  xs: "8px 16px",
+                                  sm: "10px 16px",
+                                  md: "12px 16px",
+                                  lg: "14px 16px",
+                                  xl: "16px 16px",
+                                },
+                              }}
                               key={chair._id}
                             >
                               <Box sx={{ display: "flex" }}>
-                                <Typography sx={{ fontWeight: 600 }}>
+                                <Typography
+                                  sx={{
+                                    fontWeight: 600,
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
                                   Number Chair:
                                 </Typography>
-                                <Typography sx={{ ml: 1 }}>
+                                <Typography
+                                  sx={{
+                                    ml: 1,
+                                    fontSize: {
+                                      xs: "0.6rem",
+                                      sm: "0.7rem",
+                                      md: "0.8rem",
+                                      lg: "0.9rem",
+                                      xl: "1rem",
+                                    },
+                                  }}
+                                >
                                   {chair?.codeNumber}
                                   {chair?.codeString}
                                 </Typography>
                               </Box>
-                            </CardContent>
+                            </Box>
                           );
                         }
                       })}
                     </Stack>
-                    <Box>
+                    <Box
+                      sx={{
+                        margin: {
+                          xs: "0 4px",
+                          sm: "0 5px",
+                          md: "0 6px",
+                          lg: "0 7px",
+                          xl: "0 8px",
+                        },
+                        display: "flex",
+                        flexWrap: { xs: "wrap", sm: "inherit" },
+                      }}
+                    >
                       <Button
-                        sx={{ mr: 1, height: "30px", padding: "6px 10px" }}
+                        sx={{
+                          margin: "5px 5px",
+                          height: "30px",
+                          padding: "6px 10px",
+                          fontSize: {
+                            xs: "0.6rem",
+                            sm: "0.65rem",
+                            md: "0.7rem",
+                            lg: "0.75rem",
+                            xl: "0.875rem",
+                          },
+                        }}
                         variant="contained"
                         onClick={() => handleOpen(flight)}
                       >
-                        CHI TIẾT
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xs: "0.6rem",
+                              sm: "0.65rem",
+                              md: "0.7rem",
+                              lg: "0.75rem",
+                              xl: "0.875rem",
+                            },
+                          }}
+                        >
+                          CHI TIẾT
+                        </Typography>
                         <ChevronRightIcon />
                       </Button>
                       <Button
                         sx={{
-                          mr: 1,
+                          margin: "5px 5px",
                           height: "30px",
                           padding: "6px 10px",
                           backgroundColor: "#ff5252",
@@ -163,6 +361,13 @@ function Booking() {
                           ":hover": {
                             backgroundColor: "#ff5252",
                             opacity: 1,
+                          },
+                          fontSize: {
+                            xs: "0.6rem",
+                            sm: "0.65rem",
+                            md: "0.7rem",
+                            lg: "0.75rem",
+                            xl: "0.875rem",
                           },
                         }}
                         variant="contained"
