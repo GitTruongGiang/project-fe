@@ -206,128 +206,321 @@ function Flight() {
                         sx={{
                           display: "flex",
                           alignItems: "center",
-
                           justifyContent: "space-around",
+                          flexWrap: "wrap",
                         }}
                       >
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                           <CardMedia
                             component="img"
                             image={flight.airlines.imageUrl}
-                            height="35px"
-                            sx={{ width: "35px" }}
+                            height={{
+                              xs: "15px",
+                              sm: "20px",
+                              md: "25px",
+                              lg: "30px",
+                              xl: "35px",
+                            }}
+                            sx={{
+                              width: {
+                                xs: "15px",
+                                sm: "20px",
+                                md: "25px",
+                                lg: "30px",
+                                xl: "35px",
+                              },
+                            }}
                           />
-                          <Typography sx={{ ml: 1 }}>
+                          <Typography
+                            sx={{
+                              ml: 1,
+                              fontSize: {
+                                xs: "0.6rem",
+                                sm: "0.7rem",
+                                md: "0.8rem",
+                                lg: "0.9rem",
+                                xl: "1rem",
+                              },
+                            }}
+                          >
                             {flight.airlines.name}
                           </Typography>
                         </Box>
-                        <Box sx={{ textAlign: "center" }}>
-                          <Typography
-                            sx={{
-                              fontWeight: 600,
-                              fontSize: "25px",
-                              fontStyle: "italic",
-                              pointerEvents: "fill",
-                            }}
-                          >
-                            {new Date(flight.timeFrom).getHours() < 10
-                              ? `0${new Date(flight.timeFrom).getHours()}`
-                              : new Date(flight.timeFrom).getHours()}
-                            :
-                            {new Date(flight.timeFrom).getMinutes() === 0
-                              ? "00"
-                              : new Date(flight.timeFrom).getMinutes() < 10
-                              ? `0${new Date(flight.timeFrom).getMinutes()}`
-                              : new Date(flight.timeFrom).getMinutes()}
-                          </Typography>
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
                           <Box
                             sx={{
-                              display: "flex",
+                              textAlign: "center",
+                              margin: {
+                                xs: "0 6px",
+                                sm: "0 7px",
+                                md: "0 8px",
+                                lg: "0 9px",
+                                xl: "0 10px",
+                              },
                             }}
                           >
-                            <Typography sx={{ fontWeight: 600 }}>
-                              {flight.from.toUpperCase()}
+                            <Typography
+                              sx={{
+                                fontWeight: 600,
+                                fontSize: {
+                                  xs: "17px",
+                                  sm: "19px",
+                                  md: "21px",
+                                  lg: "23px",
+                                  xl: "25px",
+                                },
+                                fontStyle: "italic",
+                                pointerEvents: "fill",
+                              }}
+                            >
+                              {new Date(flight.timeFrom).getHours() < 10
+                                ? `0${new Date(flight.timeFrom).getHours()}`
+                                : new Date(flight.timeFrom).getHours()}
+                              :
+                              {new Date(flight.timeFrom).getMinutes() === 0
+                                ? "00"
+                                : new Date(flight.timeFrom).getMinutes() < 10
+                                ? `0${new Date(flight.timeFrom).getMinutes()}`
+                                : new Date(flight.timeFrom).getMinutes()}
                             </Typography>
-                            <Typography sx={{ ml: 1 }}>
+                            <Box
+                              sx={{
+                                display: "flex",
+                                flexWrap: "wrap",
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontWeight: 600,
+                                  fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.7rem",
+                                    md: "0.8rem",
+                                    lg: "0.9rem",
+                                    xl: "1rem",
+                                  },
+                                }}
+                              >
+                                {flight.from.toUpperCase()}
+                              </Typography>
+                              <Typography
+                                sx={{
+                                  ml: 1,
+                                  fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.7rem",
+                                    md: "0.8rem",
+                                    lg: "0.9rem",
+                                    xl: "1rem",
+                                  },
+                                }}
+                              >
+                                {lableFrom.label}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xs: "9px",
+                                  sm: "10px",
+                                  md: "11px",
+                                  lg: "12px",
+                                  xl: "13px",
+                                },
+                              }}
+                            >
                               {lableFrom.label}
                             </Typography>
                           </Box>
-                          <Typography sx={{ fontSize: "13px" }}>
-                            {lableFrom.label}
-                          </Typography>
-                        </Box>
-                        <Box sx={{ textAlign: "center" }}>
-                          <Typography sx={{ fontStyle: "italic" }}>
-                            {Math.abs(
-                              new Date(flight.timeFrom).getHours() -
-                                new Date(flight.timeTo).getHours()
-                            )}
-                            h{" "}
-                            {Math.abs(
-                              new Date(flight.timeFrom).getMinutes() -
-                                new Date(flight.timeTo).getMinutes()
-                            )}
-                            min
-                          </Typography>
                           <Box
                             sx={{
-                              backgroundColor: "black",
-                              height: "1px",
-                              width: "150px",
-                            }}
-                          ></Box>
-                          <Typography sx={{ fontSize: "15px" }}>
-                            direct
-                          </Typography>
-                        </Box>
-                        <Box sx={{ textAlign: "center" }}>
-                          <Typography
-                            sx={{
-                              fontWeight: 600,
-                              fontSize: "25px",
-                              fontStyle: "italic",
+                              textAlign: "center",
+                              margin: {
+                                xs: "0 6px",
+                                sm: "0 7px",
+                                md: "0 8px",
+                                lg: "0 9px",
+                                xl: "0 10px",
+                              },
                             }}
                           >
-                            {new Date(flight.timeTo).getHours() < 10
-                              ? `0${new Date(flight.timeTo).getHours()}`
-                              : new Date(flight.timeTo).getHours()}
-                            :
-                            {new Date(flight.timeTo).getMinutes() === 0
-                              ? "00"
-                              : new Date(flight.timeTo).getMinutes() < 10
-                              ? `0${new Date(flight.timeTo).getMinutes()}`
-                              : new Date(flight.timeTo).getMinutes()}
-                          </Typography>
-                          <Box
-                            sx={{
-                              display: "flex",
-                            }}
-                          >
-                            <Typography sx={{ fontWeight: 600 }}>
-                              {flight.to.toUpperCase()}
+                            <Typography
+                              sx={{
+                                fontStyle: "italic",
+                                fontSize: {
+                                  xs: "0.6rem",
+                                  sm: "0.7rem",
+                                  md: "0.8rem",
+                                  lg: "0.9rem",
+                                  xl: "1rem",
+                                },
+                              }}
+                            >
+                              {Math.abs(
+                                new Date(flight.timeFrom).getHours() -
+                                  new Date(flight.timeTo).getHours()
+                              )}
+                              h{" "}
+                              {Math.abs(
+                                new Date(flight.timeFrom).getMinutes() -
+                                  new Date(flight.timeTo).getMinutes()
+                              )}
+                              min
                             </Typography>
-                            <Typography sx={{ ml: 1 }}>
+                            <Box
+                              sx={{
+                                backgroundColor: "black",
+                                height: "1px",
+                                width: {
+                                  xs: "110px",
+                                  sm: "120px",
+                                  md: "130px",
+                                  lg: "140px",
+                                  xl: "150px",
+                                },
+                              }}
+                            ></Box>
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xs: "7px",
+                                  sm: "9px",
+                                  md: "11px",
+                                  lg: "13px",
+                                  xl: "15px",
+                                },
+                              }}
+                            >
+                              direct
+                            </Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              textAlign: "center",
+                              margin: {
+                                xs: "0 6px",
+                                sm: "0 7px",
+                                md: "0 8px",
+                                lg: "0 9px",
+                                xl: "0 10px",
+                              },
+                            }}
+                          >
+                            <Typography
+                              sx={{
+                                fontWeight: 600,
+                                fontSize: {
+                                  xs: "17px",
+                                  sm: "19px",
+                                  md: "21px",
+                                  lg: "23px",
+                                  xl: "25px",
+                                },
+                                fontStyle: "italic",
+                              }}
+                            >
+                              {new Date(flight.timeTo).getHours() < 10
+                                ? `0${new Date(flight.timeTo).getHours()}`
+                                : new Date(flight.timeTo).getHours()}
+                              :
+                              {new Date(flight.timeTo).getMinutes() === 0
+                                ? "00"
+                                : new Date(flight.timeTo).getMinutes() < 10
+                                ? `0${new Date(flight.timeTo).getMinutes()}`
+                                : new Date(flight.timeTo).getMinutes()}
+                            </Typography>
+                            <Box
+                              sx={{
+                                display: "flex",
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  fontWeight: 600,
+                                  fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.7rem",
+                                    md: "0.8rem",
+                                    lg: "0.9rem",
+                                    xl: "1rem",
+                                  },
+                                }}
+                              >
+                                {flight.to.toUpperCase()}
+                              </Typography>
+                              <Typography
+                                sx={{
+                                  ml: 1,
+                                  fontSize: {
+                                    xs: "0.6rem",
+                                    sm: "0.7rem",
+                                    md: "0.8rem",
+                                    lg: "0.9rem",
+                                    xl: "1rem",
+                                  },
+                                }}
+                              >
+                                {lableTo.label}
+                              </Typography>
+                            </Box>
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xs: "9px",
+                                  sm: "10px",
+                                  md: "11px",
+                                  lg: "12px",
+                                  xl: "13px",
+                                },
+                              }}
+                            >
                               {lableTo.label}
                             </Typography>
                           </Box>
-                          <Typography sx={{ fontSize: "13px" }}>
-                            {lableTo.label}
-                          </Typography>
+                          <Divider
+                            orientation="vertical"
+                            flexItem
+                            sx={{ ml: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 } }}
+                          />
                         </Box>
-                        <Divider orientation="vertical" flexItem />
                         <Box
                           sx={{
-                            padding: "10px",
+                            padding: {
+                              xs: "6px",
+                              sm: "7px",
+                              md: "8px",
+                              lg: "9px",
+                              xl: "10px",
+                            },
                             textAlign: "center",
                           }}
                         >
                           <Box>
                             <Typography
-                              sx={{ fontWeight: 600, fontSize: "15px" }}
+                              sx={{
+                                fontWeight: 600,
+                                fontSize: {
+                                  xs: "11px",
+                                  sm: "12px",
+                                  md: "13px",
+                                  lg: "14px",
+                                  xl: "15px",
+                                },
+                              }}
                             >
                               GIÁ VÉ: ${Math.ceil(flight.price / 24)}
                             </Typography>
-                            <Typography>
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xs: "0.6rem",
+                                  sm: "0.7rem",
+                                  md: "0.8rem",
+                                  lg: "0.9rem",
+                                  xl: "1rem",
+                                },
+                              }}
+                            >
                               {date} / {month} / {year}
                             </Typography>
                           </Box>
@@ -352,6 +545,7 @@ function Flight() {
                 page={page}
                 onChange={handleChange}
                 color="secondary"
+                size="small"
               />
             </Stack>
           </Container>
