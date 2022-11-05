@@ -15,7 +15,7 @@ import { useParams } from "react-router-dom";
 import ChairModal from "../../components/modal/ChairModal";
 import { getSingleFlight } from "../flights/flightSlice";
 import { getChairs } from "./chairSlice";
-import "../../Button.css";
+import "./Button.css";
 
 function Chair() {
   const params = useParams();
@@ -37,11 +37,17 @@ function Chair() {
           label={flight?.airlines?.name}
           sx={{
             fontWeight: 600,
-            fontSize: "30px",
+            fontSize: {
+              xs: "22px",
+              sm: "24px",
+              md: "26px",
+              lg: "28px",
+              xl: "30px",
+            },
             fontStyle: "italic",
             backgroundColor: "#1e88e5",
             color: "white",
-            padding: "10px",
+            padding: { xs: "6px", sm: "7px", md: "8px", lg: "9px", xl: "10px" },
           }}
         ></Chip>
       </Box>
@@ -49,34 +55,63 @@ function Chair() {
         direction="row"
         spacing={1}
         sx={{
-          color: "white",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <Typography sx={{ fontSize: "25px" }}>
+        <Typography
+          sx={{
+            fontSize: {
+              xs: "17px",
+              sm: "19px",
+              md: "21px",
+              lg: "23px",
+              xl: "25px",
+            },
+          }}
+        >
           {new Date(flight?.fromDay).getDate()}-
           {new Date(flight?.fromDay).getMonth()}-
           {new Date(flight?.fromDay).getFullYear()}
         </Typography>
       </Stack>
-      <Stack direction="row" spacing={2} sx={{ justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
         <Card
           sx={{
-            minWidth: 450,
+            minWidth: { xs: 250, sm: 300, md: 350, lg: 400, xl: 450 },
             textAlign: "center",
             boxShadow:
               "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+            margin: { xs: "10px 0px", xl: "0 10px" },
           }}
         >
           <CardContent>
-            <Typography sx={{ fontSize: "22px", fontWeight: 600 }}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  sm: "16px",
+                  md: "18px",
+                  lg: "20px",
+                  xl: "22px",
+                },
+                fontWeight: 600,
+              }}
+            >
               Booking Cabin
             </Typography>
           </CardContent>
           <CardMedia
             component="img"
             height="200px"
+            sx={{ width: { xs: "300px", xl: "100%" } }}
             image="https://cdn.pixabay.com/photo/2014/09/10/18/21/aircraft-441019_960_720.jpg"
           />
           <Button
@@ -86,7 +121,13 @@ function Chair() {
             sx={{
               textTransform: "capitalize",
               color: "black",
-              fontSize: "16px",
+              fontSize: {
+                xs: "8px",
+                sm: "10px",
+                md: "12px",
+                lg: "14px",
+                xl: "16px",
+              },
               borderRadius: 0,
             }}
           >
@@ -95,14 +136,26 @@ function Chair() {
         </Card>
         <Card
           sx={{
-            minWidth: 450,
+            minWidth: { xs: 250, sm: 300, md: 350, lg: 400, xl: 450 },
             textAlign: "center",
             boxShadow:
               "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+            margin: { xs: "10px 0px", xl: "0 10px" },
           }}
         >
           <CardContent>
-            <Typography sx={{ fontSize: "22px", fontWeight: 600 }}>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  sm: "16px",
+                  md: "18px",
+                  lg: "20px",
+                  xl: "22px",
+                },
+                fontWeight: 600,
+              }}
+            >
               Booking Chair
             </Typography>
           </CardContent>
@@ -110,6 +163,7 @@ function Chair() {
             component="img"
             height="200px"
             image="https://cdn.pixabay.com/photo/2014/11/06/10/52/seats-519002_960_720.jpg"
+            sx={{ width: { xs: "300px", xl: "100%" } }}
           />
           <Button
             variant="text"
@@ -117,7 +171,13 @@ function Chair() {
             fullWidth
             sx={{
               textTransform: "capitalize",
-              fontSize: "16px",
+              fontSize: {
+                xs: "8px",
+                sm: "10px",
+                md: "12px",
+                lg: "14px",
+                xl: "16px",
+              },
               borderRadius: 0,
             }}
             onClick={handleOpen}
@@ -126,7 +186,7 @@ function Chair() {
           </Button>
         </Card>
         <ChairModal open={open} setOpen={setOpen} flight={flight} />
-      </Stack>
+      </Box>
     </Container>
   );
 }

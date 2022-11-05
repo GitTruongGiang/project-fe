@@ -36,10 +36,9 @@ function Booking() {
   }, [dispatch]);
 
   const cancelFLight = async (flight) => {
-    const chair = chairs.find((chair) => chair.flight._id === flight._id);
+    const chair = await chairs.find((chair) => chair.flight._id === flight._id);
     dispatch(cancelFlights({ status: "none", chairId: chair._id }));
   };
-  console.log(flights);
   return (
     <Container maxWidth="lg">
       <Card

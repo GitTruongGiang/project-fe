@@ -8,7 +8,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
+  width: { xs: 300, sm: 350, md: 400, lg: 450, xl: 500 },
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -62,11 +62,19 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
       <Box sx={style}>
         <Box>
           <Typography
-            variant="h6"
             component="h2"
             textAlign="center"
             mb={2}
-            sx={{ fontWeight: 600 }}
+            sx={{
+              fontWeight: 600,
+              fontSize: {
+                xs: "0.6rem",
+                sm: "0.7rem",
+                md: "0.8rem",
+                lg: "0.9rem",
+                xl: "1rem",
+              },
+            }}
           >
             Giờ cất cánh
           </Typography>
@@ -76,7 +84,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                 disableRipple
                 onClick={() => setTimeFrom(6)}
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -88,7 +102,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -101,7 +121,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -114,7 +140,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -133,6 +165,16 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             textAlign="center"
             mb={2}
             mt={2}
+            sx={{
+              fontWeight: 600,
+              fontSize: {
+                xs: "0.6rem",
+                sm: "0.7rem",
+                md: "0.8rem",
+                lg: "0.9rem",
+                xl: "1rem",
+              },
+            }}
           >
             Giờ hạ cánh
           </Typography>
@@ -141,7 +183,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -154,7 +202,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -167,7 +221,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"
@@ -180,7 +240,13 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
               <BootstrapButton
                 disableRipple
                 sx={{
-                  fontSize: "16px",
+                  fontSize: {
+                    xs: "12px",
+                    sm: "13px",
+                    md: "14px",
+                    lg: "15px",
+                    xl: "16px",
+                  },
                   ":focus-within": { backgroundColor: "#f44336" },
                 }}
                 variant="contained"

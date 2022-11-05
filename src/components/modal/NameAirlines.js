@@ -12,7 +12,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: { xs: 320, sm: 340, md: 360, lg: 380, xl: 400 },
   bgcolor: "background.paper",
   border: "1px solid #000",
   boxShadow: 25,
@@ -53,9 +53,25 @@ function NameAirlines({ nameAir, setNameAir, setName, nameID }) {
                   checked={nameID === airline._id}
                   value={airline._id}
                   onClick={handechange}
+                  sx={{
+                    "& .MuiSvgIcon-root": {
+                      fontSize: { xs: 20, sm: 22, md: 24, lg: 26, xl: 28 },
+                    },
+                  }}
                 />
                 <img src={airline.imageUrl} alt="" width="30px" height="30px" />
-                <Typography sx={{ fontWeight: 600, fontSize: "18px" }}>
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: {
+                      xs: "10px",
+                      sm: "12px",
+                      md: "14px",
+                      lg: "16px",
+                      xl: "18px",
+                    },
+                  }}
+                >
                   {airline.name}
                 </Typography>
               </Stack>

@@ -36,3 +36,10 @@
 .btn.hover-filled-slide-down:hover::before {
   height: 0%;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .btn span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}

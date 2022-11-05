@@ -19,12 +19,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 700,
-  height: 400,
+  width: { xs: 320, sm: 400, md: 500, lg: 600, xl: 700 },
+  height: { xs: 300, sm: 340, md: 360, lg: 380, xl: 400 },
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  p: { xs: 2, sm: 2.5, md: 3, lg: 3.5, xl: 4 },
   borderRadius: "200px 200px 40px 40px",
 };
 
@@ -106,14 +106,30 @@ function ChairModal({ open, setOpen, flight }) {
             <Chip
               label={flight?.plane?.name}
               sx={{
-                fontSize: "20px",
+                fontSize: {
+                  xs: "12px",
+                  sm: "14px",
+                  md: "16px",
+                  lg: "18px",
+                  xl: "20px",
+                },
                 padding: "20px 15px",
                 color: "white",
                 backgroundColor: "#40c4ff",
                 textTransform: "uppercase",
               }}
             />
-            <Typography>{`( ${flight.codePlane} )`}</Typography>
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "0.6rem",
+                  sm: "0.7rem",
+                  md: "0.8rem",
+                  lg: "0.9rem",
+                  xl: "1rem",
+                },
+              }}
+            >{`( ${flight.codePlane} )`}</Typography>
           </Stack>
           <Box sx={{ textAlign: "center" }}>
             <Grid container spacing={1} columns={chairCount} sx={{ mt: 2 }}>
@@ -138,11 +154,44 @@ function ChairModal({ open, setOpen, flight }) {
                             chair.status === "none" ? "#81c784" : "",
                           pointerEvents: chair.status !== "none" ? "none" : "",
                         },
+                        padding: {
+                          xs: "6px 8px",
+                          sm: "6px 10px",
+                          md: "6px 12px",
+                          lg: "6px 14px",
+                          xl: "6px 16px",
+                        },
+                        fontSize: {
+                          xs: "0.6rem",
+                          sm: "0.7rem",
+                          md: "0.75rem",
+                          lg: "0.8rem",
+                          xl: "0.875rem",
+                        },
+                        minWidth: {
+                          xs: "45px",
+                          sm: "50px",
+                          md: "55px",
+                          lg: "60px",
+                          xl: "64px",
+                        },
                       }}
                       onClick={() => handeChangeChair(chair)}
                     >
-                      <EventSeatIcon sx={{ fontSize: "20px", mr: 0.5 }} />
-                      {chair.codeNumber} {chair.codeString}
+                      <EventSeatIcon
+                        sx={{
+                          fontSize: {
+                            xs: "12px",
+                            sm: "14px",
+                            md: "16px",
+                            lg: "18px",
+                            xl: "20px",
+                          },
+                          mr: 0.5,
+                        }}
+                      />
+                      {chair.codeNumber}
+                      {chair.codeString}
                     </Button>
                   </Grid>
                 );
@@ -154,12 +203,28 @@ function ChairModal({ open, setOpen, flight }) {
               display: "flex",
               justifyContent: "end",
               alignItems: "center",
-              mt: 3,
+              mt: { xs: 1, xl: 3 },
             }}
           >
             <Button
               variant="contained"
-              sx={{ height: "30px", mr: 1 }}
+              sx={{
+                height: {
+                  xs: "22px",
+                  sm: "24px",
+                  md: "26px",
+                  lg: "28px",
+                  xl: "30px",
+                },
+                mr: 1,
+                fontSize: {
+                  xs: "8px",
+                  sm: "10px",
+                  md: "12px",
+                  lg: "14px",
+                  xl: "16px",
+                },
+              }}
               onClick={handleCancel}
             >
               Cancel
@@ -167,8 +232,21 @@ function ChairModal({ open, setOpen, flight }) {
             <LoadingButton
               sx={{
                 textTransform: "capitalize",
-                width: "120px",
-                height: "30px",
+                // width: "120px",
+                height: {
+                  xs: "22px",
+                  sm: "24px",
+                  md: "26px",
+                  lg: "28px",
+                  xl: "30px",
+                },
+                fontSize: {
+                  xs: "8px",
+                  sm: "10px",
+                  md: "12px",
+                  lg: "14px",
+                  xl: "16px",
+                },
               }}
               variant="contained"
               type="submit"

@@ -57,12 +57,13 @@ export const cancelChair = createAsyncThunk(
   "chair/cancelChair",
   async ({ chairId, status, userId }, { rejectWithValue }) => {
     try {
+      console.log({ chairId, status, userId });
       let url = `chairs/cancel/${chairId}`;
       const response = await apisevice.post(url, {
         status,
         userId: userId,
       });
-      return response.data;
+      return response;
     } catch (error) {
       rejectWithValue(error);
     }
@@ -73,6 +74,7 @@ export const cancelFlights = createAsyncThunk(
   "chair/cancelFlights",
   async ({ status, chairId, flightId }, { rejectWithValue }) => {
     try {
+      console.log({ status, chairId, flightId });
       let url = `chairs/cancel/flight/${chairId}`;
       const response = await apisevice.post(url, { status });
       return response.data;
@@ -158,6 +160,7 @@ export const chairSlice = createSlice({
       })
       .addCase(cancelFlights.fulfilled, (state, action) => {
         state.isLoading = false;
+        console.log(action.payload);
         const { chair, flights } = action.payload.data;
         if (chair) {
           state.flights = flights;

@@ -76,7 +76,13 @@ function CreditCard() {
         <Chip
           label="Booking"
           sx={{
-            fontSize: "30px",
+            fontSize: {
+              xs: "22px",
+              sm: "24px",
+              md: "26px",
+              lg: "28px",
+              xl: "30px",
+            },
             color: "white",
             fontStyle: "italic",
             fontWeight: 600,
@@ -88,20 +94,53 @@ function CreditCard() {
         />
       </Box>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid container direction="row" spacing={2} columns={16}>
+        <Grid
+          container
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+            lg: "row",
+            xl: "row",
+          }}
+          spacing={2}
+          columns={16}
+        >
           <Grid item xs={8}>
             <Card sx={{ maxHeight: "600px", padding: "20px" }}>
               <Box
                 sx={{
                   display: "flex",
+                  flexWrap: "wrap",
                   justifyContent: "space-between",
                   padding: "15px",
                 }}
               >
-                <Typography sx={{ fontSize: "20px" }}>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "12px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "18px",
+                      xl: "20px",
+                    },
+                  }}
+                >
                   Enter card information to pay
                 </Typography>
-                <Typography sx={{ fontSize: "20px", fontWeight: 600 }}>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "12px",
+                      sm: "14px",
+                      md: "16px",
+                      lg: "18px",
+                      xl: "20px",
+                    },
+                    fontWeight: 600,
+                  }}
+                >
                   ${Math.ceil(chair.flight?.price / 21)}
                 </Typography>
               </Box>
@@ -109,7 +148,13 @@ function CreditCard() {
                 sx={{
                   backgroundColor: "#eeeeee",
                   height: "380px",
-                  width: "360px",
+                  width: {
+                    xs: "280px",
+                    sm: "300px",
+                    md: "320px",
+                    lg: "340px",
+                    xl: "360px",
+                  },
                   margin: "0 auto",
                   padding: "20px",
                 }}
@@ -117,7 +162,13 @@ function CreditCard() {
                 <Box
                   sx={{
                     height: "350px",
-                    width: "320px",
+                    width: {
+                      xs: "240px",
+                      sm: "260px",
+                      md: "280px",
+                      lg: "300px",
+                      xl: "320px",
+                    },
                     margin: "auto",
                   }}
                 >
@@ -224,18 +275,41 @@ function CreditCard() {
                   <Typography sx={{ fontSize: "13px" }}>Phone:</Typography>
                   <TextField defaultValue={user.phone} size="small" />
                 </Stack>
-                <Button sx={{ justifyContent: "center" }} variant="contained">
+                <Button
+                  sx={{
+                    justifyContent: "center",
+                    fontSize: {
+                      xs: "0.65rem",
+                      sm: "0.7rem",
+                      md: "0.75rem",
+                      lg: "0.8rem",
+                      xl: "0.875rem",
+                    },
+                  }}
+                  variant="contained"
+                >
                   Edit
                 </Button>
               </Stack>
             </Card>
           </Grid>
         </Grid>
-        <Box sx={{ textAlign: "end", mt: 5 }}>
+        <Box
+          sx={{ textAlign: "end", mt: { xs: 1, sm: 2, md: 3, lg: 4, xl: 5 } }}
+        >
           <LoadingButton
             variant="contained"
             type="submit"
             loading={isSubmitting}
+            sx={{
+              fontSize: {
+                xs: "0.65rem",
+                sm: "0.7rem",
+                md: "0.75rem",
+                lg: "0.8rem",
+                xl: "0.875rem",
+              },
+            }}
           >
             Booking Flight
           </LoadingButton>
