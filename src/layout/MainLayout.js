@@ -12,6 +12,8 @@ function MainLayout() {
       sx={{
         margin: "0 auto",
         position: "relative",
+        width: "100%",
+        height: "100vh",
       }}
     >
       <MainHeader />

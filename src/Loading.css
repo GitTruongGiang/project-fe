@@ -2,7 +2,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font: 1em/1.5 sans-serif;
-  /* height: 100vh; */
+  height: 100vh;
   place-items: center;
   transition: background-color var(--trans-dur), color var(--trans-dur);
 }

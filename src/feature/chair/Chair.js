@@ -89,7 +89,7 @@ function Chair() {
             textAlign: "center",
             boxShadow:
               "0 -2px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-            margin: { xs: "10px 0px", xl: "0 10px" },
+            margin: { xs: "10px 0px", sm: "0 10px", xl: "0 10px" },
           }}
         >
           <CardContent>
