@@ -196,7 +196,7 @@ function Search() {
                             },
                           }}
                         >
-                          From
+                          Xuất Phát
                         </Typography>
                         <AirplanemodeActiveIcon
                           sx={{
@@ -282,7 +282,7 @@ function Search() {
                             },
                           }}
                         >
-                          To
+                          Điểm Đến
                         </Typography>
                         <AirplanemodeActiveIcon
                           sx={{
@@ -418,7 +418,7 @@ function Search() {
                         },
                       }}
                     >
-                      Calendar
+                      Lịch
                     </Typography>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                       <DatePicker

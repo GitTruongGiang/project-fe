@@ -61,7 +61,7 @@ function MainFooter() {
               },
             }}
           >
-            Company
+            Công ty
           </Typography>
           <Stack spacing={1}>
             <Link
@@ -80,7 +80,7 @@ function MainFooter() {
                 },
               }}
             >
-              About
+              nghề nghiệp
             </Link>
             <Link
               component={routerLink}
@@ -98,7 +98,7 @@ function MainFooter() {
                 },
               }}
             >
-              Careers
+              Khám Phá
             </Link>
             <Link
               component={routerLink}
@@ -116,7 +116,7 @@ function MainFooter() {
                 },
               }}
             >
-              Mobile
+              Chúng ta làm việc như thế nào
             </Link>
             <Link
               component={routerLink}
@@ -134,7 +134,7 @@ function MainFooter() {
                 },
               }}
             >
-              Discover
+              Tại sao du khách chọn Travel Booking
             </Link>
             <Link
               component={routerLink}
@@ -152,61 +152,7 @@ function MainFooter() {
                 },
               }}
             >
-              How we work
-            </Link>
-            <Link
-              component={routerLink}
-              to=""
-              sx={{
-                color: "white",
-                textDecoration: "none",
-                ":hover": { textDecoration: "underline" },
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "12px",
-                  lg: "14px",
-                  xl: "16px",
-                },
-              }}
-            >
-              Why travelers choose momondo
-            </Link>
-            <Link
-              component={routerLink}
-              to=""
-              sx={{
-                color: "white",
-                textDecoration: "none",
-                ":hover": { textDecoration: "underline" },
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "12px",
-                  lg: "14px",
-                  xl: "16px",
-                },
-              }}
-            >
-              Sustainability
-            </Link>
-            <Link
-              component={routerLink}
-              to=""
-              sx={{
-                color: "white",
-                textDecoration: "none",
-                ":hover": { textDecoration: "underline" },
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "12px",
-                  lg: "14px",
-                  xl: "16px",
-                },
-              }}
-            >
-              TravelBooking coupon codes
+              Mã giảm giá TravelBooking
             </Link>
           </Stack>
         </Grid>
@@ -224,7 +170,7 @@ function MainFooter() {
               },
             }}
           >
-            Contact
+            Tiếp xúc
           </Typography>
           <Stack spacing={1}>
             <Link
@@ -243,7 +189,7 @@ function MainFooter() {
                 },
               }}
             >
-              Help/FAQ
+              Trợ giúp/Hỏi đáp
             </Link>
             <Link
               component={routerLink}
@@ -261,7 +207,7 @@ function MainFooter() {
                 },
               }}
             >
-              Press
+              chi nhánh
             </Link>
             <Link
               component={routerLink}
@@ -279,25 +225,7 @@ function MainFooter() {
                 },
               }}
             >
-              Affiliates
-            </Link>
-            <Link
-              component={routerLink}
-              to=""
-              sx={{
-                color: "white",
-                textDecoration: "none",
-                ":hover": { textDecoration: "underline" },
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "12px",
-                  lg: "14px",
-                  xl: "16px",
-                },
-              }}
-            >
-              Advertise with us
+              Quảng cáo với chúng tôi
             </Link>
           </Stack>
         </Grid>
@@ -315,7 +243,7 @@ function MainFooter() {
               },
             }}
           >
-            More
+            Hơn
           </Typography>
           <Stack spacing={1}>
             <Link
@@ -334,7 +262,7 @@ function MainFooter() {
                 },
               }}
             >
-              Airline fees
+              Phí Hàng Không
             </Link>
             <Link
               component={routerLink}
@@ -352,7 +280,7 @@ function MainFooter() {
                 },
               }}
             >
-              Airlines
+              hãng hàng không
             </Link>
           </Stack>
         </Grid>
@@ -370,7 +298,7 @@ function MainFooter() {
               },
             }}
           >
-            Site / Currency
+            Trang web / Tiền tệ
           </Typography>
         </Grid>
       </Grid>

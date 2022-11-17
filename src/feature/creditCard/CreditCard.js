@@ -127,7 +127,7 @@ function CreditCard() {
                     },
                   }}
                 >
-                  Enter card information to pay
+                  Nhập thông tin thẻ để thanh toán
                 </Typography>
                 <Typography
                   sx={{
@@ -175,7 +175,7 @@ function CreditCard() {
                   <Stack spacing={2}>
                     <Box>
                       <Typography sx={{ mb: 1 }}>
-                        Enter your card number
+                        Nhập số thẻ của bạn
                       </Typography>
                       <Box component="div" sx={{ position: "relative" }}>
                         <InputMask
@@ -202,7 +202,7 @@ function CreditCard() {
                       </Box>
                     </Box>
                     <Box>
-                      <Typography sx={{ mb: 1 }}>Name on card</Typography>
+                      <Typography sx={{ mb: 1 }}>Tên trên thẻ</Typography>
                       <TextField
                         value={nameOnCard}
                         autoComplete="off"
@@ -214,7 +214,7 @@ function CreditCard() {
                   </Stack>
                   <Grid container spacing={1} columns={16} sx={{ mt: 1 }}>
                     <Grid item xs={8}>
-                      <Typography>Expiry date</Typography>
+                      <Typography>Ngày hết hạn</Typography>
                       <InputMask
                         mask="99/99"
                         required
@@ -256,7 +256,7 @@ function CreditCard() {
               </Typography>
               <Stack spacing={1} sx={{ padding: "15px" }}>
                 <Stack spacing={1}>
-                  <Typography sx={{ fontSize: "13px" }}>Name:</Typography>
+                  <Typography sx={{ fontSize: "13px" }}>Tên:</Typography>
                   <TextField defaultValue={user.name} size="small" />
                 </Stack>
                 <Stack spacing={1}>
@@ -264,11 +264,11 @@ function CreditCard() {
                   <TextField defaultValue={user.email} size="small" />
                 </Stack>
                 <Stack spacing={1}>
-                  <Typography sx={{ fontSize: "13px" }}>City:</Typography>
+                  <Typography sx={{ fontSize: "13px" }}>Thành Phố:</Typography>
                   <TextField defaultValue={user.city} size="small" />
                 </Stack>
                 <Stack spacing={1}>
-                  <Typography sx={{ fontSize: "13px" }}>Country:</Typography>
+                  <Typography sx={{ fontSize: "13px" }}>Quốc gia:</Typography>
                   <TextField defaultValue={user.country} size="small" />
                 </Stack>
                 <Stack spacing={1}>
@@ -288,7 +288,7 @@ function CreditCard() {
                   }}
                   variant="contained"
                 >
-                  Edit
+                  Chỉnh Sửa
                 </Button>
               </Stack>
             </Card>
@@ -311,7 +311,7 @@ function CreditCard() {
               },
             }}
           >
-            Booking Flight
+            Đặt Chuyến Bay
           </LoadingButton>
         </Box>
       </form>

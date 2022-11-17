@@ -224,15 +224,15 @@ function ChairModal({ open, setOpen, flight }) {
                   lg: "14px",
                   xl: "16px",
                 },
+                textTransform: "capitalize",
               }}
               onClick={handleCancel}
             >
-              Cancel
+              Hủy Bỏ
             </Button>
             <LoadingButton
               sx={{
                 textTransform: "capitalize",
-                // width: "120px",
                 height: {
                   xs: "22px",
                   sm: "24px",
@@ -252,7 +252,7 @@ function ChairModal({ open, setOpen, flight }) {
               type="submit"
               loading={isSubmitting}
             >
-              send
+              Gửi
             </LoadingButton>
           </Box>
         </Box>

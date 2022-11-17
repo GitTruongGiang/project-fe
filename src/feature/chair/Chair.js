@@ -105,7 +105,7 @@ function Chair() {
                 fontWeight: 600,
               }}
             >
-              Booking Cabin
+              Đặt Buồng
             </Typography>
           </CardContent>
           <CardMedia
@@ -131,7 +131,7 @@ function Chair() {
               borderRadius: 0,
             }}
           >
-            <span> check cabin</span>
+            <span> Kiểm Tra Buồng</span>
           </Button>
         </Card>
         <Card
@@ -156,7 +156,7 @@ function Chair() {
                 fontWeight: 600,
               }}
             >
-              Booking Chair
+              Đặt Ghế
             </Typography>
           </CardContent>
           <CardMedia
@@ -182,7 +182,7 @@ function Chair() {
             }}
             onClick={handleOpen}
           >
-            <span>Check Chair</span>
+            <span>Kiểm Tra Ghế</span>
           </Button>
         </Card>
         <ChairModal open={open} setOpen={setOpen} flight={flight} />

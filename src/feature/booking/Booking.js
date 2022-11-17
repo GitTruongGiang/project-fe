@@ -30,7 +30,7 @@ function Booking() {
 
   const dispatch = useDispatch();
   const { chairs, flights, isLoading } = useSelector((state) => state.chairs);
-
+  console.log(flights);
   useEffect(() => {
     dispatch(getListBooking({}));
   }, [dispatch]);

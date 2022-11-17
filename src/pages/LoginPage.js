@@ -5,7 +5,6 @@ import {
   InputAdornment,
   Link,
   Stack,
-  styled,
   TextField,
   Typography,
 } from "@mui/material";
@@ -128,7 +127,7 @@ function LoginPage() {
           mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
         }}
       >
-        Don’t have an account?{" "}
+        Bạn Chưa Có Tài Khoản?{" "}
         <Link
           variant="subtitle2"
           component={RouterLink}
@@ -143,7 +142,7 @@ function LoginPage() {
             },
           }}
         >
-          Get started
+          Bắt Đầu
         </Link>
       </Alert>
       {!!errors.responseError && (
@@ -208,7 +207,7 @@ function LoginPage() {
             control={control}
             render={({ field, fieldState: { error } }) => (
               <TextField
-                label="Password"
+                label="Mật Khẩu"
                 id="password"
                 type={showPassword ? "text" : "password"}
                 fullWidth
@@ -278,7 +277,7 @@ function LoginPage() {
               },
             }}
           >
-            LogIn
+            Đăng Nhập
           </LoadingButton>
         </Stack>
       </form>

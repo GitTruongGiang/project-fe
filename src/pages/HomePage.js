@@ -98,11 +98,12 @@ function HomePage() {
                   xl: "15px",
                 },
                 fontWeight: 600,
+                textTransform: "capitalize",
               }}
             >
-              Best travel deals
+              Ưu Đãi Du Lịch Tốt Nhất
             </Typography>
-            Find the best deals available from 900+ travel sites.
+            Tìm các giao dịch tốt nhất có sẵn từ hơn 900 trang web du lịch.
           </Box>
         </Paper>
         <Paper
@@ -171,11 +172,12 @@ function HomePage() {
                   xl: "15px",
                 },
                 fontWeight: 600,
+                textTransform: "capitalize",
               }}
             >
-              Search without worry
+              tìm kiếm không phải lo lắng
             </Typography>
-            The prices you see aren't affected by your searches.
+            Giá bạn thấy không bị ảnh hưởng bởi các tìm kiếm của bạn.
           </Box>
         </Paper>
         <Paper
@@ -244,11 +246,12 @@ function HomePage() {
                   xl: "15px",
                 },
                 fontWeight: 600,
+                textTransform: "capitalize",
               }}
             >
-              Book with flexibility
+              đặt chổ linh hoạt
             </Typography>
-            Easily find flights with no change fees.
+            Dễ dàng tìm chuyến bay mà không mất phí thay đổi.
           </Box>
         </Paper>
         <Paper
@@ -319,9 +322,9 @@ function HomePage() {
                 fontWeight: 600,
               }}
             >
-              Trusted and free
+              Đáng tin cậy và miễn phí
             </Typography>
-            We’re completely free to use – no hidden charges or fees.
+            Chúng tôi hoàn toàn miễn phí sử dụng – không có phí hoặc lệ phí ẩn.
           </Box>
         </Paper>
       </Stack>
@@ -367,9 +370,10 @@ function HomePage() {
                     xl: "20px",
                   },
                   fontWeight: 600,
+                  textTransform: "capitalize",
                 }}
               >
-                Mui Line, Authentic Cancun rediscovered
+                Mui Line, tái khám phá đích thực
               </Typography>
               <Typography
                 sx={{
@@ -382,8 +386,8 @@ function HomePage() {
                   },
                 }}
               >
-                A Mui Line family vacation offers beach fun, kids club and
-                international cuisine
+                Một kỳ nghỉ gia đình ở Mui Line mang đến niềm vui trên bãi biển,
+                câu lạc bộ trẻ em và ẩm thực quốc tế
               </Typography>
             </Box>
             <Button
@@ -399,7 +403,7 @@ function HomePage() {
                 },
               }}
             >
-              Discover
+              Khám Phá
             </Button>
           </CardActions>
         </Card>

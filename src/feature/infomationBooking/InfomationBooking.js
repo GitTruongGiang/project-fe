@@ -399,7 +399,7 @@ function InfomationBooking() {
             },
           }}
         >
-          finish
+          Kết Thúc
         </Button>
       </Box>
     </Container>

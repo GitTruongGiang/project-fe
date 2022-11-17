@@ -7,10 +7,10 @@ import AccountSocialLinks from "./AccountSocialLinks";
 import { capitalCase } from "change-case";
 
 function Profile() {
-  const [currentTab, setCurrentTab] = useState("general");
+  const [currentTab, setCurrentTab] = useState("Chung");
   const ACCOUNT_TABS = [
     {
-      value: "general",
+      value: "Chung",
       icon: (
         <AccountBoxIcon
           sx={{ fontSize: { xs: 22, sm: 24, md: 26, lg: 28, xl: 30 } }}
@@ -19,7 +19,7 @@ function Profile() {
       component: <AccountGeneral />,
     },
     {
-      value: "social_links",
+      value: "Lien_Ket_Xa_Hoi",
       icon: (
         <ShareIcon
           sx={{ fontSize: { xs: 22, sm: 24, md: 26, lg: 28, xl: 30 } }}

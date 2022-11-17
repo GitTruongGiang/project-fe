@@ -144,7 +144,7 @@ function AccountGeneral() {
                   return (
                     <TextField
                       fullWidth
-                      label="name"
+                      label="Tên"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -175,7 +175,8 @@ function AccountGeneral() {
                   return (
                     <TextField
                       fullWidth
-                      label="Phone"
+                      type="number"
+                      label="Số Điện Thoại"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -190,7 +191,7 @@ function AccountGeneral() {
                   return (
                     <TextField
                       fullWidth
-                      label="Address"
+                      label="Địa Chỉ"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -205,7 +206,7 @@ function AccountGeneral() {
                   return (
                     <TextField
                       fullWidth
-                      label="City"
+                      label="Thành Phố"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -220,7 +221,7 @@ function AccountGeneral() {
                   return (
                     <TextField
                       fullWidth
-                      label="Country"
+                      label="Quốc Gia"
                       {...field}
                       error={!!error}
                       helperText={error?.message}
@@ -256,7 +257,7 @@ function AccountGeneral() {
                         fullWidth
                         multiline
                         rows={4}
-                        label="About Me"
+                        label="Giới Thiệu Của Tôi"
                         {...field}
                         error={!!error}
                         helperText={error?.message}

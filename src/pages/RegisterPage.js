@@ -163,7 +163,7 @@ function RegisterPage() {
               },
             }}
           >
-            Already have an account?{" "}
+            Tài Khoảng Của Bạn Đã Sẳn Sàng{" "}
             <Link
               variant="subtitle2"
               component={RouterLink}
@@ -178,7 +178,7 @@ function RegisterPage() {
                 },
               }}
             >
-              Sign in
+              Đăng Nhập
             </Link>
           </Alert>
           <Controller
@@ -190,7 +190,7 @@ function RegisterPage() {
                   autoComplete="off"
                   fullWidth
                   id="name"
-                  label="Full Name"
+                  label="Tên Đầy Đủ"
                   {...field}
                   error={!!error}
                   helperText={error?.message}
@@ -207,7 +207,7 @@ function RegisterPage() {
                   autoComplete="off"
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Địa Chỉ Email"
                   {...field}
                   error={!!error}
                   helperText={error?.message}
@@ -224,7 +224,7 @@ function RegisterPage() {
                   autoComplete="off"
                   fullWidth
                   id="city"
-                  label="City"
+                  label="Thành Phố"
                   {...field}
                   error={!!error}
                   helperText={error?.message}
@@ -241,7 +241,7 @@ function RegisterPage() {
                   autoComplete="off"
                   fullWidth
                   id="phone"
-                  label="Phone Numeber"
+                  label="Số Điện Thoại"
                   {...field}
                   error={!!error}
                   helperText={error?.message}
@@ -255,7 +255,7 @@ function RegisterPage() {
             render={({ field, fieldState: { error } }) => {
               return (
                 <TextField
-                  label="Password"
+                  label="Mật Khẩu"
                   fullWidth
                   id="password"
                   type={showPassword ? "text" : "password"}
@@ -309,7 +309,7 @@ function RegisterPage() {
               return (
                 <TextField
                   fullWidth
-                  label="Password Confirmation"
+                  label="Điền Lại Mật Khẩu"
                   id="password"
                   type={showPasswordConfirmation ? "text" : "password"}
                   {...field}
@@ -383,7 +383,7 @@ function RegisterPage() {
               },
             }}
           >
-            Register
+            Tạo
           </LoadingButton>
         </Stack>
       </form>

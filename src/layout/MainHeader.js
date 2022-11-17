@@ -516,7 +516,7 @@ function MainHeader() {
                     },
                   }}
                 >
-                  Logout
+                  Đăng Xuất
                 </Typography>
               </Menu>
             </Box>
