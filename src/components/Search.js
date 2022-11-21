@@ -207,6 +207,7 @@ function Search() {
                             bottom: {
                               xs: "0px",
                               sm: "4px",
+                              md: "10px",
                               lg: "10px",
                               xl: "12px",
                             },
@@ -293,6 +294,7 @@ function Search() {
                             bottom: {
                               xs: "0px",
                               sm: "4px",
+                              md: "10px",
                               lg: "10px",
                               xl: "12px",
                             },
