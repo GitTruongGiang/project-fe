@@ -371,7 +371,13 @@ function Search() {
                       sx={{
                         position: "absolute",
                         color: "#1e88e5",
-                        top: { xs: "32px", sm: "37px", xl: "55px" },
+                        top: {
+                          xs: "32px",
+                          sm: "37px",
+                          md: "48px",
+                          lg: "52px",
+                          xl: "55px",
+                        },
                         left: { xs: "12px", sm: "15px", xl: "20px" },
                         zIndex: 10,
                         fontSize: {
@@ -468,7 +474,13 @@ function Search() {
                         color: "#1e88e5",
                         zIndex: 10,
                         left: { xs: "15px", sm: "16px", xl: "20px" },
-                        bottom: { xs: "5px", sm: "5px", xl: "26px" },
+                        bottom: {
+                          xs: "5px",
+                          sm: "5px",
+                          md: "26px",
+                          lg: "26px",
+                          xl: "26px",
+                        },
                         height: "20px",
                         fontSize: {
                           xs: "0.7rem",
