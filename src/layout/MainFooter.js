@@ -284,23 +284,6 @@ function MainFooter() {
             </Link>
           </Stack>
         </Grid>
-        <Grid item xs={4}>
-          <Typography
-            sx={{
-              mb: { xs: 0.6, sm: 0.7, md: 0.8, lg: 0.9, xl: 1 },
-              fontWeight: 600,
-              fontSize: {
-                xs: "0.6rem",
-                sm: "0.7rem",
-                md: "0.8rem",
-                lg: "0.9rem",
-                xl: "1rem",
-              },
-            }}
-          >
-            Trang web / Tiền tệ
-          </Typography>
-        </Grid>
       </Grid>
       <Typography
         sx={{

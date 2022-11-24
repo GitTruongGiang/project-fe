@@ -173,7 +173,7 @@ function Booking() {
                                     },
                                   }}
                                 >
-                                  From:
+                                  Xuất Phát:
                                 </Typography>
                                 <Typography
                                   sx={{
@@ -228,7 +228,7 @@ function Booking() {
                                     },
                                   }}
                                 >
-                                  To:
+                                  Điểm Đến:
                                 </Typography>
                                 <Typography
                                   sx={{
@@ -283,7 +283,7 @@ function Booking() {
                                     },
                                   }}
                                 >
-                                  Number Chair:
+                                  Số Ghế:
                                 </Typography>
                                 <Typography
                                   sx={{
