@@ -5,6 +5,7 @@ import {
   CardActions,
   CardMedia,
   Container,
+  Grid,
   IconButton,
   Paper,
   Typography,
@@ -22,312 +23,322 @@ import "./HomePageCss.css";
 function HomePage() {
   return (
     <Container maxWidth="lg">
-      <Stack
-        direction={{ xs: "column", xl: "row" }}
-        spacing={{ xs: 1.2, sm: 1.4, md: 1.6, lg: 1.8, xl: 2 }}
+      <Grid
+        container
+        direction={{ xs: "column", sm: "row", md: "row", lg: "row", xl: "row" }}
+        spacing={2}
         sx={{
           textAlign: "center",
           justifyContent: "center",
-          flexWrap: { xs: "wrap" },
           alignContent: "center",
         }}
       >
-        <Paper
-          sx={{
-            height: {
-              xs: "80px",
-              sm: "90px",
-              md: "100px",
-              lg: "110px",
-              xl: "120px",
-            },
-            width: {
-              xs: "245px",
-              sm: "250px",
-              md: "255px",
-              lg: "260px",
-              xl: "265px",
-            },
-          }}
-          elevation={3}
-        >
-          <LocalOfferIcon
+        <Grid item xs={3}>
+          <Paper
             sx={{
-              marginTop: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
+              height: {
+                xs: "80px",
+                sm: "90px",
+                md: "100px",
+                lg: "110px",
+                xl: "120px",
               },
-              marginLeft: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
-              },
-              fontSize: {
-                xs: "1.1rem",
-                sm: "1.2rem",
-                md: "1.3rem",
-                lg: "1.4rem",
-                xl: "1.5rem",
+              width: {
+                xs: "245px",
+                sm: "250px",
+                md: "255px",
+                lg: "260px",
+                xl: "265px",
               },
             }}
-          />
-          <Box
-            sx={{
-              padding: "5px 16px 12px 16px",
-              fontSize: {
-                xs: "9px",
-                sm: "10px",
-                md: "11px",
-                lg: "12px",
-                xl: "13px",
-              },
-            }}
+            elevation={3}
           >
-            <Typography
+            <LocalOfferIcon
               sx={{
-                fontSize: {
-                  xs: "11px",
-                  sm: "12px",
-                  md: "13px",
-                  lg: "14px",
-                  xl: "15px",
+                marginTop: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
                 },
-                fontWeight: 600,
-                textTransform: "capitalize",
+                marginLeft: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
+                },
+                fontSize: {
+                  xs: "1.1rem",
+                  sm: "1.2rem",
+                  md: "1.3rem",
+                  lg: "1.4rem",
+                  xl: "1.5rem",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                padding: "5px 16px 12px 16px",
+                fontSize: {
+                  xs: "9px",
+                  sm: "10px",
+                  md: "11px",
+                  lg: "12px",
+                  xl: "13px",
+                },
               }}
             >
-              Ưu Đãi Du Lịch Tốt Nhất
-            </Typography>
-            Tìm các giao dịch tốt nhất có sẵn từ hơn 900 trang web du lịch.
-          </Box>
-        </Paper>
-        <Paper
-          sx={{
-            height: {
-              xs: "80px",
-              sm: "90px",
-              md: "100px",
-              lg: "110px",
-              xl: "120px",
-            },
-            width: {
-              xs: "245px",
-              sm: "250px",
-              md: "255px",
-              lg: "260px",
-              xl: "265px",
-            },
-          }}
-          elevation={3}
-        >
-          <CheckCircleOutlineIcon
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "11px",
+                    sm: "12px",
+                    md: "13px",
+                    lg: "14px",
+                    xl: "15px",
+                  },
+                  fontWeight: 600,
+                  textTransform: "capitalize",
+                }}
+              >
+                Ưu Đãi Du Lịch Tốt Nhất
+              </Typography>
+              Tìm các giao dịch tốt nhất có sẵn từ hơn 900 trang web du lịch.
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper
             sx={{
-              marginTop: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
+              height: {
+                xs: "80px",
+                sm: "90px",
+                md: "100px",
+                lg: "110px",
+                xl: "120px",
               },
-              marginLeft: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
-              },
-              fontSize: {
-                xs: "1.1rem",
-                sm: "1.2rem",
-                md: "1.3rem",
-                lg: "1.4rem",
-                xl: "1.5rem",
+              width: {
+                xs: "245px",
+                sm: "250px",
+                md: "255px",
+                lg: "260px",
+                xl: "265px",
               },
             }}
-          />
-          <Box
-            sx={{
-              padding: "5px 16px 12px 16px",
-              fontSize: {
-                xs: "9px",
-                sm: "10px",
-                md: "11px",
-                lg: "12px",
-                xl: "13px",
-              },
-            }}
+            elevation={3}
           >
-            <Typography
+            <CheckCircleOutlineIcon
               sx={{
-                fontSize: {
-                  xs: "11px",
-                  sm: "12px",
-                  md: "13px",
-                  lg: "14px",
-                  xl: "15px",
+                marginTop: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
                 },
-                fontWeight: 600,
-                textTransform: "capitalize",
+                marginLeft: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
+                },
+                fontSize: {
+                  xs: "1.1rem",
+                  sm: "1.2rem",
+                  md: "1.3rem",
+                  lg: "1.4rem",
+                  xl: "1.5rem",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                padding: "5px 16px 12px 16px",
+                fontSize: {
+                  xs: "9px",
+                  sm: "10px",
+                  md: "11px",
+                  lg: "12px",
+                  xl: "13px",
+                },
               }}
             >
-              tìm kiếm không phải lo lắng
-            </Typography>
-            Giá bạn thấy không bị ảnh hưởng bởi các tìm kiếm của bạn.
-          </Box>
-        </Paper>
-        <Paper
-          sx={{
-            height: {
-              xs: "80px",
-              sm: "90px",
-              md: "100px",
-              lg: "110px",
-              xl: "120px",
-            },
-            width: {
-              xs: "245px",
-              sm: "250px",
-              md: "255px",
-              lg: "260px",
-              xl: "265px",
-            },
-          }}
-          elevation={3}
-        >
-          <PublishedWithChangesIcon
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "11px",
+                    sm: "12px",
+                    md: "13px",
+                    lg: "14px",
+                    xl: "15px",
+                  },
+                  fontWeight: 600,
+                  textTransform: "capitalize",
+                }}
+              >
+                tìm kiếm không phải lo lắng
+              </Typography>
+              Giá bạn thấy không bị ảnh hưởng bởi các tìm kiếm của bạn.
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper
             sx={{
-              marginTop: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
+              height: {
+                xs: "80px",
+                sm: "90px",
+                md: "100px",
+                lg: "110px",
+                xl: "120px",
               },
-              marginLeft: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
-              },
-              fontSize: {
-                xs: "1.1rem",
-                sm: "1.2rem",
-                md: "1.3rem",
-                lg: "1.4rem",
-                xl: "1.5rem",
+              width: {
+                xs: "245px",
+                sm: "250px",
+                md: "255px",
+                lg: "260px",
+                xl: "265px",
               },
             }}
-          />
-          <Box
-            sx={{
-              padding: "5px 16px 12px 16px",
-              fontSize: {
-                xs: "9px",
-                sm: "10px",
-                md: "11px",
-                lg: "12px",
-                xl: "13px",
-              },
-            }}
+            elevation={3}
           >
-            <Typography
+            <PublishedWithChangesIcon
               sx={{
-                fontSize: {
-                  xs: "11px",
-                  sm: "12px",
-                  md: "13px",
-                  lg: "14px",
-                  xl: "15px",
+                marginTop: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
                 },
-                fontWeight: 600,
-                textTransform: "capitalize",
+                marginLeft: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
+                },
+                fontSize: {
+                  xs: "1.1rem",
+                  sm: "1.2rem",
+                  md: "1.3rem",
+                  lg: "1.4rem",
+                  xl: "1.5rem",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                padding: "5px 16px 12px 16px",
+                fontSize: {
+                  xs: "9px",
+                  sm: "10px",
+                  md: "11px",
+                  lg: "12px",
+                  xl: "13px",
+                },
               }}
             >
-              đặt chổ linh hoạt
-            </Typography>
-            Dễ dàng tìm chuyến bay mà không mất phí thay đổi.
-          </Box>
-        </Paper>
-        <Paper
-          sx={{
-            height: {
-              xs: "80px",
-              sm: "90px",
-              md: "100px",
-              lg: "110px",
-              xl: "120px",
-            },
-            width: {
-              xs: "245px",
-              sm: "250px",
-              md: "255px",
-              lg: "260px",
-              xl: "265px",
-            },
-          }}
-          elevation={3}
-        >
-          <RecommendIcon
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "11px",
+                    sm: "12px",
+                    md: "13px",
+                    lg: "14px",
+                    xl: "15px",
+                  },
+                  fontWeight: 600,
+                  textTransform: "capitalize",
+                }}
+              >
+                đặt chổ linh hoạt
+              </Typography>
+              Dễ dàng tìm chuyến bay mà không mất phí thay đổi.
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          {" "}
+          <Paper
             sx={{
-              marginTop: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
+              height: {
+                xs: "80px",
+                sm: "90px",
+                md: "100px",
+                lg: "110px",
+                xl: "120px",
               },
-              marginLeft: {
-                xs: "6px",
-                sm: "7px",
-                md: "8px",
-                lg: "9px",
-                xl: "10px",
-              },
-              fontSize: {
-                xs: "1.1rem",
-                sm: "1.2rem",
-                md: "1.3rem",
-                lg: "1.4rem",
-                xl: "1.5rem",
+              width: {
+                xs: "245px",
+                sm: "250px",
+                md: "255px",
+                lg: "260px",
+                xl: "265px",
               },
             }}
-          />
-          <Box
-            sx={{
-              padding: "5px 16px 12px 16px",
-              fontSize: {
-                xs: "9px",
-                sm: "10px",
-                md: "11px",
-                lg: "12px",
-                xl: "13px",
-              },
-            }}
+            elevation={3}
           >
-            <Typography
+            <RecommendIcon
               sx={{
-                fontSize: {
-                  xs: "11px",
-                  sm: "12px",
-                  md: "13px",
-                  lg: "14px",
-                  xl: "15px",
+                marginTop: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
                 },
-                fontWeight: 600,
+                marginLeft: {
+                  xs: "6px",
+                  sm: "7px",
+                  md: "8px",
+                  lg: "9px",
+                  xl: "10px",
+                },
+                fontSize: {
+                  xs: "1.1rem",
+                  sm: "1.2rem",
+                  md: "1.3rem",
+                  lg: "1.4rem",
+                  xl: "1.5rem",
+                },
+              }}
+            />
+            <Box
+              sx={{
+                padding: "5px 16px 12px 16px",
+                fontSize: {
+                  xs: "9px",
+                  sm: "10px",
+                  md: "11px",
+                  lg: "12px",
+                  xl: "13px",
+                },
               }}
             >
-              Đáng tin cậy và miễn phí
-            </Typography>
-            Chúng tôi hoàn toàn miễn phí sử dụng – không có phí hoặc lệ phí ẩn.
-          </Box>
-        </Paper>
-      </Stack>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "11px",
+                    sm: "12px",
+                    md: "13px",
+                    lg: "14px",
+                    xl: "15px",
+                  },
+                  fontWeight: 600,
+                }}
+              >
+                Đáng tin cậy và miễn phí
+              </Typography>
+              Chúng tôi hoàn toàn miễn phí sử dụng – không có phí hoặc lệ phí
+              ẩn.
+            </Box>
+          </Paper>
+        </Grid>
+      </Grid>
       <Stack mt={{ xs: 6, sm: 7, md: 8, lg: 9, xl: 10 }}>
         <Card sx={{ backgroundColor: "#24292e", color: "white" }}>
           <Typography
