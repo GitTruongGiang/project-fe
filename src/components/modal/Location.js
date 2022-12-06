@@ -51,7 +51,50 @@ const BootstrapButton = styled(Button)({
 });
 
 function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
+  const [onStart, setOnStart] = useState({
+    start1: false,
+    start2: false,
+    start3: false,
+    start4: false,
+  });
+  const [onEnd, setOnEnd] = useState({
+    start1: false,
+    start2: false,
+    start3: false,
+    start4: false,
+  });
   const handleClose = () => setLocation(false);
+  const handleTimeFrom = (number) => {
+    setTimeFrom(number);
+    if (number === 6) {
+      setOnStart({ start1: true, start2: false, start3: false, start4: false });
+    }
+    if (number === 12) {
+      setOnStart({ start1: false, start2: true, start3: false, start4: false });
+    }
+    if (number === 18) {
+      setOnStart({ start1: false, start2: false, start3: true, start4: false });
+    }
+    if (number === 23) {
+      setOnStart({ start1: false, start2: false, start3: false, start4: true });
+    }
+  };
+
+  const handleTimeTo = (number) => {
+    setTimeTo(number);
+    if (number === 6) {
+      setOnEnd({ start1: true, start2: false, start3: false, start4: false });
+    }
+    if (number === 12) {
+      setOnEnd({ start1: false, start2: true, start3: false, start4: false });
+    }
+    if (number === 18) {
+      setOnEnd({ start1: false, start2: false, start3: true, start4: false });
+    }
+    if (number === 23) {
+      setOnEnd({ start1: false, start2: false, start3: false, start4: true });
+    }
+  };
   return (
     <Modal
       open={location}
@@ -82,7 +125,7 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
             <Grid item xs={4}>
               <BootstrapButton
                 disableRipple
-                onClick={() => setTimeFrom(6)}
+                onClick={() => handleTimeFrom(6)}
                 sx={{
                   fontSize: {
                     xs: "12px",
@@ -91,7 +134,8 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onStart.start1 === true ? "#f44336" : "",
                 }}
                 variant="contained"
               >
@@ -109,10 +153,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onStart.start2 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeFrom(12)}
+                onClick={() => handleTimeFrom(12)}
               >
                 06:00 - 12:00
               </BootstrapButton>
@@ -128,10 +173,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onStart.start3 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeFrom(18)}
+                onClick={() => handleTimeFrom(18)}
               >
                 12:00 - 18:00
               </BootstrapButton>
@@ -147,10 +193,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onStart.start4 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeFrom(23)}
+                onClick={() => handleTimeFrom(23)}
               >
                 18:00 - 24:00
               </BootstrapButton>
@@ -190,10 +237,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onEnd.start1 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeTo(6)}
+                onClick={() => handleTimeTo(6)}
               >
                 00:00 - 06:00
               </BootstrapButton>
@@ -209,10 +257,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onEnd.start2 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeTo(12)}
+                onClick={() => handleTimeTo(12)}
               >
                 06:00 - 12:00
               </BootstrapButton>
@@ -228,10 +277,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onEnd.start3 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeTo(18)}
+                onClick={() => handleTimeTo(18)}
               >
                 12:00 - 18:00
               </BootstrapButton>
@@ -247,10 +297,11 @@ function Location({ location, setLocation, setTimeFrom, setTimeTo }) {
                     lg: "15px",
                     xl: "16px",
                   },
-                  ":focus-within": { backgroundColor: "#f44336" },
+                  // ":focus-within": { backgroundColor: "#f44336" },
+                  backgroundColor: onEnd.start4 === true ? "#f44336" : "",
                 }}
                 variant="contained"
-                onClick={() => setTimeTo(23)}
+                onClick={() => handleTimeTo(23)}
               >
                 18:00 - 24:00
               </BootstrapButton>
