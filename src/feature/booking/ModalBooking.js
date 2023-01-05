@@ -346,7 +346,7 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
                     },
                   }}
                 >
-                  {dataFlight.codePlane}
+                  {dataFlight?.plane.codePlane}
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -364,10 +364,7 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
                 >
                   Số ghế:
                 </Typography>
-                {chairs.map((chair) => {
-                  if (chair.flight._id === dataFlight._id) {
-                    return (
-                      <Typography
+                <Typography
                         sx={{
                           ml: 1,
                           fontSize: {
@@ -378,14 +375,11 @@ function ModalBooking({ open, setOpen, dataFlight, chairs }) {
                             xl: "16px",
                           },
                         }}
-                        key={chair._id}
+              
                       >
-                        {chair.codeNumber}
-                        {chair.codeString}
+                        {dataFlight.codeNumber}
+                        {dataFlight.codeString}
                       </Typography>
-                    );
-                  }
-                })}
               </Box>
             </Stack>
           </Box>

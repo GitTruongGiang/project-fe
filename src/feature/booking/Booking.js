@@ -29,15 +29,14 @@ function Booking() {
   };
 
   const dispatch = useDispatch();
-  const { chairs, flights, isLoading } = useSelector((state) => state.chairs);
-  console.log(flights);
+  const { chairs, bookings, isLoading } = useSelector((state) => state.chairs);
+  console.log(bookings);
   useEffect(() => {
     dispatch(getListBooking({}));
   }, [dispatch]);
 
   const cancelFLight = async (flight) => {
-    const chair = await chairs.find((chair) => chair.flight._id === flight._id);
-    dispatch(cancelFlights({ status: "none", chairId: chair._id }));
+    dispatch(cancelFlights({ status: "none", chairId: flight.chair }));
   };
   return (
     <Container maxWidth="lg">
@@ -63,13 +62,13 @@ function Booking() {
             lịch sử đặt chổ
           </Typography>
         </CardContent>
-        {flights.length ? (
+        {bookings.length ? (
           <>
             {isLoading ? (
               <LoadingCss />
             ) : (
               <Stack spacing={1}>
-                {flights.map((flight) => (
+                {bookings.map((flight) => (
                   <Card
                     sx={{
                       display: "flex",
@@ -255,10 +254,7 @@ function Booking() {
                           );
                         }
                       })}
-                      {chairs.map((chair) => {
-                        if (chair.flight._id === flight._id) {
-                          return (
-                            <Box
+                                   <Box
                               sx={{
                                 padding: {
                                   xs: "8px 16px",
@@ -268,7 +264,7 @@ function Booking() {
                                   xl: "16px 16px",
                                 },
                               }}
-                              key={chair._id}
+               
                             >
                               <Box sx={{ display: "flex" }}>
                                 <Typography
@@ -297,14 +293,11 @@ function Booking() {
                                     },
                                   }}
                                 >
-                                  {chair?.codeNumber}
-                                  {chair?.codeString}
+                                  {flight?.codeNumber}
+                                  {flight?.codeString}
                                 </Typography>
                               </Box>
                             </Box>
-                          );
-                        }
-                      })}
                     </Stack>
                     <Box
                       sx={{

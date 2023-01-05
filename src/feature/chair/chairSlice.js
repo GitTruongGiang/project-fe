@@ -8,7 +8,7 @@ const initialState = {
   chairs: [],
   chair: {},
   flight: {},
-  flights: [],
+  bookings:[],
   chairCount: 0,
   rowChairCount: 0,
 };
@@ -160,10 +160,9 @@ export const chairSlice = createSlice({
       })
       .addCase(cancelFlights.fulfilled, (state, action) => {
         state.isLoading = false;
-        console.log(action.payload);
-        const { chair, flights } = action.payload.data;
+        const { chair, bookings } = action.payload.data;
         if (chair) {
-          state.flights = flights;
+          state.bookings = bookings
           toast.success("cancel flight success");
         } else {
           toast.error(`${action.payload.message}`);
@@ -178,10 +177,11 @@ export const chairSlice = createSlice({
       })
       .addCase(getListBooking.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { chairs, flights } = action.payload.data;
+        const { bookings } = action.payload.data;
         state.message = action.payload.message;
-        state.chairs = chairs;
-        state.flights = flights;
+        // state.chairs = chairs;
+        // state.flights = flights;
+        state.bookings = bookings
       })
       .addCase(getListBooking.rejected, (state, action) => {
         state.error = action.error.message;
